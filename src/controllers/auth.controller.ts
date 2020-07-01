@@ -7,6 +7,7 @@ import { JwtService } from '@nestjs/jwt';
 import { SmsService } from "src/services/sms.service";
 import { VersionService } from "src/services/version.service";
 import { JwtAuthGuard } from "src/passport/auth.guard";
+import * as passwordHash from "password-hash";
 
 @Controller('auth')
 export class AuthController {
@@ -17,6 +18,32 @@ export class AuthController {
     private smsService: SmsService,
     private versionService: VersionService
   ) {}
+
+  @Post('register-user')
+  registerYourself(@Request() req) {
+    const { body } = req;
+
+    const password = body.password;
+    var hashedPassword = passwordHash.generate(password); 
+    body.password = hashedPassword;
+    const registerYourself = this.service.registerYourself(body);
+    return  registerYourself;
+  }
+
+  @Post('simple-login')
+  async simpleLogin(@Body() body) {
+    
+    const {email, password } = body;
+    const user = await this.usersService.findOne({email});
+    
+    const encryptedPassword = passwordHash.verify(password, user.password);
+    
+    if(encryptedPassword){
+      return success('logged in successfully', {user});
+    }else{
+      return 'wrong password';
+    }
+  }
 
   @Post('request-otp')
   async requestOtp(@Body() requestBody) {

@@ -13,5 +13,5 @@ export default [
   AuthController,
   ChaptersController,
   SubjectsController,
-  PaymentsController
+  PaymentsController,
 ];

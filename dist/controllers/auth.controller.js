@@ -22,6 +22,7 @@ const jwt_1 = require("@nestjs/jwt");
 const sms_service_1 = require("../services/sms.service");
 const version_service_1 = require("../services/version.service");
 const auth_guard_1 = require("../passport/auth.guard");
+const passwordHash = require("password-hash");
 let AuthController = (() => {
     let AuthController = class AuthController {
         constructor(service, usersService, jwtService, smsService, versionService) {
@@ -30,6 +31,25 @@ let AuthController = (() => {
             this.jwtService = jwtService;
             this.smsService = smsService;
             this.versionService = versionService;
+        }
+        registerYourself(req) {
+            const { body } = req;
+            const password = body.password;
+            var hashedPassword = passwordHash.generate(password);
+            body.password = hashedPassword;
+            const registerYourself = this.service.registerYourself(body);
+            return registerYourself;
+        }
+        async simpleLogin(body) {
+            const { email, password } = body;
+            const user = await this.usersService.findOne({ email });
+            const encryptedPassword = passwordHash.verify(password, user.password);
+            if (encryptedPassword) {
+                return utils_1.success('logged in successfully', { user });
+            }
+            else {
+                return 'wrong password';
+            }
         }
         async requestOtp(requestBody) {
             try {
@@ -85,6 +105,20 @@ let AuthController = (() => {
             return this.versionService.findOne({});
         }
     };
+    __decorate([
+        common_1.Post('register-user'),
+        __param(0, common_1.Request()),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", void 0)
+    ], AuthController.prototype, "registerYourself", null);
+    __decorate([
+        common_1.Post('simple-login'),
+        __param(0, common_1.Body()),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", Promise)
+    ], AuthController.prototype, "simpleLogin", null);
     __decorate([
         common_1.Post('request-otp'),
         __param(0, common_1.Body()),

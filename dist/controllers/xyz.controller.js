@@ -9,19 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UsersController = void 0;
+exports.XyZController = void 0;
 const common_1 = require("@nestjs/common");
-const users_service_1 = require("../services/users.service");
-const resource_controller_1 = require("./resource.controller");
-const utils_1 = require("../utils");
-const auth_guard_1 = require("../passport/auth.guard");
-let UsersController = (() => {
-    let UsersController = class UsersController extends resource_controller_1.ResourceController {
-        constructor(service) {
-            super(service);
+let XyZController = (() => {
+    let XyZController = class XyZController {
+        getXyz() {
+            return 'Success xyz';
         }
-        findAll() {
-            return utils_1.success('List found successfully', this.service.findAll());
+        asdf() {
+            return 'asdfsdf';
         }
     };
     __decorate([
@@ -29,12 +25,17 @@ let UsersController = (() => {
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
-    ], UsersController.prototype, "findAll", null);
-    UsersController = __decorate([
-        common_1.Controller('users'),
-        __metadata("design:paramtypes", [users_service_1.UsersService])
-    ], UsersController);
-    return UsersController;
+    ], XyZController.prototype, "getXyz", null);
+    __decorate([
+        common_1.Post('asdfasdf'),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], XyZController.prototype, "asdf", null);
+    XyZController = __decorate([
+        common_1.Controller('xyz')
+    ], XyZController);
+    return XyZController;
 })();
-exports.UsersController = UsersController;
-//# sourceMappingURL=users.controller.js.map
+exports.XyZController = XyZController;
+//# sourceMappingURL=xyz.controller.js.map

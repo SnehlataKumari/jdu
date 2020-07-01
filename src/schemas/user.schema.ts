@@ -19,6 +19,9 @@ export const UserSchema = new mongoose.Schema({
   username: { //only for admin
     type: String
   },
+  email: {
+    type: String
+  },
   mobileNumber: {
     type: String,
     required: [true, 'Mobile Number is required!'],
