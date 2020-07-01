@@ -1897,12 +1897,12 @@
         "affectsGlobalScope": false
       },
       "../src/constants/index.ts": {
-        "version": "b2c5f33adb1f160ddd04b9af2f6f9fa84914ea2980450e4d0dbfdfea781767c4",
-        "signature": "9bd50e5b327fd244c7a96ec1967deb451521205f378f6ccadc062a6dbc482479",
+        "version": "e28ac5ea3c5a313a61dcc07d76655d4e57dce144d9e36da760fd15133a12c72d",
+        "signature": "c6f2e19937ebaeec7ac06986b2e95bf753fdef176b114102a62c0a8da64a1052",
         "affectsGlobalScope": false
       },
       "../src/schemas/user.schema.ts": {
-        "version": "5e7cabe496e32768c1fc3f030a69bf97a42f8f31321e534d01a77cc6f7ea43d2",
+        "version": "657351383ce680deb24d5dc63dbd278da1b08c87134b93b06c8b3e194836aa02",
         "signature": "33b6d9f5900752b91a05e8ec298b94fec72ab453cbb20021183b577561396086",
         "affectsGlobalScope": false
       },
@@ -3307,8 +3307,8 @@
         "affectsGlobalScope": false
       },
       "../src/services/auth.service.ts": {
-        "version": "cea0360d44fddcdc5952bd6fc3ed0b481cb6a6179a7d59286ebdedb9e0ad4b9a",
-        "signature": "1ef7a8e22c3e62bc32c3cb305973dce5c55a0fe4571d6dda32d4f66a00aae1c2",
+        "version": "51bdc54dba17036392c71e533c5b2b11d9948442e19a55f3eea25d1a1c529dee",
+        "signature": "cc123904d1203f28d447d270db0ea639b7026797c03650452e5b7dfbb13d80f9",
         "affectsGlobalScope": false
       },
       "../node_modules/twilio/lib/jwt/taskrouter/taskroutercapability.d.ts": {
@@ -5583,7 +5583,7 @@
       },
       "../src/services/index.ts": {
         "version": "2b7f52ec73c98e86e96225dfc4f18d7ec8ed1a0ea83cf3f41d5ae8a99943d1a1",
-        "signature": "4a061421709f94f90a6fd663d842247227610f7df1fd9dbeed7594084274efce",
+        "signature": "e769358d1dc2c23f57a7c543100ff52e787cb46416d26cde31587042d74e9f85",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/passport-strategy/index.d.ts": {
@@ -5612,7 +5612,7 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/users.controller.ts": {
-        "version": "b65075cec0eb5b478abb6e10480f0b92327e659754dc9b4976f26f9401c595fc",
+        "version": "e83376e6c5b41fde87d407e097ff60d629da5cefdb22b43100256eb7864a1d5f",
         "signature": "3103f40d7e63d3497ca2b3d601df1705ba694cab7360dad6e98f6d5bee7f66e0",
         "affectsGlobalScope": false
       },
@@ -5657,8 +5657,8 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/auth.controller.ts": {
-        "version": "93a7a8986a1458e54723dd1a6309182892d08d955bb74618889a9dce47c81c0a",
-        "signature": "31d29f7a9ea530fec9d27749c97c42bdefd386a2370d7829204e2ee9c69f1ee6",
+        "version": "8a0326d62469d4e1932ad74537afa66eeb71ebe15fd89d759f9753feb07b7dea",
+        "signature": "861fbfc26689bc04935ba002990e8ebd695cfd01d352c4040d3b9f89c1fb8a2a",
         "affectsGlobalScope": false
       },
       "../src/controllers/chapters.controller.ts": {
@@ -5677,8 +5677,8 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/index.ts": {
-        "version": "de74b2f73997983ff1b268b24a85f1fd2d99a82008b766eb59c956896f964a4d",
-        "signature": "6e503d7b6fe0a26ad643c09f36bec1cf4f7c261eed3db7a77425d9e897d44dff",
+        "version": "2a51ff2ff999dfa03a658696bc6081b8b6c8902dcd87d2aa7d3b5b1655704a1e",
+        "signature": "9d4e3472cf745cded6c4cda41737e04ec377803df2111576fb4b71fe879b06b5",
         "affectsGlobalScope": false
       },
       "../node_modules/passport-custom/lib/index.d.ts": {
@@ -18516,6 +18516,7 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/controllers/resource.controller.ts",
+        "../src/passport/auth.guard.ts",
         "../src/services/users.service.ts",
         "../src/utils/index.ts"
       ],

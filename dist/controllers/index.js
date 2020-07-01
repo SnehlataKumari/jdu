@@ -14,6 +14,6 @@ exports.default = [
     auth_controller_1.AuthController,
     chapters_controller_1.ChaptersController,
     subject_controller_1.SubjectsController,
-    payments_controller_1.PaymentsController
+    payments_controller_1.PaymentsController,
 ];
 //# sourceMappingURL=index.js.map

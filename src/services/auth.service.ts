@@ -7,6 +7,11 @@ export class AuthService {
 
   constructor(private userService: UsersService) {}
 
+  async registerYourself(body) {
+    const user = await this.userService.create(body);
+    return user;
+  }
+
   async requestOTP(user) {
     user.otp = generateOTP();
     user.save();

@@ -4,7 +4,11 @@ exports.JWT_CONSTANTS = exports.USER_ROLES = exports.getKeys = void 0;
 exports.getKeys = (constant) => Reflect.ownKeys(constant).map(constantKey => constant[constantKey].key);
 exports.USER_ROLES = {
     USER: { key: 'USER', label: 'User' },
-    ADMIN: { key: 'ADMIN', label: 'Admin' }
+    SUPER_ADMIN: { key: 'SUPER ADMIN', label: 'Super Admin' },
+    ADMIN: { key: 'ADMIN', label: 'Admin' },
+    STATE_LEVEL_USER: { key: 'STATE LEVEL USER', label: 'State Level User' },
+    BLOCK_LEVEL_USER: { key: 'BLOCK LEVEL USER', label: 'Block level user' },
+    DISTRICT_LEVEL_USER: { key: 'DISTRICT LEVEL USER', label: 'District level user' }
 };
 exports.JWT_CONSTANTS = {
     secret: process.env.SECRET || 'dontcare',

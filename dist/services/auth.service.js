@@ -18,6 +18,10 @@ let AuthService = (() => {
         constructor(userService) {
             this.userService = userService;
         }
+        async registerYourself(body) {
+            const user = await this.userService.create(body);
+            return user;
+        }
         async requestOTP(user) {
             user.otp = utils_1.generateOTP();
             user.save();

@@ -10,6 +10,11 @@ export declare class AuthController {
     private smsService;
     private versionService;
     constructor(service: AuthService, usersService: UsersService, jwtService: JwtService, smsService: SmsService, versionService: VersionService);
+    registerYourself(req: any): Promise<any>;
+    simpleLogin(body: any): Promise<{
+        message: string;
+        data: any;
+    } | "wrong password">;
     requestOtp(requestBody: any): Promise<{
         message: string;
         data: any;
