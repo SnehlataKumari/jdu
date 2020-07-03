@@ -45,6 +45,22 @@ export class AuthController {
     }
   }
 
+  @Post('login-with-username')
+  async loginWithUsername(@Body() body) {
+
+    const { username, password } = body;
+  
+    const user = await this.usersService.findOne({ username });
+    const encryptedPassword = passwordHash.verify(password, user.password);
+    console.log(encryptedPassword);
+
+    if (encryptedPassword) {
+      return success('logged in successfully', { user, access_token: this.jwtService.sign(user.toJSON()) });
+    } else {
+      return 'wrong password';
+    }
+  }
+
   @Post('request-otp')
   async requestOtp(@Body() requestBody) {
     try {

@@ -24,22 +24,16 @@ exports.UserSchema = new mongoose.Schema({
     },
     mobileNumber: {
         type: String,
-        required: [true, 'Mobile Number is required!'],
-        unique: [true, 'Mobile Number already exists!']
     },
     devices: [String],
-    isSubscribed: {
-        type: Boolean,
-        default: false
-    },
     isBlocked: { type: Boolean, default: false },
     role: {
         type: String,
         enum: constants_1.getKeys(constants_1.USER_ROLES),
-        default: constants_1.USER_ROLES['USER'].key
+        default: constants_1.USER_ROLES['USER'].key,
+        required: true
     },
-    otp: String,
-    payments: [paymentSchema]
+    otp: String
 }, {
     timestamps: true
 });

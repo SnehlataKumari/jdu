@@ -6,4 +6,8 @@ export declare class UsersController extends ResourceController {
         message: string;
         data: any;
     }>;
+    createUser(body: any): Promise<{
+        message: string;
+        data: any;
+    }>;
 }
