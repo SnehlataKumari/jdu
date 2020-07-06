@@ -10,6 +10,9 @@ import { SubjectsService } from "./subject.service";
 import { VersionService } from "./version.service";
 import { TwillioService } from "./twillio.service";
 import { DummySmsService } from "./dummySms.service";
+import { EventSchema } from "src/schemas/event.schema";
+import { EventsService } from "./events.service";
+import { YatrayenService } from "./yatrayen.service";
 
 export default [
   UsersService,
@@ -24,5 +27,7 @@ export default [
   SubjectsService,
   VersionService,
   TwillioService,
-  DummySmsService
+  DummySmsService,
+  EventsService,
+  YatrayenService,
 ];

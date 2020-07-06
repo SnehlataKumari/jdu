@@ -51,6 +51,18 @@ let AuthController = (() => {
                 return 'wrong password';
             }
         }
+        async loginWithUsername(body) {
+            const { username, password } = body;
+            const user = await this.usersService.findOne({ username });
+            const encryptedPassword = passwordHash.verify(password, user.password);
+            console.log(encryptedPassword);
+            if (encryptedPassword) {
+                return utils_1.success('logged in successfully', { user, access_token: this.jwtService.sign(user.toJSON()) });
+            }
+            else {
+                return 'wrong password';
+            }
+        }
         async requestOtp(requestBody) {
             try {
                 const { mobileNumber } = requestBody;
@@ -119,6 +131,13 @@ let AuthController = (() => {
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", Promise)
     ], AuthController.prototype, "simpleLogin", null);
+    __decorate([
+        common_1.Post('login-with-username'),
+        __param(0, common_1.Body()),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", Promise)
+    ], AuthController.prototype, "loginWithUsername", null);
     __decorate([
         common_1.Post('request-otp'),
         __param(0, common_1.Body()),

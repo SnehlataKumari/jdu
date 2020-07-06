@@ -12,6 +12,9 @@ const subject_service_1 = require("./subject.service");
 const version_service_1 = require("./version.service");
 const twillio_service_1 = require("./twillio.service");
 const dummySms_service_1 = require("./dummySms.service");
+const event_schema_1 = require("../schemas/event.schema");
+const events_service_1 = require("./events.service");
+const yatrayen_service_1 = require("./yatrayen.service");
 exports.default = [
     users_service_1.UsersService,
     assets_service_1.AssetsService,
@@ -25,6 +28,8 @@ exports.default = [
     subject_service_1.SubjectsService,
     version_service_1.VersionService,
     twillio_service_1.TwillioService,
-    dummySms_service_1.DummySmsService
+    dummySms_service_1.DummySmsService,
+    events_service_1.EventsService,
+    yatrayen_service_1.YatrayenService,
 ];
 //# sourceMappingURL=index.js.map

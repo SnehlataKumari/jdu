@@ -4,16 +4,8 @@ import { InjectModel } from '@nestjs/mongoose';
 import { DBService } from './db.service';
 
 @Injectable()
-export class UsersService extends DBService {
-  constructor(@InjectModel('User') model: Model<any>) {
+export class YatrayenService extends DBService {
+  constructor(@InjectModel('Yatrayen') model: Model<any>) {
     super(model);
   }
-
-  async findByMobileNumber(mobileNumber) {
-    return this.findOne({
-      mobileNumber
-    });
-  }
-
-
 }
