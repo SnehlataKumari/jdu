@@ -17,7 +17,6 @@ const common_1 = require("@nestjs/common");
 const users_service_1 = require("../services/users.service");
 const auth_service_1 = require("../services/auth.service");
 const utils_1 = require("../utils");
-const passport_1 = require("@nestjs/passport");
 const jwt_1 = require("@nestjs/jwt");
 const sms_service_1 = require("../services/sms.service");
 const version_service_1 = require("../services/version.service");
@@ -54,13 +53,16 @@ let AuthController = (() => {
         async loginWithUsername(body) {
             const { username, password } = body;
             const user = await this.usersService.findOne({ username });
+            if (!user) {
+                throw new common_1.UnauthorizedException('User not found!');
+            }
             const encryptedPassword = passwordHash.verify(password, user.password);
-            console.log(encryptedPassword);
             if (encryptedPassword) {
                 return utils_1.success('logged in successfully', { user, access_token: this.jwtService.sign(user.toJSON()) });
             }
             else {
-                return 'wrong password';
+                throw new common_1.UnauthorizedException('Invalid credentials');
+                ;
             }
         }
         async requestOtp(requestBody) {
@@ -160,7 +162,6 @@ let AuthController = (() => {
         __metadata("design:returntype", Promise)
     ], AuthController.prototype, "loginAdmin", null);
     __decorate([
-        common_1.UseGuards(passport_1.AuthGuard('otpStrategy')),
         common_1.Post('login'),
         __param(0, common_1.Request()),
         __metadata("design:type", Function),

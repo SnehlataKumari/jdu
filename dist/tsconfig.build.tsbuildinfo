@@ -5677,8 +5677,8 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/auth.controller.ts": {
-        "version": "0b964a674630b949184738ebb0ae167aacb72298f311948e927d341378154e2a",
-        "signature": "26bc8a27ba090ef51705dc329eb91df09040028eb91af9d5f3f3a6e94e3b76d7",
+        "version": "ca09311b87065fa38fcc2bbe7806bc705a860da5011136b3c3184a71cbd1d82f",
+        "signature": "819b73765f9795c103decced481c6105804f932ce017c2f05f538860c33585b1",
         "affectsGlobalScope": false
       },
       "../src/controllers/chapters.controller.ts": {
@@ -18447,6 +18447,7 @@
         "../node_modules/@nestjs/jwt/index.d.ts",
         "../node_modules/@nestjs/passport/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/console.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",

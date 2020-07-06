@@ -18,7 +18,7 @@ export declare class AuthController {
     loginWithUsername(body: any): Promise<{
         message: string;
         data: any;
-    } | "wrong password">;
+    }>;
     requestOtp(requestBody: any): Promise<{
         message: string;
         data: any;

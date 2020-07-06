@@ -8,6 +8,7 @@ import { SmsService } from "src/services/sms.service";
 import { VersionService } from "src/services/version.service";
 import { JwtAuthGuard } from "src/passport/auth.guard";
 import * as passwordHash from "password-hash";
+import { error } from "console";
 
 @Controller('auth')
 export class AuthController {
@@ -51,13 +52,15 @@ export class AuthController {
     const { username, password } = body;
   
     const user = await this.usersService.findOne({ username });
+    if (!user) {
+      throw new UnauthorizedException('User not found!');
+    }
     const encryptedPassword = passwordHash.verify(password, user.password);
-    console.log(encryptedPassword);
 
     if (encryptedPassword) {
       return success('logged in successfully', { user, access_token: this.jwtService.sign(user.toJSON()) });
     } else {
-      return 'wrong password';
+      throw new UnauthorizedException('Invalid credentials');;
     }
   }
 
@@ -108,7 +111,7 @@ export class AuthController {
     return success('Admin created successfully!', { user, access_token: this.jwtService.sign(user.toJSON())});
   }
 
-  @UseGuards(AuthGuard('otpStrategy'))
+  // @UseGuards(AuthGuard('otpStrategy'))
   @Post('login')
   async login(@Request() req) {
     const { user } = req;
