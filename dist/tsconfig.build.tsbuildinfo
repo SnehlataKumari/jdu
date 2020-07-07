@@ -1897,8 +1897,8 @@
         "affectsGlobalScope": false
       },
       "../src/constants/index.ts": {
-        "version": "fe93b81ac76797318897cab4f3642a81459c409c7e61b82bfdb7dc8f35d1e4bc",
-        "signature": "c6f2e19937ebaeec7ac06986b2e95bf753fdef176b114102a62c0a8da64a1052",
+        "version": "e5340a23226b28cc33d5514fe37e8a79e72142ef51b97d2db85c5020e26b8a13",
+        "signature": "2a3b61a5d79a26e3c1979a90c0db5472d3b952c7069d39eb97673b07a2d74fa3",
         "affectsGlobalScope": false
       },
       "../src/schemas/user.schema.ts": {
@@ -1942,7 +1942,7 @@
         "affectsGlobalScope": false
       },
       "../src/schemas/question.schema.ts": {
-        "version": "0dabf5ee5516a58e960092996c6ffd32ae19efa2f50bac30c65feb5a46d08ddc",
+        "version": "7cf070ff044e7581e984d5417f5d09624623e7e89d50a956d79a71dbfeac4848",
         "signature": "cfb5b5a24744e3aa3d4c6cec501b3a1f681340f4126b0db7c78ccd391005e821",
         "affectsGlobalScope": false
       },
@@ -18715,7 +18715,8 @@
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts"
+        "../node_modules/@types/node/util.d.ts",
+        "../src/constants/index.ts"
       ],
       "../src/schemas/subject.schema.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
