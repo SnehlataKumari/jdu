@@ -8,6 +8,7 @@ const subject_schema_1 = require("./subject.schema");
 const version_schema_1 = require("./version.schema");
 const event_schema_1 = require("./event.schema");
 const yatrayen_schema_1 = require("./yatrayen.schema");
+const question_schema_1 = require("./question.schema");
 exports.default = [
     { name: 'Class', schema: class_schema_1.ClassSchema },
     { name: 'User', schema: user_schema_1.UserSchema },
@@ -17,5 +18,6 @@ exports.default = [
     { name: 'Version', schema: version_schema_1.VersionSchema },
     { name: 'Event', schema: event_schema_1.EventSchema },
     { name: 'Yatrayen', schema: yatrayen_schema_1.YatrayenSchema },
+    { name: 'Question', schema: question_schema_1.QuestionSchema },
 ];
 //# sourceMappingURL=index.js.map

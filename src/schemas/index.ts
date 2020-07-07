@@ -6,6 +6,7 @@ import { SubjectSchema } from "./subject.schema";
 import { VersionSchema } from "./version.schema";
 import { EventSchema } from "./event.schema";
 import { YatrayenSchema } from "./yatrayen.schema";
+import { QuestionSchema } from "./question.schema";
 
 export default  [
   { name: 'Class', schema: ClassSchema },
@@ -16,4 +17,5 @@ export default  [
   { name: 'Version', schema: VersionSchema },
   { name: 'Event', schema: EventSchema},
   { name: 'Yatrayen', schema: YatrayenSchema},
+  { name: 'Question', schema: QuestionSchema},
 ];
