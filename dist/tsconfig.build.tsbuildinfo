@@ -5703,7 +5703,7 @@
       },
       "../src/controllers/index.ts": {
         "version": "22beb8ec0dcb3b059c210aa13ab77eef033371e614d52bac995c116344cf5c4a",
-        "signature": "1513cc160634f32cf1b818b8df5b8091f62e9d5ae40cd3563673d362bc83cc64",
+        "signature": "49bcc8a345bd4b0ae172a59c3e5320123ec73773c698325b5983eaf219af8a93",
         "affectsGlobalScope": false
       },
       "../node_modules/passport-custom/lib/index.d.ts": {

@@ -4,7 +4,7 @@
  */
 
 import AvMenu from './lib/AvMenu.js';
-import Settings from './lib/settings.js';
+import Settings from './lib/Settings.js';
 import WowzaWebRTCPublish from './lib/WowzaWebRTCPublish.js';
 window.WowzaWebRTCPublish = WowzaWebRTCPublish;
 let browserDetails = window.adapter.browserDetails;
