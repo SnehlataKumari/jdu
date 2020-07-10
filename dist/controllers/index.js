@@ -8,6 +8,8 @@ const chapters_controller_1 = require("./chapters.controller");
 const subject_controller_1 = require("./subject.controller");
 const payments_controller_1 = require("./payments.controller");
 const events_controller_1 = require("./events.controller");
+const yatrayen_controllers_1 = require("./yatrayen.controllers");
+const questions_controller_1 = require("./questions.controller");
 exports.default = [
     users_controller_1.UsersController,
     classes_controller_1.ClassesController,
@@ -17,5 +19,7 @@ exports.default = [
     subject_controller_1.SubjectsController,
     payments_controller_1.PaymentsController,
     events_controller_1.EventsController,
+    yatrayen_controllers_1.YatrayenController,
+    questions_controller_1.QuestionsController,
 ];
 //# sourceMappingURL=index.js.map

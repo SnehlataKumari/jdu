@@ -6,6 +6,8 @@ import { ChaptersController } from "./chapters.controller";
 import { SubjectsController } from "./subject.controller";
 import { PaymentsController } from "./payments.controller";
 import { EventsController } from "./events.controller";
+import { YatrayenController } from "./yatrayen.controllers";
+import { QuestionsController } from "./questions.controller";
 
 export default [
   UsersController,
@@ -16,4 +18,6 @@ export default [
   SubjectsController,
   PaymentsController,
   EventsController,
+  YatrayenController,
+  QuestionsController,
 ];

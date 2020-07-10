@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.JWT_CONSTANTS = exports.USER_ROLES = exports.getKeys = void 0;
+exports.JWT_CONSTANTS = exports.QUESTION_CATEGORY = exports.getCategory = exports.USER_ROLES = exports.getKeys = void 0;
 exports.getKeys = (constant) => Reflect.ownKeys(constant).map(constantKey => constant[constantKey].key);
 exports.USER_ROLES = {
     USER: { key: 'USER', label: 'User' },
@@ -9,6 +9,13 @@ exports.USER_ROLES = {
     STATE_LEVEL_USER: { key: 'STATE_LEVEL_USER', label: 'State Level User' },
     BLOCK_LEVEL_USER: { key: 'BLOCK_LEVEL_USER', label: 'Block level user' },
     DISTRICT_LEVEL_USER: { key: 'DISTRICT_LEVEL_USER', label: 'District level user' }
+};
+exports.getCategory = (constant) => Reflect.ownKeys(constant).map(constantKey => constant[constantKey].key);
+exports.QUESTION_CATEGORY = {
+    FARMER: { key: 'FARMER', label: 'Farmer' },
+    STUDENT: { key: 'STUDENT', label: 'Student' },
+    TEACHER: { key: 'TEACHER', label: 'Teacher' },
+    COOPERATE: { key: 'COOPERATE', label: 'Cooperate' },
 };
 exports.JWT_CONSTANTS = {
     secret: process.env.SECRET || 'dontcare',

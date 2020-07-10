@@ -8,6 +8,13 @@ export const USER_ROLES = {
   BLOCK_LEVEL_USER: { key: 'BLOCK_LEVEL_USER', label: 'Block level user'},
   DISTRICT_LEVEL_USER: { key:  'DISTRICT_LEVEL_USER', label: 'District level user'}
 };
+export const getCategory = (constant) => Reflect.ownKeys(constant).map(constantKey => constant[constantKey].key);
+export const QUESTION_CATEGORY = {
+  FARMER: { key: 'FARMER', label: 'Farmer' },
+  STUDENT: { key: 'STUDENT', label: 'Student' },
+  TEACHER: { key: 'TEACHER', label: 'Teacher' },
+  COOPERATE: { key: 'COOPERATE', label: 'Cooperate' },
+};
 
 export const JWT_CONSTANTS = {
   secret: process.env.SECRET || 'dontcare',

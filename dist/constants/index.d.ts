@@ -25,6 +25,25 @@ export declare const USER_ROLES: {
         label: string;
     };
 };
+export declare const getCategory: (constant: any) => any[];
+export declare const QUESTION_CATEGORY: {
+    FARMER: {
+        key: string;
+        label: string;
+    };
+    STUDENT: {
+        key: string;
+        label: string;
+    };
+    TEACHER: {
+        key: string;
+        label: string;
+    };
+    COOPERATE: {
+        key: string;
+        label: string;
+    };
+};
 export declare const JWT_CONSTANTS: {
     secret: string;
     expiresIn: string;
