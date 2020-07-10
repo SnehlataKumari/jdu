@@ -22,10 +22,10 @@ $(document).ready(() => {
       streamName: "",
       audioBitrate: "64",
       audioCodec: "opus",
-      videoBitrate: "3500",
+      videoBitrate: "500",
       videoCodec: "42e01f",
       videoFrameRate: "30",
-      frameSize: "1280x720"
+      frameSize: "520x360"
     }
   };
 
