@@ -14,6 +14,7 @@ import { EventSchema } from "src/schemas/event.schema";
 import { EventsService } from "./events.service";
 import { YatrayenService } from "./yatrayen.service";
 import { QuestionsService } from "./questions.service";
+import { AnswersService } from "./answer.service";
 
 export default [
   UsersService,
@@ -31,5 +32,6 @@ export default [
   DummySmsService,
   EventsService,
   YatrayenService,
-  QuestionsService
+  QuestionsService,
+  AnswersService
 ];

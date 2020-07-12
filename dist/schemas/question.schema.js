@@ -16,7 +16,13 @@ const QuestionSchema = new mongoose.Schema({
         type: String,
         enum: constants_1.getCategory(constants_1.QUESTION_CATEGORY),
         default: constants_1.QUESTION_CATEGORY['FARMER'].key,
-    }
+    },
+    options: [String]
 });
 exports.QuestionSchema = QuestionSchema;
+QuestionSchema.virtual('answers', {
+    ref: 'Answer',
+    localField: '_id',
+    foreignField: 'questionId',
+});
 //# sourceMappingURL=question.schema.js.map

@@ -16,6 +16,15 @@ const QuestionSchema = new mongoose.Schema({
     enum: getCategory(QUESTION_CATEGORY),
     default: QUESTION_CATEGORY['FARMER'].key,
     //required: true
-  }
+  },
+  options: [String]
 });
+
+QuestionSchema.virtual('answers', {
+  ref: 'Answer', // The model to use
+  localField: '_id', // Find people where `localField`
+  foreignField: 'questionId', // is equal to `foreignField`
+});
+
+
 export { QuestionSchema };

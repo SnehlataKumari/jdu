@@ -1942,12 +1942,17 @@
         "affectsGlobalScope": false
       },
       "../src/schemas/question.schema.ts": {
-        "version": "7cf070ff044e7581e984d5417f5d09624623e7e89d50a956d79a71dbfeac4848",
+        "version": "4fee36b45004c593c4c2398056b01a86dfdd01f5b63ad5fad97fb55b1f6e576b",
         "signature": "cfb5b5a24744e3aa3d4c6cec501b3a1f681340f4126b0db7c78ccd391005e821",
         "affectsGlobalScope": false
       },
+      "../src/schemas/answer.schema.ts": {
+        "version": "0c7ba89ee6b1d9411a2f8958e0bd0b4a2162655b8f259284f49a8bf8b4caf8c9",
+        "signature": "aefaefb56b466018579efca21cd3c2ae14f96e8e1030939e9cffa1817380ace8",
+        "affectsGlobalScope": false
+      },
       "../src/schemas/index.ts": {
-        "version": "e1830c1853e812becb5d4c77d037945827e532a6af6a572d07b799353bab34fa",
+        "version": "1158bb2a170c2969f82a8f36db088e4c2bd84feadf15d491d52f9b8653b82a09",
         "signature": "d44bdcd4f74fae62b3e4900e347298d7ca322c9441794795b395dc7db1fda182",
         "affectsGlobalScope": false
       },
@@ -5611,8 +5616,13 @@
         "signature": "1d0370d2ccb0d31955f571378db87ac96d924d81e6df7a728ea7e0a1182a3785",
         "affectsGlobalScope": false
       },
+      "../src/services/answer.service.ts": {
+        "version": "a842d0b5d240f386daa97a9de87b3427fd58f8c93a05b9389d57ebdabdc2410c",
+        "signature": "e7d72702d24e4ffc4c5c8c8673feb035bad7f5535f0e1301d395ca9d4aa3e9d9",
+        "affectsGlobalScope": false
+      },
       "../src/services/index.ts": {
-        "version": "69ef1457df8d12bf18c66200deb2e423203a2881c70ca4e1aaa7b8010c8ce2e6",
+        "version": "816046374360b49abbaa87bb165a2ab231404b05641f273c01c6a5be50c2013c",
         "signature": "8120d2692ee3ca289c68d77c44075c74be942b0e0adc1a39963b7a3dcee829ec",
         "affectsGlobalScope": false
       },
@@ -5717,13 +5727,13 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/questions.controller.ts": {
-        "version": "030a1ca891b7ff3c7f40e1d71638a81bc2c15d3c5858eff820f458dc75320ac1",
-        "signature": "fa9a584f81f96880f57bc5d18e6e4fc0381911e8f746c21d0870a3ae1c6085c2",
+        "version": "beb0fedbe5c59c05b734ab83f491bfeb38f0e2ad2ac4698601ee78cc31b2da9c",
+        "signature": "3e1116ad08e9ebec5dba052016297e509616c605a9795cd08ab43cf306c9e532",
         "affectsGlobalScope": false
       },
       "../src/controllers/index.ts": {
         "version": "f482f988f006836be61e96005772d061a53842e5a7b29c84106ab075bfe5f74b",
-        "signature": "95679b1bc6672157f5224225d360437be2e091b1a7c143d6160ed03d941256da",
+        "signature": "3ce605ff31623ecdee2188c211f8e2fff4d17bd817655ea9d7f498be45b67d5a",
         "affectsGlobalScope": false
       },
       "../node_modules/passport-custom/lib/index.d.ts": {
@@ -18549,6 +18559,7 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/controllers/resource.controller.ts",
+        "../src/services/answer.service.ts",
         "../src/services/questions.service.ts"
       ],
       "../src/controllers/resource.controller.ts": [
@@ -18661,6 +18672,14 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/schemas/answer.schema.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
+      ],
       "../src/schemas/asset.schema.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/mongoose/index.d.ts",
@@ -18699,6 +18718,7 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
+        "../src/schemas/answer.schema.ts",
         "../src/schemas/asset.schema.ts",
         "../src/schemas/chapter.schema.ts",
         "../src/schemas/class.schema.ts",
@@ -18750,6 +18770,17 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
+      ],
+      "../src/services/answer.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/services/db.service.ts"
       ],
       "../src/services/assets.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -18839,6 +18870,7 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/schemas/event.schema.ts",
+        "../src/services/answer.service.ts",
         "../src/services/assets.service.ts",
         "../src/services/auth.service.ts",
         "../src/services/chapters.service.ts",
@@ -31410,6 +31442,7 @@
         "../src/controllers/auth.controller.ts",
         "../src/controllers/chapters.controller.ts",
         "../src/controllers/classes.controller.ts",
+        "../src/controllers/events.controller.ts",
         "../src/controllers/questions.controller.ts",
         "../src/controllers/subject.controller.ts"
       ],
@@ -31419,6 +31452,7 @@
       ],
       "../src/controllers/questions.controller.ts": [
         "../src/controllers/resource.controller.ts",
+        "../src/services/answer.service.ts",
         "../src/services/questions.service.ts"
       ],
       "../src/controllers/subject.controller.ts": [
@@ -31452,6 +31486,9 @@
         "../node_modules/passport-custom/lib/index.d.ts",
         "../src/services/auth.service.ts"
       ],
+      "../src/schemas/answer.schema.ts": [
+        "../node_modules/@types/mongoose/index.d.ts"
+      ],
       "../src/schemas/asset.schema.ts": [
         "../node_modules/@types/mongoose/index.d.ts"
       ],
@@ -31481,6 +31518,10 @@
       ],
       "../src/schemas/yatrayen.schema.ts": [
         "../node_modules/@types/mongoose/index.d.ts"
+      ],
+      "../src/services/answer.service.ts": [
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../src/services/db.service.ts"
       ],
       "../src/services/assets.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
@@ -32715,6 +32756,7 @@
       "../src/passport/jwt.strategy.ts",
       "../src/passport/otp.strategy.ts",
       "../src/privacy-policy.ts",
+      "../src/schemas/answer.schema.ts",
       "../src/schemas/asset.schema.ts",
       "../src/schemas/chapter.schema.ts",
       "../src/schemas/class.schema.ts",
@@ -32725,6 +32767,7 @@
       "../src/schemas/user.schema.ts",
       "../src/schemas/version.schema.ts",
       "../src/schemas/yatrayen.schema.ts",
+      "../src/services/answer.service.ts",
       "../src/services/assets.service.ts",
       "../src/services/auth.service.ts",
       "../src/services/chapters.service.ts",

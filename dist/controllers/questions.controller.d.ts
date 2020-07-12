@@ -1,5 +1,11 @@
 import { ResourceController } from './resource.controller';
 import { QuestionsService } from 'src/services/questions.service';
+import { AnswersService } from 'src/services/answer.service';
 export declare class QuestionsController extends ResourceController {
-    constructor(service: QuestionsService);
+    private answerService;
+    constructor(service: QuestionsService, answerService: AnswersService);
+    submitResponse(body: any): Promise<any>;
+    getQuestionsWithAnswers(): Promise<any>;
+    getAllAnswers(): Promise<any[]>;
+    getAnswersOfQuestion(questionId: any): Promise<any[]>;
 }
