@@ -8,6 +8,7 @@ import { PaymentsController } from "./payments.controller";
 import { EventsController } from "./events.controller";
 import { YatrayenController } from "./yatrayen.controllers";
 import { QuestionsController } from "./questions.controller";
+import { DocumentsController } from "./documents.controller";
 
 export default [
   UsersController,
@@ -20,4 +21,5 @@ export default [
   EventsController,
   YatrayenController,
   QuestionsController,
+  DocumentsController
 ];

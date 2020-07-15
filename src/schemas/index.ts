@@ -8,6 +8,7 @@ import { EventSchema } from "./event.schema";
 import { YatrayenSchema } from "./yatrayen.schema";
 import { QuestionSchema } from "./question.schema";
 import { AnswerSchema } from "./answer.schema";
+import { DocumentSchema } from "./document.schema";
 
 export default  [
   { name: 'Class', schema: ClassSchema },
@@ -20,4 +21,5 @@ export default  [
   { name: 'Yatrayen', schema: YatrayenSchema},
   { name: 'Question', schema: QuestionSchema},
   { name: 'Answer', schema: AnswerSchema},
+  { name: 'Document', schema: DocumentSchema},
 ];

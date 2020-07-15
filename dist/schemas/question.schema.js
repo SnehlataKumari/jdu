@@ -15,7 +15,7 @@ const QuestionSchema = new mongoose.Schema({
     category: {
         type: String,
         enum: constants_1.getCategory(constants_1.QUESTION_CATEGORY),
-        default: constants_1.QUESTION_CATEGORY['FARMER'].key,
+        required: true
     },
     options: [String]
 });

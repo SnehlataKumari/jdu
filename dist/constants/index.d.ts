@@ -27,19 +27,23 @@ export declare const USER_ROLES: {
 };
 export declare const getCategory: (constant: any) => any[];
 export declare const QUESTION_CATEGORY: {
-    FARMER: {
+    CYCLE_SCHEM: {
+        key: string;
+        label: string;
+    };
+    MAHILA_JEEVIKA: {
+        key: string;
+        label: string;
+    };
+    HEALTH_DEPARTMENT: {
+        key: string;
+        label: string;
+    };
+    EDUCATION_DEPARTMENT: {
         key: string;
         label: string;
     };
     STUDENT: {
-        key: string;
-        label: string;
-    };
-    TEACHER: {
-        key: string;
-        label: string;
-    };
-    COOPERATE: {
         key: string;
         label: string;
     };

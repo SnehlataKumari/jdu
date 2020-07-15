@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const resource_controller_1 = require("./resource.controller");
 const questions_service_1 = require("../services/questions.service");
 const answer_service_1 = require("../services/answer.service");
+const utils_1 = require("../utils");
 let QuestionsController = (() => {
     let QuestionsController = class QuestionsController extends resource_controller_1.ResourceController {
         constructor(service, answerService) {
@@ -24,12 +25,13 @@ let QuestionsController = (() => {
             this.answerService = answerService;
         }
         async submitResponse(body) {
-            const { questionId, answer } = body;
-            console.log({ questionId, answer });
-            const savedAnswer = await this.answerService.create({
+            const questions = await Promise.all(Reflect.ownKeys(body)
+                .map(questionId => ({ questionId, answer: body[questionId] }))
+                .filter(({ answer }) => !!answer)
+                .map(({ questionId, answer }) => this.answerService.create({
                 questionId, answer
-            });
-            return savedAnswer;
+            })));
+            return utils_1.success('Answers submitted successfully', questions);
         }
         async getQuestionsWithAnswers() {
             const questions = (await this.service.find({}).populate('answers'));

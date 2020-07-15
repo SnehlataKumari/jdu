@@ -9,11 +9,15 @@ export const USER_ROLES = {
   DISTRICT_LEVEL_USER: { key:  'DISTRICT_LEVEL_USER', label: 'District level user'}
 };
 export const getCategory = (constant) => Reflect.ownKeys(constant).map(constantKey => constant[constantKey].key);
+
+
+// CYCLE_SCHEM, MAHILA_JEEVIKA, HEALTH_DEPARTMENT, EDUCATION_DEPARTMENT, STUDENT
 export const QUESTION_CATEGORY = {
-  FARMER: { key: 'FARMER', label: 'Farmer' },
+  CYCLE_SCHEM: { key: 'CYCLE_SCHEM', label: 'Cycle Schema' },
+  MAHILA_JEEVIKA: { key: 'MAHILA_JEEVIKA', label: 'Mahila Jeevika' },
+  HEALTH_DEPARTMENT: { key: 'HEALTH_DEPARTMENT', label: 'Health Department' },
+  EDUCATION_DEPARTMENT: { key: 'EDUCATION_DEPARTMENT', label: 'Education Department' },
   STUDENT: { key: 'STUDENT', label: 'Student' },
-  TEACHER: { key: 'TEACHER', label: 'Teacher' },
-  COOPERATE: { key: 'COOPERATE', label: 'Cooperate' },
 };
 
 export const JWT_CONSTANTS = {

@@ -22,6 +22,7 @@ const jwt_1 = require("@nestjs/jwt");
 const constants_1 = require("./constants");
 const passport_1 = require("@nestjs/passport");
 const jwt_strategy_1 = require("./passport/jwt.strategy");
+const platform_express_1 = require("@nestjs/platform-express");
 let AppModule = (() => {
     let AppModule = class AppModule {
     };
@@ -34,6 +35,9 @@ let AppModule = (() => {
                 mongoose_1.MongooseModule.forFeature(schemas_1.default),
                 serve_static_1.ServeStaticModule.forRoot({
                     rootPath: path_1.join(__dirname, '..', 'static'),
+                }),
+                platform_express_1.MulterModule.register({
+                    dest: path_1.join(__dirname, '..', 'static/uploads'),
                 }),
                 jwt_1.JwtModule.register({
                     secret: constants_1.JWT_CONSTANTS.secret

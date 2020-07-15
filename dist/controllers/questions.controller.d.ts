@@ -4,7 +4,10 @@ import { AnswersService } from 'src/services/answer.service';
 export declare class QuestionsController extends ResourceController {
     private answerService;
     constructor(service: QuestionsService, answerService: AnswersService);
-    submitResponse(body: any): Promise<any>;
+    submitResponse(body: any): Promise<{
+        message: string;
+        data: any;
+    }>;
     getQuestionsWithAnswers(): Promise<any>;
     getAllAnswers(): Promise<any[]>;
     getAnswersOfQuestion(questionId: any): Promise<any[]>;

@@ -10,6 +10,7 @@ const payments_controller_1 = require("./payments.controller");
 const events_controller_1 = require("./events.controller");
 const yatrayen_controllers_1 = require("./yatrayen.controllers");
 const questions_controller_1 = require("./questions.controller");
+const documents_controller_1 = require("./documents.controller");
 exports.default = [
     users_controller_1.UsersController,
     classes_controller_1.ClassesController,
@@ -21,5 +22,6 @@ exports.default = [
     events_controller_1.EventsController,
     yatrayen_controllers_1.YatrayenController,
     questions_controller_1.QuestionsController,
+    documents_controller_1.DocumentsController
 ];
 //# sourceMappingURL=index.js.map

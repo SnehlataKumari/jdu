@@ -15,6 +15,7 @@ import { EventsService } from "./events.service";
 import { YatrayenService } from "./yatrayen.service";
 import { QuestionsService } from "./questions.service";
 import { AnswersService } from "./answer.service";
+import { DocumentsService } from "./documents.service";
 
 export default [
   UsersService,
@@ -33,5 +34,6 @@ export default [
   EventsService,
   YatrayenService,
   QuestionsService,
-  AnswersService
+  AnswersService,
+  DocumentsService
 ];
