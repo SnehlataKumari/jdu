@@ -34,7 +34,7 @@ export class DocumentsController extends ResourceController {
   }
 
   @Post('upload')
-  @UseInterceptors(FileInterceptor('file'))
+  @UseInterceptors(FileInterceptor('file', {}))
   uploadFile(@UploadedFile() file) {
     const filename = file.filename;
     const destination = '\\uploads';

@@ -14,6 +14,14 @@ import { JWT_CONSTANTS } from './constants';
 import { PassportModule } from '@nestjs/passport';
 import { JwtStrategy } from './passport/jwt.strategy';
 import { MulterModule } from '@nestjs/platform-express';
+import * as multer from 'multer';
+
+var storage = multer.diskStorage({
+  destination: join(__dirname, '..', 'static/uploads'),
+  filename: function (req, file, cb) {
+    cb(null, file.originalname)
+  }
+})
 
 @Module({
   imports: [
@@ -25,7 +33,8 @@ import { MulterModule } from '@nestjs/platform-express';
       rootPath: join(__dirname, '..', 'static'),
     }),
     MulterModule.register({
-      dest: join(__dirname, '..', 'static/uploads'),
+      // dest: join(__dirname, '..', 'static/uploads'),
+      storage
     }),
     JwtModule.register({
       secret: JWT_CONSTANTS.secret

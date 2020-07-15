@@ -23,6 +23,13 @@ const constants_1 = require("./constants");
 const passport_1 = require("@nestjs/passport");
 const jwt_strategy_1 = require("./passport/jwt.strategy");
 const platform_express_1 = require("@nestjs/platform-express");
+const multer = require("multer");
+var storage = multer.diskStorage({
+    destination: path_1.join(__dirname, '..', 'static/uploads'),
+    filename: function (req, file, cb) {
+        cb(null, file.originalname);
+    }
+});
 let AppModule = (() => {
     let AppModule = class AppModule {
     };
@@ -37,7 +44,7 @@ let AppModule = (() => {
                     rootPath: path_1.join(__dirname, '..', 'static'),
                 }),
                 platform_express_1.MulterModule.register({
-                    dest: path_1.join(__dirname, '..', 'static/uploads'),
+                    storage
                 }),
                 jwt_1.JwtModule.register({
                     secret: constants_1.JWT_CONSTANTS.secret

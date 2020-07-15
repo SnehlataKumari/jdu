@@ -89,7 +89,7 @@ let DocumentsController = (() => {
     ], DocumentsController.prototype, "getRoleBasedDocuments", null);
     __decorate([
         common_1.Post('upload'),
-        common_1.UseInterceptors(platform_express_1.FileInterceptor('file')),
+        common_1.UseInterceptors(platform_express_1.FileInterceptor('file', {})),
         __param(0, common_1.UploadedFile()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
