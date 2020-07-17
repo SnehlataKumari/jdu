@@ -13,6 +13,11 @@ export class QuestionsController extends ResourceController {
     super(service)
   }
 
+  @Get()
+  findAll() {
+    return success('List found successfully', this.service.findAll());
+  }
+  
   @Post('submit-response')
   async submitResponse(@Body() body) {
 

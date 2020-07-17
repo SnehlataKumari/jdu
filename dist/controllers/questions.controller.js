@@ -35,6 +35,9 @@ let QuestionsController = (() => {
             super(service);
             this.answerService = answerService;
         }
+        findAll() {
+            return utils_1.success('List found successfully', this.service.findAll());
+        }
         async submitResponse(body) {
             const { user } = body, answers = __rest(body, ["user"]);
             const questions = await Promise.all(Reflect.ownKeys(answers)
@@ -57,6 +60,12 @@ let QuestionsController = (() => {
             return (await this.answerService.find({ questionId }));
         }
     };
+    __decorate([
+        common_1.Get(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], QuestionsController.prototype, "findAll", null);
     __decorate([
         common_1.Post('submit-response'),
         __param(0, common_1.Body()),

@@ -5,5 +5,5 @@ import { SubjectsController } from "./subject.controller";
 import { EventsController } from "./events.controller";
 import { QuestionsController } from "./questions.controller";
 import { DocumentsController } from "./documents.controller";
-declare const _default: (typeof DocumentsController | typeof ClassesController | typeof AuthController | typeof ChaptersController | typeof SubjectsController | typeof EventsController | typeof QuestionsController)[];
+declare const _default: (typeof QuestionsController | typeof ClassesController | typeof AuthController | typeof ChaptersController | typeof SubjectsController | typeof EventsController | typeof DocumentsController)[];
 export default _default;
