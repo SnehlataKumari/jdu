@@ -9,7 +9,9 @@ const AnswerSchema = new Schema({
         ref: 'Question',
         required: true
     },
-    constituency: String,
+    comment: String,
+    destrict: String,
+    vidhanSabha: String,
     mobileNumber: String,
     name: String,
     answer: { type: String, required: true }
