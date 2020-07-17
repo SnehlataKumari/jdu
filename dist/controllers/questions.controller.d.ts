@@ -14,5 +14,8 @@ export declare class QuestionsController extends ResourceController {
     }>;
     getQuestionsWithAnswers(): Promise<any>;
     getAllAnswers(): Promise<any[]>;
-    getAnswersOfQuestion(questionId: any): Promise<any[]>;
+    getAnswersOfQuestion(questionId: any): Promise<{
+        message: string;
+        data: any;
+    }>;
 }

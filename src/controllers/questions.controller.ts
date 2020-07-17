@@ -49,6 +49,12 @@ export class QuestionsController extends ResourceController {
 
   @Get('/:id/answers')
   async getAnswersOfQuestion(@Param('id') questionId) {
-    return (await this.answerService.find({questionId}));
+    const question = await this.service.findById(questionId);
+    const answers = await this.answerService.find({ questionId });
+
+    return success('Sucess', {
+      question,
+      answers
+    });
   }
 }

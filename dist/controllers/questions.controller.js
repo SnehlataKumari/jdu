@@ -57,7 +57,12 @@ let QuestionsController = (() => {
             return (await this.answerService.find({}));
         }
         async getAnswersOfQuestion(questionId) {
-            return (await this.answerService.find({ questionId }));
+            const question = await this.service.findById(questionId);
+            const answers = await this.answerService.find({ questionId });
+            return utils_1.success('Sucess', {
+                question,
+                answers
+            });
         }
     };
     __decorate([
