@@ -15,13 +15,13 @@ export class QuestionsController extends ResourceController {
 
   @Post('submit-response')
   async submitResponse(@Body() body) {
+
+    const {user, ...answers} = body;
     const questions = await Promise.all(
-      Reflect.ownKeys(body)
-        .map(questionId => ({ questionId, answer: body[questionId] }))
+      Reflect.ownKeys(answers)
+        .map(questionId => ({ questionId, answer: answers[questionId], ...user }))
         .filter(({ answer }) => !!answer)
-        .map(({questionId, answer}) => this.answerService.create({
-          questionId, answer
-        }))
+        .map((question) => this.answerService.create(question))
     );
     
     return success('Answers submitted successfully', questions);

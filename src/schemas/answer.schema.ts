@@ -7,6 +7,9 @@ const AnswerSchema = new Schema({
     ref: 'Question',
     required: true
   },
+  constituency: String,
+  mobileNumber: String,
+  name: String,
   answer: {type: String, required: true}
 });
 
