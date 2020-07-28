@@ -11,6 +11,7 @@ const yatrayen_schema_1 = require("./yatrayen.schema");
 const question_schema_1 = require("./question.schema");
 const answer_schema_1 = require("./answer.schema");
 const document_schema_1 = require("./document.schema");
+const scheme_schema_1 = require("./scheme.schema");
 exports.default = [
     { name: 'Class', schema: class_schema_1.ClassSchema },
     { name: 'User', schema: user_schema_1.UserSchema },
@@ -23,5 +24,6 @@ exports.default = [
     { name: 'Question', schema: question_schema_1.QuestionSchema },
     { name: 'Answer', schema: answer_schema_1.AnswerSchema },
     { name: 'Document', schema: document_schema_1.DocumentSchema },
+    { name: 'Scheme', schema: scheme_schema_1.SchemeSchema },
 ];
 //# sourceMappingURL=index.js.map

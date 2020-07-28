@@ -9,6 +9,7 @@ import { EventsController } from "./events.controller";
 import { YatrayenController } from "./yatrayen.controllers";
 import { QuestionsController } from "./questions.controller";
 import { DocumentsController } from "./documents.controller";
+import { SchemesController } from "./scheme.controller";
 
 export default [
   UsersController,
@@ -21,5 +22,6 @@ export default [
   EventsController,
   YatrayenController,
   QuestionsController,
-  DocumentsController
+  DocumentsController,
+  SchemesController
 ];

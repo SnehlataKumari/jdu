@@ -1956,8 +1956,13 @@
         "signature": "9f0939867fb9cee9c268b605c8bb6662526a0408e7c0f7be0ad1654946d215e2",
         "affectsGlobalScope": false
       },
+      "../src/schemas/scheme.schema.ts": {
+        "version": "0707f5bafea8a5f59f6ea0914bcf0e673e23b4eebfaf1ba1fdf5bac9c284f3ff",
+        "signature": "ea45b16351d80b40e2fb1a456f0c5836d269e2e1b384bf738c593e3977dae2f2",
+        "affectsGlobalScope": false
+      },
       "../src/schemas/index.ts": {
-        "version": "4ad31143846a59672efb6a0bcd4ad3f0a54df8c7f07de13a58087092b8399520",
+        "version": "58a2bca07d88d05d58c6b1661bd5626bd4a8cffeced3a558fa215f545779d510",
         "signature": "d44bdcd4f74fae62b3e4900e347298d7ca322c9441794795b395dc7db1fda182",
         "affectsGlobalScope": false
       },
@@ -5631,8 +5636,13 @@
         "signature": "9e6dd71403ce4d4c1e300147d70020645b0ab78e7bc20047e68fb7a768fa0403",
         "affectsGlobalScope": false
       },
+      "../src/services/scheme.service.ts": {
+        "version": "18f3037cfaf55ba3cd33327ce7e315220717432c71e5562d86ae097a61943c21",
+        "signature": "ffa949f436ba20f4f5fe5ca4f5a5714028963b9ddcef2109b7ce4f46795e335a",
+        "affectsGlobalScope": false
+      },
       "../src/services/index.ts": {
-        "version": "acc8d1e2bc698bf9f275602e1758415f8b675581b519f46e6806533559e3cac4",
+        "version": "bdb7b369de34150c29f870d9fa066b46beb532471ace9ec8a81872302dc23e49",
         "signature": "d52b4f2d8a0dca2f44fb885fc845923e8c777f7a7c6bf3ac333f7fe01c34280a",
         "affectsGlobalScope": false
       },
@@ -5826,9 +5836,14 @@
         "signature": "917166341f2215e3a01844d2f007050340ce3a6cb8258e8831538c64b326affb",
         "affectsGlobalScope": false
       },
+      "../src/controllers/scheme.controller.ts": {
+        "version": "adaeffb87b1b6a8326d987f461b0111ddb8f624a4dbd3db9fe1463e33e822a83",
+        "signature": "107ed5fd7423c04db3512cdaacf4e6d5de56e3b492b8e2a16a1b4ee7d5dcda2e",
+        "affectsGlobalScope": false
+      },
       "../src/controllers/index.ts": {
-        "version": "06def82e14835d904633d512af4cb89800b534ff72245b6ecd8223cd64b06e5d",
-        "signature": "ea3f929f33c1ef85c4f42c709513d91f75e024411449d10e6dcd2ebfc8be292e",
+        "version": "610156f50f3e84903450b76e5574fdb05adc8b20fc85494cebe3263503544eba",
+        "signature": "e6d2f9970406ae9885f6dc3892a8987f550a0cfe771052fc78043d3b7ecc09f1",
         "affectsGlobalScope": false
       },
       "../node_modules/passport-custom/lib/index.d.ts": {
@@ -18792,6 +18807,7 @@
         "../src/controllers/events.controller.ts",
         "../src/controllers/payments.controller.ts",
         "../src/controllers/questions.controller.ts",
+        "../src/controllers/scheme.controller.ts",
         "../src/controllers/subject.controller.ts",
         "../src/controllers/users.controller.ts",
         "../src/controllers/yatrayen.controllers.ts"
@@ -18831,6 +18847,16 @@
         "../src/passport/auth.guard.ts",
         "../src/passport/jwt.strategy.ts",
         "../src/utils/index.ts"
+      ],
+      "../src/controllers/scheme.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/controllers/resource.controller.ts",
+        "../src/services/scheme.service.ts"
       ],
       "../src/controllers/subject.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -18992,6 +19018,7 @@
         "../src/schemas/document.schema.ts",
         "../src/schemas/event.schema.ts",
         "../src/schemas/question.schema.ts",
+        "../src/schemas/scheme.schema.ts",
         "../src/schemas/subject.schema.ts",
         "../src/schemas/user.schema.ts",
         "../src/schemas/version.schema.ts",
@@ -19005,6 +19032,14 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/constants/index.ts"
+      ],
+      "../src/schemas/scheme.schema.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
       ],
       "../src/schemas/subject.schema.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -19162,6 +19197,7 @@
         "../src/services/file.service.ts",
         "../src/services/questions.service.ts",
         "../src/services/s3.service.ts",
+        "../src/services/scheme.service.ts",
         "../src/services/sms.service.ts",
         "../src/services/subject.service.ts",
         "../src/services/twillio.service.ts",
@@ -19189,6 +19225,17 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/aws-sdk/index.d.ts"
+      ],
+      "../src/services/scheme.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/services/db.service.ts"
       ],
       "../src/services/sms.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -31889,6 +31936,10 @@
         "../src/services/answer.service.ts",
         "../src/services/questions.service.ts"
       ],
+      "../src/controllers/scheme.controller.ts": [
+        "../src/controllers/resource.controller.ts",
+        "../src/services/scheme.service.ts"
+      ],
       "../src/controllers/subject.controller.ts": [
         "../src/controllers/resource.controller.ts",
         "../src/services/assets.service.ts",
@@ -31942,6 +31993,9 @@
         "../node_modules/@types/mongoose/index.d.ts"
       ],
       "../src/schemas/question.schema.ts": [
+        "../node_modules/@types/mongoose/index.d.ts"
+      ],
+      "../src/schemas/scheme.schema.ts": [
         "../node_modules/@types/mongoose/index.d.ts"
       ],
       "../src/schemas/subject.schema.ts": [
@@ -32009,6 +32063,10 @@
       ],
       "../src/services/s3.service.ts": [
         "../node_modules/@nestjs/config/index.d.ts"
+      ],
+      "../src/services/scheme.service.ts": [
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../src/services/db.service.ts"
       ],
       "../src/services/sms.service.ts": [
         "../node_modules/@nestjs/config/index.d.ts",
@@ -33207,6 +33265,7 @@
       "../src/controllers/payments.controller.ts",
       "../src/controllers/questions.controller.ts",
       "../src/controllers/resource.controller.ts",
+      "../src/controllers/scheme.controller.ts",
       "../src/controllers/subject.controller.ts",
       "../src/controllers/users.controller.ts",
       "../src/controllers/yatrayen.controllers.ts",
@@ -33224,6 +33283,7 @@
       "../src/schemas/event.schema.ts",
       "../src/schemas/index.ts",
       "../src/schemas/question.schema.ts",
+      "../src/schemas/scheme.schema.ts",
       "../src/schemas/subject.schema.ts",
       "../src/schemas/user.schema.ts",
       "../src/schemas/version.schema.ts",
@@ -33241,6 +33301,7 @@
       "../src/services/index.ts",
       "../src/services/questions.service.ts",
       "../src/services/s3.service.ts",
+      "../src/services/scheme.service.ts",
       "../src/services/sms.service.ts",
       "../src/services/subject.service.ts",
       "../src/services/twillio.service.ts",

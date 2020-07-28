@@ -16,6 +16,7 @@ import { YatrayenService } from "./yatrayen.service";
 import { QuestionsService } from "./questions.service";
 import { AnswersService } from "./answer.service";
 import { DocumentsService } from "./documents.service";
+import { SchemesService } from "./scheme.service";
 
 export default [
   UsersService,
@@ -35,5 +36,6 @@ export default [
   YatrayenService,
   QuestionsService,
   AnswersService,
-  DocumentsService
+  DocumentsService,
+  SchemesService
 ];
