@@ -10,4 +10,8 @@ export declare class UsersController extends ResourceController {
         message: string;
         data: any;
     }>;
+    migrateUsers(file: any): Promise<{
+        message: string;
+        data: any;
+    }>;
 }

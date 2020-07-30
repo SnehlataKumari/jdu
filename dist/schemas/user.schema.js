@@ -17,7 +17,8 @@ exports.UserSchema = new mongoose.Schema({
         type: String
     },
     username: {
-        type: String
+        type: String,
+        unique: [true, 'Username already exists!']
     },
     email: {
         type: String

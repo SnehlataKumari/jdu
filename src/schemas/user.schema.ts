@@ -17,7 +17,8 @@ export const UserSchema = new mongoose.Schema({
     type: String
   },
   username: { //only for admin
-    type: String
+    type: String,
+    unique: [true, 'Username already exists!']
   },
   email: {
     type: String

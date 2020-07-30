@@ -11,5 +11,6 @@ export declare class DBService {
     findById(id: any): import("mongoose").DocumentQuery<any, any, {}>;
     findOne(query: any): import("mongoose").DocumentQuery<any, any, {}>;
     find(query?: {}): import("mongoose").DocumentQuery<any[], any, {}>;
+    insertMany(values: any): Promise<any>;
     update(model: any, updateObject: any): Promise<any>;
 }

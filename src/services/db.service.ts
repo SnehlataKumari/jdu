@@ -33,6 +33,9 @@ export class DBService {
     return this.model.find(query);
   }
 
+  insertMany(values) {
+    return this.model.insertMany(values);
+  }
 
   async update(model, updateObject) {
     return this.findByIdAndUpdate(model._id, updateObject);

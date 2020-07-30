@@ -1,0 +1,5 @@
+﻿name, username,password,role
+Satish Admin,satishAdmin2,P@ssw0rd,ADMIN
+Satish Admin,satishAdmin3,P@ssw0rd,STATE_LEVEL_USER
+Satish Admin,satishAdmin4,P@ssw0rd,BLOCK_LEVEL_USER
+Satish Admin,satishAdmin5,P@ssw0rd,DISTRICT_LEVEL_USER
