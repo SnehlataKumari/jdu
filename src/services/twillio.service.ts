@@ -2,7 +2,6 @@ import { Injectable } from "@nestjs/common";
 import * as twilio from "twilio";
 import { ConfigService } from "@nestjs/config";
 
-@Injectable()
 export class TwillioService {
 
   twilioAccountSid;

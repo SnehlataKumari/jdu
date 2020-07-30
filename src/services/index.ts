@@ -30,7 +30,6 @@ export default [
   ChaptersService,
   SubjectsService,
   VersionService,
-  TwillioService,
   DummySmsService,
   EventsService,
   YatrayenService,

@@ -10,7 +10,6 @@ const sms_service_1 = require("./sms.service");
 const chapters_service_1 = require("./chapters.service");
 const subject_service_1 = require("./subject.service");
 const version_service_1 = require("./version.service");
-const twillio_service_1 = require("./twillio.service");
 const dummySms_service_1 = require("./dummySms.service");
 const event_schema_1 = require("../schemas/event.schema");
 const events_service_1 = require("./events.service");
@@ -31,7 +30,6 @@ exports.default = [
     chapters_service_1.ChaptersService,
     subject_service_1.SubjectsService,
     version_service_1.VersionService,
-    twillio_service_1.TwillioService,
     dummySms_service_1.DummySmsService,
     events_service_1.EventsService,
     yatrayen_service_1.YatrayenService,

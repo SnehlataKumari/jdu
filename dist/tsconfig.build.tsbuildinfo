@@ -3346,6 +3346,26 @@
         "signature": "cc123904d1203f28d447d270db0ea639b7026797c03650452e5b7dfbb13d80f9",
         "affectsGlobalScope": false
       },
+      "../src/services/dummysms.service.ts": {
+        "version": "a3d20f5e791ef86066292484bb5926bfcd695144f0074a96265805ee68bced8b",
+        "signature": "94b1bdadcb2769065ed3753f0232849810bd456b1589f13cfb3e90ae14927d28",
+        "affectsGlobalScope": false
+      },
+      "../src/services/sms.service.ts": {
+        "version": "6334b6058557a93bda891cb3d8d354ec63694844889fb6281a4d3ae28e149492",
+        "signature": "b1e05fc0f35af30b07740ee04018848351eae047a7304e3f841f38e435ec4be5",
+        "affectsGlobalScope": false
+      },
+      "../src/services/chapters.service.ts": {
+        "version": "bf99544e02e013bfdbd92f8a20cffebc3ec41cbbee9ea3f45ed6bca0ecfde64e",
+        "signature": "211d90690886fa06c6e636f1df2396cf09b78cedad952abfe05eacf76e940df9",
+        "affectsGlobalScope": false
+      },
+      "../src/services/subject.service.ts": {
+        "version": "61ecb9fe8268db4e5b1879e9fbad959e36233eca361a378e42f22d6d59ed22e8",
+        "signature": "695c00e7a8f196dd006ffe75bcca681ff3412667e710c6e640b7cd32ea18a7be",
+        "affectsGlobalScope": false
+      },
       "../node_modules/twilio/lib/jwt/taskrouter/taskroutercapability.d.ts": {
         "version": "dca34927798d6af9b6519683155f99e31283a33626d5ed999be1b260a22b9879",
         "signature": "dca34927798d6af9b6519683155f99e31283a33626d5ed999be1b260a22b9879",
@@ -5592,28 +5612,8 @@
         "affectsGlobalScope": false
       },
       "../src/services/twillio.service.ts": {
-        "version": "96abe88623a8bfae3b89c1674454d95c9b26a3c2ecc084375e26b63a9f515b9f",
+        "version": "391a46a0595248a0e221121bcfd2dfa44482f70ccf68298277bb01ef32f36f72",
         "signature": "3dfa6f4d53823b8d59f5273e4d642bb6ad92b805f0769c7f412a0ac6f4b6e898",
-        "affectsGlobalScope": false
-      },
-      "../src/services/dummysms.service.ts": {
-        "version": "a3d20f5e791ef86066292484bb5926bfcd695144f0074a96265805ee68bced8b",
-        "signature": "94b1bdadcb2769065ed3753f0232849810bd456b1589f13cfb3e90ae14927d28",
-        "affectsGlobalScope": false
-      },
-      "../src/services/sms.service.ts": {
-        "version": "fc50b8d6c1d68aea29445a47f759f31885f79d5ab42a7c1a592404de4245b125",
-        "signature": "b1e05fc0f35af30b07740ee04018848351eae047a7304e3f841f38e435ec4be5",
-        "affectsGlobalScope": false
-      },
-      "../src/services/chapters.service.ts": {
-        "version": "bf99544e02e013bfdbd92f8a20cffebc3ec41cbbee9ea3f45ed6bca0ecfde64e",
-        "signature": "211d90690886fa06c6e636f1df2396cf09b78cedad952abfe05eacf76e940df9",
-        "affectsGlobalScope": false
-      },
-      "../src/services/subject.service.ts": {
-        "version": "61ecb9fe8268db4e5b1879e9fbad959e36233eca361a378e42f22d6d59ed22e8",
-        "signature": "695c00e7a8f196dd006ffe75bcca681ff3412667e710c6e640b7cd32ea18a7be",
         "affectsGlobalScope": false
       },
       "../src/services/events.service.ts": {
@@ -5647,8 +5647,8 @@
         "affectsGlobalScope": false
       },
       "../src/services/index.ts": {
-        "version": "bdb7b369de34150c29f870d9fa066b46beb532471ace9ec8a81872302dc23e49",
-        "signature": "c74a1ef13718e58b1541122aeaf8cd1f260778f9891d195e0cbadc3578a16804",
+        "version": "4b79cb6e807d348c5a5e5840bbcb4ed99f292204122829f968dda38616da3ddf",
+        "signature": "41d11cb3e92e474be7af729b5ca41e229e3bf6fcf71eedcd57754f628a56369d",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/passport-strategy/index.d.ts": {
@@ -19260,8 +19260,7 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
-        "../src/services/dummysms.service.ts",
-        "../src/services/twillio.service.ts"
+        "../src/services/dummysms.service.ts"
       ],
       "../src/services/subject.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -32080,8 +32079,7 @@
         "../src/services/dummysms.service.ts",
         "../src/services/file.service.ts",
         "../src/services/s3.service.ts",
-        "../src/services/sms.service.ts",
-        "../src/services/twillio.service.ts"
+        "../src/services/sms.service.ts"
       ],
       "../src/services/questions.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
