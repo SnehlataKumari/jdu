@@ -5657,8 +5657,8 @@
         "affectsGlobalScope": false
       },
       "../src/services/index.ts": {
-        "version": "b1282a1110773f2e5f8738d99f938169da2fad75bd6fc5ca2706eafcb8569517",
-        "signature": "8f3fb381731faa4ad04864ea839c426128601d0fe625a99cfc774acec3fc1b73",
+        "version": "5d724a32349aac7e45aca48b8673d0ec608b61e1a41066c508ee2fdfe1d22467",
+        "signature": "d52b4f2d8a0dca2f44fb885fc845923e8c777f7a7c6bf3ac333f7fe01c34280a",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/passport-strategy/index.d.ts": {
@@ -32135,6 +32135,10 @@
         "../src/services/file.service.ts",
         "../src/services/s3.service.ts",
         "../src/services/sms.service.ts"
+      ],
+      "../src/services/messages.service.ts": [
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../src/services/db.service.ts"
       ],
       "../src/services/messages.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
