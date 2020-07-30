@@ -26,6 +26,9 @@ class DBService {
     find(query = {}) {
         return this.model.find(query);
     }
+    insertMany(values) {
+        return this.model.insertMany(values);
+    }
     async update(model, updateObject) {
         return this.findByIdAndUpdate(model._id, updateObject);
     }

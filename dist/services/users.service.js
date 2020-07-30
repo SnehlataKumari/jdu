@@ -17,6 +17,15 @@ const common_1 = require("@nestjs/common");
 const mongoose_1 = require("mongoose");
 const mongoose_2 = require("@nestjs/mongoose");
 const db_service_1 = require("./db.service");
+const Joi = require("@hapi/joi");
+const constants_1 = require("../constants");
+const userSchem = Joi.object({
+    name: Joi.string().required(),
+    username: Joi.string().required(),
+    password: Joi.string().required(),
+    role: Joi.string().valid(...constants_1.getKeys(constants_1.USER_ROLES)).required()
+});
+const usersSchema = Joi.array().items(userSchem);
 let UsersService = (() => {
     let UsersService = class UsersService extends db_service_1.DBService {
         constructor(model) {
@@ -26,6 +35,12 @@ let UsersService = (() => {
             return this.findOne({
                 mobileNumber
             });
+        }
+        validateUserJson(userObject) {
+            return userSchem.validateAsync(userObject, { allowUnknown: true });
+        }
+        async getUserByUsername(username) {
+            return this.findOne({ username });
         }
     };
     UsersService = __decorate([

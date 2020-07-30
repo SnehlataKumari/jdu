@@ -19,6 +19,8 @@ const resource_controller_1 = require("./resource.controller");
 const utils_1 = require("../utils");
 const auth_guard_1 = require("../passport/auth.guard");
 const passwordHash = require("password-hash");
+const platform_express_1 = require("@nestjs/platform-express");
+const lodash_1 = require("lodash");
 let UsersController = (() => {
     let UsersController = class UsersController extends resource_controller_1.ResourceController {
         constructor(service) {
@@ -32,6 +34,35 @@ let UsersController = (() => {
             var hashedPassword = passwordHash.generate(password);
             body.password = hashedPassword;
             return utils_1.success('Resource created successfully!', this.service.create(body));
+        }
+        async migrateUsers(file) {
+            const validatedValues = [];
+            const withError = [];
+            const users = await utils_1.getJsonFromCSV(file);
+            for (const user of users) {
+                try {
+                    const validatedUser = await this.service.validateUserJson(user);
+                    const userExits = await this.service.getUserByUsername(validatedUser.username);
+                    if (!!userExits) {
+                        throw new Error(`Username already exists: ${validatedUser.username}`);
+                    }
+                    var hashedPassword = passwordHash.generate(validatedUser.password);
+                    validatedUser.password = hashedPassword;
+                    validatedValues.push(validatedUser);
+                }
+                catch (e) {
+                    withError.push(Object.assign(Object.assign({}, user), { error: e.message }));
+                }
+            }
+            if (withError.length > 0) {
+                throw new common_1.BadRequestException(`Please upload valid csv file: Error: ${withError[0].error}`);
+            }
+            const uniqueUsers = lodash_1.uniqBy(validatedValues, 'username');
+            if (uniqueUsers.length !== validatedValues.length) {
+                throw new common_1.BadRequestException(`Please upload valid csv file: Error: Please check CSV all username must be unique!`);
+            }
+            const insertedValues = await this.service.insertMany(validatedValues);
+            return utils_1.success('Users created successfully!', insertedValues);
         }
     };
     __decorate([
@@ -47,6 +78,14 @@ let UsersController = (() => {
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], UsersController.prototype, "createUser", null);
+    __decorate([
+        common_1.Post('migrate-users'),
+        common_1.UseInterceptors(platform_express_1.FileInterceptor('file', {})),
+        __param(0, common_1.UploadedFile()),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", Promise)
+    ], UsersController.prototype, "migrateUsers", null);
     UsersController = __decorate([
         common_1.Controller('users'),
         __metadata("design:paramtypes", [users_service_1.UsersService])
