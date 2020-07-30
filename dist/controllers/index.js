@@ -12,6 +12,7 @@ const yatrayen_controllers_1 = require("./yatrayen.controllers");
 const questions_controller_1 = require("./questions.controller");
 const documents_controller_1 = require("./documents.controller");
 const scheme_controller_1 = require("./scheme.controller");
+const messages_controller_1 = require("./messages.controller");
 exports.default = [
     users_controller_1.UsersController,
     classes_controller_1.ClassesController,
@@ -24,6 +25,7 @@ exports.default = [
     yatrayen_controllers_1.YatrayenController,
     questions_controller_1.QuestionsController,
     documents_controller_1.DocumentsController,
-    scheme_controller_1.SchemesController
+    scheme_controller_1.SchemesController,
+    messages_controller_1.MessagesController,
 ];
 //# sourceMappingURL=index.js.map

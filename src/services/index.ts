@@ -17,6 +17,7 @@ import { QuestionsService } from "./questions.service";
 import { AnswersService } from "./answer.service";
 import { DocumentsService } from "./documents.service";
 import { SchemesService } from "./scheme.service";
+import { MessagesService } from "./messages.service";
 
 export default [
   UsersService,
@@ -36,5 +37,7 @@ export default [
   QuestionsService,
   AnswersService,
   DocumentsService,
-  SchemesService
+  SchemesService,
+  MessagesService,
+
 ];

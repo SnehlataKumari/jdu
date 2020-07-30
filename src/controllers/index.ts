@@ -10,6 +10,7 @@ import { YatrayenController } from "./yatrayen.controllers";
 import { QuestionsController } from "./questions.controller";
 import { DocumentsController } from "./documents.controller";
 import { SchemesController } from "./scheme.controller";
+import { MessagesController } from "./messages.controller";
 
 export default [
   UsersController,
@@ -23,5 +24,6 @@ export default [
   YatrayenController,
   QuestionsController,
   DocumentsController,
-  SchemesController
+  SchemesController,
+  MessagesController,
 ];

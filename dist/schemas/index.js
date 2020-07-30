@@ -12,6 +12,7 @@ const question_schema_1 = require("./question.schema");
 const answer_schema_1 = require("./answer.schema");
 const document_schema_1 = require("./document.schema");
 const scheme_schema_1 = require("./scheme.schema");
+const message_schema_1 = require("./message.schema");
 exports.default = [
     { name: 'Class', schema: class_schema_1.ClassSchema },
     { name: 'User', schema: user_schema_1.UserSchema },
@@ -25,5 +26,6 @@ exports.default = [
     { name: 'Answer', schema: answer_schema_1.AnswerSchema },
     { name: 'Document', schema: document_schema_1.DocumentSchema },
     { name: 'Scheme', schema: scheme_schema_1.SchemeSchema },
+    { name: 'Message', schema: message_schema_1.MessageSchema },
 ];
 //# sourceMappingURL=index.js.map
