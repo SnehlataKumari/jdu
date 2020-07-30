@@ -5602,8 +5602,8 @@
         "affectsGlobalScope": false
       },
       "../src/services/sms.service.ts": {
-        "version": "1a498e9bc08647b8533af0d97319b3131971bd4053de14241b147142e0a10245",
-        "signature": "fffc32adeb2c84b7ce54b83743eecc3a4d743dbc56cc20120ab7cf4b62d19b7c",
+        "version": "fc50b8d6c1d68aea29445a47f759f31885f79d5ab42a7c1a592404de4245b125",
+        "signature": "b1e05fc0f35af30b07740ee04018848351eae047a7304e3f841f38e435ec4be5",
         "affectsGlobalScope": false
       },
       "../src/services/chapters.service.ts": {
@@ -5648,7 +5648,7 @@
       },
       "../src/services/index.ts": {
         "version": "bdb7b369de34150c29f870d9fa066b46beb532471ace9ec8a81872302dc23e49",
-        "signature": "d52b4f2d8a0dca2f44fb885fc845923e8c777f7a7c6bf3ac333f7fe01c34280a",
+        "signature": "c74a1ef13718e58b1541122aeaf8cd1f260778f9891d195e0cbadc3578a16804",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/passport-strategy/index.d.ts": {
@@ -32096,8 +32096,7 @@
       ],
       "../src/services/sms.service.ts": [
         "../node_modules/@nestjs/config/index.d.ts",
-        "../src/services/dummysms.service.ts",
-        "../src/services/twillio.service.ts"
+        "../src/services/dummysms.service.ts"
       ],
       "../src/services/subject.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",

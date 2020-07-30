@@ -7,5 +7,5 @@ import { SmsService } from "./sms.service";
 import { TwillioService } from "./twillio.service";
 import { DummySmsService } from "./dummySms.service";
 import { DocumentsService } from "./documents.service";
-declare const _default: (typeof AssetsService | typeof ClassesService | typeof FileService | typeof AuthService | typeof S3Service | typeof SmsService | typeof TwillioService | typeof DummySmsService | typeof DocumentsService)[];
+declare const _default: (typeof SmsService | typeof AssetsService | typeof ClassesService | typeof FileService | typeof AuthService | typeof S3Service | typeof TwillioService | typeof DummySmsService | typeof DocumentsService)[];
 export default _default;
