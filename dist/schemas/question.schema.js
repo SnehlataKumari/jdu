@@ -14,7 +14,6 @@ const QuestionSchema = new mongoose.Schema({
     },
     category: {
         type: String,
-        enum: constants_1.getCategory(constants_1.QUESTION_CATEGORY),
         required: true
     },
     options: [String]

@@ -1942,7 +1942,7 @@
         "affectsGlobalScope": false
       },
       "../src/schemas/question.schema.ts": {
-        "version": "8cca27bc3741fd05710dac2c98c8ba14a42bd9d2fdb44af010e3c30f8e85bb2e",
+        "version": "2e707b3c356db466da9f712f397165593d3aeff2e66c9c6c05b3a6cfc9cef103",
         "signature": "cfb5b5a24744e3aa3d4c6cec501b3a1f681340f4126b0db7c78ccd391005e821",
         "affectsGlobalScope": false
       },
@@ -5657,8 +5657,8 @@
         "affectsGlobalScope": false
       },
       "../src/services/index.ts": {
-        "version": "5d724a32349aac7e45aca48b8673d0ec608b61e1a41066c508ee2fdfe1d22467",
-        "signature": "d52b4f2d8a0dca2f44fb885fc845923e8c777f7a7c6bf3ac333f7fe01c34280a",
+        "version": "b1282a1110773f2e5f8738d99f938169da2fad75bd6fc5ca2706eafcb8569517",
+        "signature": "41d11cb3e92e474be7af729b5ca41e229e3bf6fcf71eedcd57754f628a56369d",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/passport-strategy/index.d.ts": {
@@ -5852,8 +5852,8 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/scheme.controller.ts": {
-        "version": "adaeffb87b1b6a8326d987f461b0111ddb8f624a4dbd3db9fe1463e33e822a83",
-        "signature": "107ed5fd7423c04db3512cdaacf4e6d5de56e3b492b8e2a16a1b4ee7d5dcda2e",
+        "version": "01b34514c7a4eab6f2990957bc38cd4ab9f0ee6295e5f6497f94e07768f591e2",
+        "signature": "6e6f91fe318e6d610182e6c83135e9732c7ec173a3bd4519106312a90452d861",
         "affectsGlobalScope": false
       },
       "../src/controllers/messages.controller.ts": {
@@ -5863,7 +5863,7 @@
       },
       "../src/controllers/index.ts": {
         "version": "827bd6f3f1f3e77ff2f6a540e3b3ee1a85ca26dad79726a89261f8c1c66f5614",
-        "signature": "7c1d3ff109092682549b1d38239658e98075d8fd5a65ade5342f579d14734ca4",
+        "signature": "24bc0b792c014516488983cbb86c0853579131723b4b78ec2aebe973e0781e9e",
         "affectsGlobalScope": false
       },
       "../node_modules/passport-custom/lib/index.d.ts": {
@@ -18897,7 +18897,8 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/controllers/resource.controller.ts",
-        "../src/services/scheme.service.ts"
+        "../src/services/scheme.service.ts",
+        "../src/utils/index.ts"
       ],
       "../src/controllers/subject.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -31996,8 +31997,8 @@
         "../src/controllers/chapters.controller.ts",
         "../src/controllers/classes.controller.ts",
         "../src/controllers/documents.controller.ts",
-        "../src/controllers/events.controller.ts",
         "../src/controllers/questions.controller.ts",
+        "../src/controllers/scheme.controller.ts",
         "../src/controllers/subject.controller.ts"
       ],
       "../src/controllers/messages.controller.ts": [
@@ -32135,10 +32136,6 @@
         "../src/services/file.service.ts",
         "../src/services/s3.service.ts",
         "../src/services/sms.service.ts"
-      ],
-      "../src/services/messages.service.ts": [
-        "../node_modules/@types/mongoose/index.d.ts",
-        "../src/services/db.service.ts"
       ],
       "../src/services/messages.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",

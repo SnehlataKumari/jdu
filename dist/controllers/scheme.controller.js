@@ -13,12 +13,22 @@ exports.SchemesController = void 0;
 const common_1 = require("@nestjs/common");
 const resource_controller_1 = require("./resource.controller");
 const scheme_service_1 = require("../services/scheme.service");
+const utils_1 = require("../utils");
 let SchemesController = (() => {
     let SchemesController = class SchemesController extends resource_controller_1.ResourceController {
         constructor(service) {
             super(service);
         }
+        findAll() {
+            return utils_1.success('List found successfully', this.service.findAll());
+        }
     };
+    __decorate([
+        common_1.Get(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], SchemesController.prototype, "findAll", null);
     SchemesController = __decorate([
         common_1.Controller('scheme'),
         __metadata("design:paramtypes", [scheme_service_1.SchemesService])
