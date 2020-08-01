@@ -10,6 +10,7 @@ import { QuestionSchema } from "./question.schema";
 import { AnswerSchema } from "./answer.schema";
 import { DocumentSchema } from "./document.schema";
 import { SchemeSchema } from "./scheme.schema";
+import { MessageSchema } from "./message.schema";
 
 export default  [
   { name: 'Class', schema: ClassSchema },
@@ -24,4 +25,6 @@ export default  [
   { name: 'Answer', schema: AnswerSchema},
   { name: 'Document', schema: DocumentSchema},
   { name: 'Scheme', schema: SchemeSchema},
+  { name: 'Message', schema: MessageSchema},
+
 ];

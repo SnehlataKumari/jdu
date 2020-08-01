@@ -13,8 +13,6 @@ const QuestionSchema = new mongoose.Schema({
   },
   category: {
     type: String,
-    enum: getCategory(QUESTION_CATEGORY),
-    // default: QUESTION_CATEGORY['FARMER'].key,
     required: true
   },
   options: [String]

@@ -1942,7 +1942,7 @@
         "affectsGlobalScope": false
       },
       "../src/schemas/question.schema.ts": {
-        "version": "8cca27bc3741fd05710dac2c98c8ba14a42bd9d2fdb44af010e3c30f8e85bb2e",
+        "version": "2e707b3c356db466da9f712f397165593d3aeff2e66c9c6c05b3a6cfc9cef103",
         "signature": "cfb5b5a24744e3aa3d4c6cec501b3a1f681340f4126b0db7c78ccd391005e821",
         "affectsGlobalScope": false
       },
@@ -1961,8 +1961,13 @@
         "signature": "ea45b16351d80b40e2fb1a456f0c5836d269e2e1b384bf738c593e3977dae2f2",
         "affectsGlobalScope": false
       },
+      "../src/schemas/message.schema.ts": {
+        "version": "5c38e23a3acdf0e675a5ebabc2d82614a5212d94a3cdfc831bd67264b72949c1",
+        "signature": "d98370259ba8f43b424224460d93046f9fcfe0a634a523dba0e07ec6f1a078b6",
+        "affectsGlobalScope": false
+      },
       "../src/schemas/index.ts": {
-        "version": "58a2bca07d88d05d58c6b1661bd5626bd4a8cffeced3a558fa215f545779d510",
+        "version": "199dfd02ee8d74da349b0e56fe7a46a9976957fa0a4c23e03344a10db2d4834e",
         "signature": "d44bdcd4f74fae62b3e4900e347298d7ca322c9441794795b395dc7db1fda182",
         "affectsGlobalScope": false
       },
@@ -5646,8 +5651,13 @@
         "signature": "ffa949f436ba20f4f5fe5ca4f5a5714028963b9ddcef2109b7ce4f46795e335a",
         "affectsGlobalScope": false
       },
+      "../src/services/messages.service.ts": {
+        "version": "6a4cbba20f3ec3072f712a983ec09b36a50d525c05ad2176e59135a342415a12",
+        "signature": "9a1ca2a042b643ae0e8b9d7d0ab6ca2f51548bf28b379a99c1ed57e4c64862d0",
+        "affectsGlobalScope": false
+      },
       "../src/services/index.ts": {
-        "version": "4b79cb6e807d348c5a5e5840bbcb4ed99f292204122829f968dda38616da3ddf",
+        "version": "b1282a1110773f2e5f8738d99f938169da2fad75bd6fc5ca2706eafcb8569517",
         "signature": "41d11cb3e92e474be7af729b5ca41e229e3bf6fcf71eedcd57754f628a56369d",
         "affectsGlobalScope": false
       },
@@ -5842,13 +5852,18 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/scheme.controller.ts": {
-        "version": "adaeffb87b1b6a8326d987f461b0111ddb8f624a4dbd3db9fe1463e33e822a83",
-        "signature": "107ed5fd7423c04db3512cdaacf4e6d5de56e3b492b8e2a16a1b4ee7d5dcda2e",
+        "version": "01b34514c7a4eab6f2990957bc38cd4ab9f0ee6295e5f6497f94e07768f591e2",
+        "signature": "6e6f91fe318e6d610182e6c83135e9732c7ec173a3bd4519106312a90452d861",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/messages.controller.ts": {
+        "version": "e6cf0a2dd0f39406da0a3022ee0b9f7fb5e46a534bf8999e9a39cac9ae1599e6",
+        "signature": "5f2e6c9bb9c634d80b17a65e7f2f6a5e9fbfc3418f0bfd36dc1a2086c46f3470",
         "affectsGlobalScope": false
       },
       "../src/controllers/index.ts": {
-        "version": "610156f50f3e84903450b76e5574fdb05adc8b20fc85494cebe3263503544eba",
-        "signature": "7c1d3ff109092682549b1d38239658e98075d8fd5a65ade5342f579d14734ca4",
+        "version": "827bd6f3f1f3e77ff2f6a540e3b3ee1a85ca26dad79726a89261f8c1c66f5614",
+        "signature": "24bc0b792c014516488983cbb86c0853579131723b4b78ec2aebe973e0781e9e",
         "affectsGlobalScope": false
       },
       "../node_modules/passport-custom/lib/index.d.ts": {
@@ -18819,12 +18834,24 @@
         "../src/controllers/classes.controller.ts",
         "../src/controllers/documents.controller.ts",
         "../src/controllers/events.controller.ts",
+        "../src/controllers/messages.controller.ts",
         "../src/controllers/payments.controller.ts",
         "../src/controllers/questions.controller.ts",
         "../src/controllers/scheme.controller.ts",
         "../src/controllers/subject.controller.ts",
         "../src/controllers/users.controller.ts",
         "../src/controllers/yatrayen.controllers.ts"
+      ],
+      "../src/controllers/messages.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/controllers/resource.controller.ts",
+        "../src/services/messages.service.ts",
+        "../src/utils/index.ts"
       ],
       "../src/controllers/payments.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -18870,7 +18897,8 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/controllers/resource.controller.ts",
-        "../src/services/scheme.service.ts"
+        "../src/services/scheme.service.ts",
+        "../src/utils/index.ts"
       ],
       "../src/controllers/subject.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -19032,12 +19060,21 @@
         "../src/schemas/class.schema.ts",
         "../src/schemas/document.schema.ts",
         "../src/schemas/event.schema.ts",
+        "../src/schemas/message.schema.ts",
         "../src/schemas/question.schema.ts",
         "../src/schemas/scheme.schema.ts",
         "../src/schemas/subject.schema.ts",
         "../src/schemas/user.schema.ts",
         "../src/schemas/version.schema.ts",
         "../src/schemas/yatrayen.schema.ts"
+      ],
+      "../src/schemas/message.schema.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
       ],
       "../src/schemas/question.schema.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -19210,6 +19247,7 @@
         "../src/services/dummysms.service.ts",
         "../src/services/events.service.ts",
         "../src/services/file.service.ts",
+        "../src/services/messages.service.ts",
         "../src/services/questions.service.ts",
         "../src/services/s3.service.ts",
         "../src/services/scheme.service.ts",
@@ -19219,6 +19257,17 @@
         "../src/services/users.service.ts",
         "../src/services/version.service.ts",
         "../src/services/yatrayen.service.ts"
+      ],
+      "../src/services/messages.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/services/db.service.ts"
       ],
       "../src/services/questions.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -31948,9 +31997,13 @@
         "../src/controllers/chapters.controller.ts",
         "../src/controllers/classes.controller.ts",
         "../src/controllers/documents.controller.ts",
-        "../src/controllers/events.controller.ts",
         "../src/controllers/questions.controller.ts",
+        "../src/controllers/scheme.controller.ts",
         "../src/controllers/subject.controller.ts"
+      ],
+      "../src/controllers/messages.controller.ts": [
+        "../src/controllers/resource.controller.ts",
+        "../src/services/messages.service.ts"
       ],
       "../src/controllers/payments.controller.ts": [
         "../src/controllers/resource.controller.ts",
@@ -32017,6 +32070,9 @@
       "../src/schemas/index.ts": [
         "../node_modules/@types/mongoose/index.d.ts"
       ],
+      "../src/schemas/message.schema.ts": [
+        "../node_modules/@types/mongoose/index.d.ts"
+      ],
       "../src/schemas/question.schema.ts": [
         "../node_modules/@types/mongoose/index.d.ts"
       ],
@@ -32080,6 +32136,10 @@
         "../src/services/file.service.ts",
         "../src/services/s3.service.ts",
         "../src/services/sms.service.ts"
+      ],
+      "../src/services/messages.service.ts": [
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../src/services/db.service.ts"
       ],
       "../src/services/questions.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
@@ -33286,6 +33346,7 @@
       "../src/controllers/documents.controller.ts",
       "../src/controllers/events.controller.ts",
       "../src/controllers/index.ts",
+      "../src/controllers/messages.controller.ts",
       "../src/controllers/payments.controller.ts",
       "../src/controllers/questions.controller.ts",
       "../src/controllers/resource.controller.ts",
@@ -33306,6 +33367,7 @@
       "../src/schemas/document.schema.ts",
       "../src/schemas/event.schema.ts",
       "../src/schemas/index.ts",
+      "../src/schemas/message.schema.ts",
       "../src/schemas/question.schema.ts",
       "../src/schemas/scheme.schema.ts",
       "../src/schemas/subject.schema.ts",
@@ -33323,6 +33385,7 @@
       "../src/services/events.service.ts",
       "../src/services/file.service.ts",
       "../src/services/index.ts",
+      "../src/services/messages.service.ts",
       "../src/services/questions.service.ts",
       "../src/services/s3.service.ts",
       "../src/services/scheme.service.ts",

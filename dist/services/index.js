@@ -18,6 +18,7 @@ const questions_service_1 = require("./questions.service");
 const answer_service_1 = require("./answer.service");
 const documents_service_1 = require("./documents.service");
 const scheme_service_1 = require("./scheme.service");
+const messages_service_1 = require("./messages.service");
 exports.default = [
     users_service_1.UsersService,
     assets_service_1.AssetsService,
@@ -36,6 +37,7 @@ exports.default = [
     questions_service_1.QuestionsService,
     answer_service_1.AnswersService,
     documents_service_1.DocumentsService,
-    scheme_service_1.SchemesService
+    scheme_service_1.SchemesService,
+    messages_service_1.MessagesService,
 ];
 //# sourceMappingURL=index.js.map
