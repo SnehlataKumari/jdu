@@ -1962,7 +1962,7 @@
         "affectsGlobalScope": false
       },
       "../src/schemas/message.schema.ts": {
-        "version": "5c38e23a3acdf0e675a5ebabc2d82614a5212d94a3cdfc831bd67264b72949c1",
+        "version": "21bc23931e48eaae381662c34cf770ec95b89ad0f9688a8ab42da3c0847cf00a",
         "signature": "d98370259ba8f43b424224460d93046f9fcfe0a634a523dba0e07ec6f1a078b6",
         "affectsGlobalScope": false
       },
@@ -5658,7 +5658,7 @@
       },
       "../src/services/index.ts": {
         "version": "b1282a1110773f2e5f8738d99f938169da2fad75bd6fc5ca2706eafcb8569517",
-        "signature": "41d11cb3e92e474be7af729b5ca41e229e3bf6fcf71eedcd57754f628a56369d",
+        "signature": "bba2277e23f86da4882b7d4feaa9a7176192d19e882f19564166298a5d16cde6",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/passport-strategy/index.d.ts": {
@@ -5857,13 +5857,13 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/messages.controller.ts": {
-        "version": "e6cf0a2dd0f39406da0a3022ee0b9f7fb5e46a534bf8999e9a39cac9ae1599e6",
+        "version": "195f350aaab87827bd57efd44ad1a7af1953ada7ad59e923227dcafe565fb9a2",
         "signature": "5f2e6c9bb9c634d80b17a65e7f2f6a5e9fbfc3418f0bfd36dc1a2086c46f3470",
         "affectsGlobalScope": false
       },
       "../src/controllers/index.ts": {
         "version": "827bd6f3f1f3e77ff2f6a540e3b3ee1a85ca26dad79726a89261f8c1c66f5614",
-        "signature": "24bc0b792c014516488983cbb86c0853579131723b4b78ec2aebe973e0781e9e",
+        "signature": "e6d2f9970406ae9885f6dc3892a8987f550a0cfe771052fc78043d3b7ecc09f1",
         "affectsGlobalScope": false
       },
       "../node_modules/passport-custom/lib/index.d.ts": {
@@ -31997,8 +31997,8 @@
         "../src/controllers/chapters.controller.ts",
         "../src/controllers/classes.controller.ts",
         "../src/controllers/documents.controller.ts",
+        "../src/controllers/events.controller.ts",
         "../src/controllers/questions.controller.ts",
-        "../src/controllers/scheme.controller.ts",
         "../src/controllers/subject.controller.ts"
       ],
       "../src/controllers/messages.controller.ts": [
@@ -32130,10 +32130,10 @@
       "../src/services/index.ts": [
         "../src/services/assets.service.ts",
         "../src/services/auth.service.ts",
-        "../src/services/classes.service.ts",
         "../src/services/documents.service.ts",
         "../src/services/dummysms.service.ts",
         "../src/services/file.service.ts",
+        "../src/services/messages.service.ts",
         "../src/services/s3.service.ts",
         "../src/services/sms.service.ts"
       ],

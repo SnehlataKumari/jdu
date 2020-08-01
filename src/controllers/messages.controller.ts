@@ -14,9 +14,11 @@ export class MessagesController extends ResourceController {
   }
   @Get('users/:usersId')
   async getMessage(@Param('usersId') id) {
-    const message = await this.service.find({
-      usersId: id
-    });
+    const message = await this.service.find({$or: [
+      {usersId: id},
+      { "usersId.0": { "$exists": false }}
+    ]});
+
     return success('Messages sent to this user found successfully!', 
       message
     );

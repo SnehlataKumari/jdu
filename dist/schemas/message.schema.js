@@ -11,6 +11,8 @@ const MessageSchema = new mongoose.Schema({
             type: Schema.Types.ObjectId,
             ref: 'User',
         }]
+}, {
+    timestamps: true
 });
 exports.MessageSchema = MessageSchema;
 //# sourceMappingURL=message.schema.js.map

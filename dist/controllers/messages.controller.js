@@ -26,9 +26,10 @@ let MessagesController = (() => {
             return utils_1.success('Message created successfully!', this.service.create(message));
         }
         async getMessage(id) {
-            const message = await this.service.find({
-                usersId: id
-            });
+            const message = await this.service.find({ $or: [
+                    { usersId: id },
+                    { "usersId.0": { "$exists": false } }
+                ] });
             return utils_1.success('Messages sent to this user found successfully!', message);
         }
     };
