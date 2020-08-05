@@ -1942,7 +1942,7 @@
         "affectsGlobalScope": false
       },
       "../src/schemas/question.schema.ts": {
-        "version": "2e707b3c356db466da9f712f397165593d3aeff2e66c9c6c05b3a6cfc9cef103",
+        "version": "d2602632f508bdc7d57ae916fe50e7fc716942206fd5b3d2dac31c0ee5e12fc6",
         "signature": "cfb5b5a24744e3aa3d4c6cec501b3a1f681340f4126b0db7c78ccd391005e821",
         "affectsGlobalScope": false
       },
@@ -1962,7 +1962,7 @@
         "affectsGlobalScope": false
       },
       "../src/schemas/message.schema.ts": {
-        "version": "21bc23931e48eaae381662c34cf770ec95b89ad0f9688a8ab42da3c0847cf00a",
+        "version": "8d72b8068332637c2718fbffd27cfe602ed8da9318bed77a8cde6c3db2196c99",
         "signature": "d98370259ba8f43b424224460d93046f9fcfe0a634a523dba0e07ec6f1a078b6",
         "affectsGlobalScope": false
       },
@@ -1977,7 +1977,7 @@
         "affectsGlobalScope": false
       },
       "../src/services/users.service.ts": {
-        "version": "3f109be93d4669117fd035b335b839214a516e893c61c6cb33dbeebed1ad056c",
+        "version": "68b83974b2dc7fb14fc0b86c428b4f355e8ac1706492312e47d2c719cb71955b",
         "signature": "42fbbe5dc1757e79accc9f525abb4841e3faa3d03e627358b9148d0007be2a42",
         "affectsGlobalScope": false
       },
@@ -5652,13 +5652,13 @@
         "affectsGlobalScope": false
       },
       "../src/services/messages.service.ts": {
-        "version": "6a4cbba20f3ec3072f712a983ec09b36a50d525c05ad2176e59135a342415a12",
-        "signature": "9a1ca2a042b643ae0e8b9d7d0ab6ca2f51548bf28b379a99c1ed57e4c64862d0",
+        "version": "9b54c22bc3f41683ce05a5877128ac50189f4dfee6cde62378c069ee66ada505",
+        "signature": "bc232119e3eeb4a39cfb2fed37a76c02f1a0fe8dd9fbbacc2cad726e635f5a9f",
         "affectsGlobalScope": false
       },
       "../src/services/index.ts": {
         "version": "b1282a1110773f2e5f8738d99f938169da2fad75bd6fc5ca2706eafcb8569517",
-        "signature": "bba2277e23f86da4882b7d4feaa9a7176192d19e882f19564166298a5d16cde6",
+        "signature": "fed9af0c490765c6dc89165d9568dca02f9b416152e7833f89ae1833ee8e5d0a",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/passport-strategy/index.d.ts": {
@@ -5857,7 +5857,7 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/messages.controller.ts": {
-        "version": "195f350aaab87827bd57efd44ad1a7af1953ada7ad59e923227dcafe565fb9a2",
+        "version": "e010e8de379c945554e70b1b2ced087c9244a1dd881574c7ea61bcf0391f254d",
         "signature": "5f2e6c9bb9c634d80b17a65e7f2f6a5e9fbfc3418f0bfd36dc1a2086c46f3470",
         "affectsGlobalScope": false
       },
@@ -18850,6 +18850,7 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/controllers/resource.controller.ts",
+        "../src/passport/auth.guard.ts",
         "../src/services/messages.service.ts",
         "../src/utils/index.ts"
       ],
@@ -19082,8 +19083,7 @@
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../src/constants/index.ts"
+        "../node_modules/@types/node/util.d.ts"
       ],
       "../src/schemas/scheme.schema.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -19267,7 +19267,8 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
-        "../src/services/db.service.ts"
+        "../src/services/db.service.ts",
+        "../src/services/users.service.ts"
       ],
       "../src/services/questions.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -32130,6 +32131,7 @@
       "../src/services/index.ts": [
         "../src/services/assets.service.ts",
         "../src/services/auth.service.ts",
+        "../src/services/classes.service.ts",
         "../src/services/documents.service.ts",
         "../src/services/dummysms.service.ts",
         "../src/services/file.service.ts",
@@ -32139,7 +32141,8 @@
       ],
       "../src/services/messages.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
-        "../src/services/db.service.ts"
+        "../src/services/db.service.ts",
+        "../src/services/users.service.ts"
       ],
       "../src/services/questions.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",

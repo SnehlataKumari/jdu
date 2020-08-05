@@ -6,5 +6,6 @@ import { S3Service } from "./s3.service";
 import { SmsService } from "./sms.service";
 import { DummySmsService } from "./dummySms.service";
 import { DocumentsService } from "./documents.service";
-declare const _default: (typeof AssetsService | typeof ClassesService | typeof FileService | typeof AuthService | typeof S3Service | typeof SmsService | typeof DummySmsService | typeof DocumentsService)[];
+import { MessagesService } from "./messages.service";
+declare const _default: (typeof MessagesService | typeof AssetsService | typeof ClassesService | typeof FileService | typeof AuthService | typeof S3Service | typeof SmsService | typeof DummySmsService | typeof DocumentsService)[];
 export default _default;

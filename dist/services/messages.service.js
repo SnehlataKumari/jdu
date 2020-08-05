@@ -17,16 +17,35 @@ const common_1 = require("@nestjs/common");
 const mongoose_1 = require("mongoose");
 const mongoose_2 = require("@nestjs/mongoose");
 const db_service_1 = require("./db.service");
+const users_service_1 = require("./users.service");
 let MessagesService = (() => {
     let MessagesService = class MessagesService extends db_service_1.DBService {
-        constructor(model) {
+        constructor(model, userService) {
             super(model);
+            this.userService = userService;
+        }
+        async sendMessage(message) {
+            let users = [];
+            const msgObj = message.toJSON();
+            if (message.sendToType.ALL) {
+                users = await this.userService.findAll();
+            }
+            else {
+                const where = {
+                    $or: [
+                        { role: { $in: Reflect.ownKeys(msgObj.sendToType).filter(sendTo => msgObj.sendToType[sendTo]) } },
+                        { _id: { $in: message.usersId } }
+                    ]
+                };
+                users = await this.userService.find(where);
+            }
         }
     };
     MessagesService = __decorate([
         common_1.Injectable(),
         __param(0, mongoose_2.InjectModel('Message')),
-        __metadata("design:paramtypes", [mongoose_1.Model])
+        __metadata("design:paramtypes", [mongoose_1.Model,
+            users_service_1.UsersService])
     ], MessagesService);
     return MessagesService;
 })();

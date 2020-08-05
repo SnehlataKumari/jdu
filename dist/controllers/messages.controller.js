@@ -17,13 +17,25 @@ const common_1 = require("@nestjs/common");
 const resource_controller_1 = require("./resource.controller");
 const utils_1 = require("../utils");
 const messages_service_1 = require("../services/messages.service");
+const auth_guard_1 = require("../passport/auth.guard");
 let MessagesController = (() => {
     let MessagesController = class MessagesController extends resource_controller_1.ResourceController {
         constructor(service) {
             super(service);
         }
         async createMessage(message) {
-            return utils_1.success('Message created successfully!', this.service.create(message));
+            if (message.sendToType.ALL) {
+                message.sendToType.CUSTOM = false;
+                message.sendToType.STATE_LEVEL_USER = false;
+                message.sendToType.BLOCK_LEVEL_USER = false;
+                message.sendToType.DISTRICT_LEVEL_USER = false;
+            }
+            if (!message.sendToType.CUSTOM) {
+                message.usersId = [];
+            }
+            const messageObj = await this.service.create(message);
+            await this.service.sendMessage(messageObj);
+            return utils_1.success('Message created successfully!', messageObj);
         }
         async getMessage(id) {
             const message = await this.service.find({ $or: [
@@ -34,7 +46,8 @@ let MessagesController = (() => {
         }
     };
     __decorate([
-        common_1.Post('create-message'),
+        common_1.UseGuards(auth_guard_1.JwtAuthGuard),
+        common_1.Post(),
         __param(0, common_1.Body()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),

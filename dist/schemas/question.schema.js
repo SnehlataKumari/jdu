@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.QuestionSchema = void 0;
 const mongoose = require("mongoose");
-const constants_1 = require("../constants");
 const Schema = mongoose.Schema;
 const QuestionSchema = new mongoose.Schema({
     title: {

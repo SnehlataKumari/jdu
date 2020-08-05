@@ -23,6 +23,8 @@ const userSchem = Joi.object({
     name: Joi.string().required(),
     username: Joi.string().required(),
     password: Joi.string().required(),
+    email: Joi.string().email().required(),
+    mobileNumber: Joi.string().min(10).max(10).required(),
     role: Joi.string().valid(...constants_1.getKeys(constants_1.USER_ROLES)).required()
 });
 const usersSchema = Joi.array().items(userSchem);
