@@ -5652,7 +5652,7 @@
         "affectsGlobalScope": false
       },
       "../src/services/nodemailer.service.ts": {
-        "version": "457c8bad64ce322c539634df4458f9a9954a8550fd6fc4a5794de77e9e15ac5d",
+        "version": "e0f2b4dc35fe646d6e335c46f886d1df5f056769b36c71339cd59d4224e19cd5",
         "signature": "d5691b833167e4500b6eaa0e6b93b3a4b3520a0bb05989144c385c6f6f0f5fd2",
         "affectsGlobalScope": false
       },
@@ -5662,7 +5662,7 @@
         "affectsGlobalScope": false
       },
       "../src/services/messages.service.ts": {
-        "version": "3e2511b5ae357ba6f61b40653a9b5c6a110d2c4bd2c1dfd8b9dc09b2afcef91f",
+        "version": "c909a9d4cf055ad8d1ee99806f00cafa6eaba50332667c4a110035cc627977f4",
         "signature": "9bc2bec22fe5626ebf39b400507c668feb5e6483cfc3e0d74618586e229edcf8",
         "affectsGlobalScope": false
       },

@@ -44,22 +44,25 @@ let MessagesService = (() => {
                 };
                 users = await this.userService.find(where);
             }
-            const usersMobileNumber = users
-                .map(user => user.mobileNumber)
-                .filter(mobileNumber => !!mobileNumber)
-                .map(number => `+91${number}`);
-            const usersEmail = users
-                .map(user => user.email)
-                .filter(email => !!email);
-            this.processBatch(usersMobileNumber, strMessage, this.sendSMS.bind(this));
-            this.processBatch(usersEmail, strMessage, this.sendEmail.bind(this));
+            console.log(message);
+            if (message.mediumType.SMS) {
+                const usersMobileNumber = users
+                    .map(user => user.mobileNumber)
+                    .filter(mobileNumber => !!mobileNumber)
+                    .map(number => `+91${number}`);
+                this.processBatch(usersMobileNumber, strMessage, this.sendSMS.bind(this));
+            }
+            if (message.mediumType.EMAIL) {
+                const usersEmail = users
+                    .map(user => user.email)
+                    .filter(email => !!email);
+                this.processBatch(usersEmail, strMessage, this.sendEmail.bind(this));
+            }
         }
         async sendSMS(body, to) {
-            console.log('Sending sms to:', to, body);
             return await this.smsService.sendMessage({ body, to });
         }
         async sendEmail(body, to) {
-            console.log('Sending email to:', to, body);
             return await this.emailService.sendEmail(to, 'New Message from CM', body);
         }
         processBatch(list, message, cb) {

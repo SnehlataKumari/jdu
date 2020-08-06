@@ -28,13 +28,6 @@ export class NodeMailerService {
     await this.mailTransporter.sendMail(mailDetails, async function (err, data) {
       if (err) {
         console.log(err);
-        
-        // console.log("error", err)
-        // return res.status(401).json({ success: false, msg: 'Error while sending OTP!' })
-      } else {
-        console.log(data);
-        
-        // return res.status(200).json({ success: true, msg: 'OTP sent successfully to you via Email!' })
       }
     });
   }
