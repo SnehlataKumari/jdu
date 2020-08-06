@@ -10,5 +10,5 @@ import { DocumentsService } from "./documents.service";
 import { MessagesService } from "./messages.service";
 import { NodeMailerService } from "./nodemailer.service";
 import { EmailService } from "./email.service";
-declare const _default: (typeof MessagesService | typeof AssetsService | typeof ClassesService | typeof FileService | typeof AuthService | typeof S3Service | typeof SmsService | typeof DummySmsService | typeof DocumentsService | typeof TwillioService | typeof NodeMailerService | typeof EmailService)[];
+declare const _default: (typeof AssetsService | typeof ClassesService | typeof FileService | typeof AuthService | typeof S3Service | typeof SmsService | typeof DummySmsService | typeof DocumentsService | typeof MessagesService | typeof TwillioService | typeof NodeMailerService | typeof EmailService)[];
 export default _default;

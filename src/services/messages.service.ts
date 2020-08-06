@@ -49,10 +49,12 @@ export class MessagesService extends DBService {
   }
 
   async sendSMS(body, to) {
+    console.log('Sending sms to:', to, body);
     return await this.smsService.sendMessage({ body, to });
   }
   
   async sendEmail(body, to) {
+    console.log('Sending email to:', to, body);
     return await this.emailService.sendEmail(to, 'New Message from CM', body);
   }
 
