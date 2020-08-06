@@ -18,15 +18,20 @@ const mongoose_1 = require("mongoose");
 const mongoose_2 = require("@nestjs/mongoose");
 const db_service_1 = require("./db.service");
 const users_service_1 = require("./users.service");
+const sms_service_1 = require("./sms.service");
+const email_service_1 = require("./email.service");
 let MessagesService = (() => {
     let MessagesService = class MessagesService extends db_service_1.DBService {
-        constructor(model, userService) {
+        constructor(model, userService, smsService, emailService) {
             super(model);
             this.userService = userService;
+            this.smsService = smsService;
+            this.emailService = emailService;
         }
         async sendMessage(message) {
             let users = [];
             const msgObj = message.toJSON();
+            const strMessage = message.message;
             if (message.sendToType.ALL) {
                 users = await this.userService.findAll();
             }
@@ -39,13 +44,42 @@ let MessagesService = (() => {
                 };
                 users = await this.userService.find(where);
             }
+            const usersMobileNumber = users
+                .map(user => user.mobileNumber)
+                .filter(mobileNumber => !!mobileNumber)
+                .map(number => `+91${number}`);
+            const usersEmail = users
+                .map(user => user.email)
+                .filter(email => !!email);
+            this.processBatch(usersMobileNumber, strMessage, this.sendSMS.bind(this));
+            this.processBatch(usersEmail, strMessage, this.sendEmail.bind(this));
+        }
+        async sendSMS(body, to) {
+            return await this.smsService.sendMessage({ body, to });
+        }
+        async sendEmail(body, to) {
+            return await this.emailService.sendEmail(to, 'New Message from CM', body);
+        }
+        processBatch(list, message, cb) {
+            const batchSize = 5;
+            const promises = new Array(batchSize).fill(0).map(() => Promise.resolve());
+            let i = 0;
+            for (const mobileNumber of list) {
+                promises[i] = promises[i]
+                    .then(() => cb(message, mobileNumber))
+                    .catch(e => console.log(e));
+                i = (i + 1) % batchSize;
+            }
+            return Promise.all(promises);
         }
     };
     MessagesService = __decorate([
         common_1.Injectable(),
         __param(0, mongoose_2.InjectModel('Message')),
         __metadata("design:paramtypes", [mongoose_1.Model,
-            users_service_1.UsersService])
+            users_service_1.UsersService,
+            sms_service_1.SmsService,
+            email_service_1.EmailService])
     ], MessagesService);
     return MessagesService;
 })();

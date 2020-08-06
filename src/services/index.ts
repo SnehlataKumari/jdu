@@ -18,6 +18,8 @@ import { AnswersService } from "./answer.service";
 import { DocumentsService } from "./documents.service";
 import { SchemesService } from "./scheme.service";
 import { MessagesService } from "./messages.service";
+import { NodeMailerService } from "./nodemailer.service";
+import { EmailService } from "./email.service";
 
 export default [
   UsersService,
@@ -39,5 +41,7 @@ export default [
   DocumentsService,
   SchemesService,
   MessagesService,
-
+  TwillioService,
+  NodeMailerService,
+  EmailService
 ];

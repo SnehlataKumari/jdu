@@ -1,10 +1,12 @@
 import { Injectable } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { DummySmsService } from "./dummySms.service";
+import { TwillioService } from "./twillio.service";
 
 @Injectable()
 export class SmsService {
   constructor(
+    private twillioService: TwillioService,
     private dummySmsService: DummySmsService,
     private config: ConfigService
   ) { }

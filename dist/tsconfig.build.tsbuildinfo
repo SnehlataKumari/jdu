@@ -3356,21 +3356,6 @@
         "signature": "94b1bdadcb2769065ed3753f0232849810bd456b1589f13cfb3e90ae14927d28",
         "affectsGlobalScope": false
       },
-      "../src/services/sms.service.ts": {
-        "version": "6334b6058557a93bda891cb3d8d354ec63694844889fb6281a4d3ae28e149492",
-        "signature": "b1e05fc0f35af30b07740ee04018848351eae047a7304e3f841f38e435ec4be5",
-        "affectsGlobalScope": false
-      },
-      "../src/services/chapters.service.ts": {
-        "version": "bf99544e02e013bfdbd92f8a20cffebc3ec41cbbee9ea3f45ed6bca0ecfde64e",
-        "signature": "211d90690886fa06c6e636f1df2396cf09b78cedad952abfe05eacf76e940df9",
-        "affectsGlobalScope": false
-      },
-      "../src/services/subject.service.ts": {
-        "version": "61ecb9fe8268db4e5b1879e9fbad959e36233eca361a378e42f22d6d59ed22e8",
-        "signature": "695c00e7a8f196dd006ffe75bcca681ff3412667e710c6e640b7cd32ea18a7be",
-        "affectsGlobalScope": false
-      },
       "../node_modules/twilio/lib/jwt/taskrouter/taskroutercapability.d.ts": {
         "version": "dca34927798d6af9b6519683155f99e31283a33626d5ed999be1b260a22b9879",
         "signature": "dca34927798d6af9b6519683155f99e31283a33626d5ed999be1b260a22b9879",
@@ -5617,8 +5602,23 @@
         "affectsGlobalScope": false
       },
       "../src/services/twillio.service.ts": {
-        "version": "391a46a0595248a0e221121bcfd2dfa44482f70ccf68298277bb01ef32f36f72",
-        "signature": "3dfa6f4d53823b8d59f5273e4d642bb6ad92b805f0769c7f412a0ac6f4b6e898",
+        "version": "27a888801759c2579136ab1b3bd237465810705e2f7c3ac64f9ca8388e9d9b21",
+        "signature": "ab8ecf19486abf7f11aae768975c636a42b7dbc6a3c56f91b7a9624186addb9c",
+        "affectsGlobalScope": false
+      },
+      "../src/services/sms.service.ts": {
+        "version": "4947b1cca009305f95993ef9971cef7dc15be949a3f289aed72017b0f08ede3c",
+        "signature": "c43e4267b57ccbc9386601a01218485514ccc62182c7dfd2cf31fab23248c0f5",
+        "affectsGlobalScope": false
+      },
+      "../src/services/chapters.service.ts": {
+        "version": "bf99544e02e013bfdbd92f8a20cffebc3ec41cbbee9ea3f45ed6bca0ecfde64e",
+        "signature": "211d90690886fa06c6e636f1df2396cf09b78cedad952abfe05eacf76e940df9",
+        "affectsGlobalScope": false
+      },
+      "../src/services/subject.service.ts": {
+        "version": "61ecb9fe8268db4e5b1879e9fbad959e36233eca361a378e42f22d6d59ed22e8",
+        "signature": "695c00e7a8f196dd006ffe75bcca681ff3412667e710c6e640b7cd32ea18a7be",
         "affectsGlobalScope": false
       },
       "../src/services/events.service.ts": {
@@ -5651,14 +5651,24 @@
         "signature": "ffa949f436ba20f4f5fe5ca4f5a5714028963b9ddcef2109b7ce4f46795e335a",
         "affectsGlobalScope": false
       },
+      "../src/services/nodemailer.service.ts": {
+        "version": "711fdb0c7a43b0cd102721e6a85c21b1d1b626bc0bd9ca581638732571f6078c",
+        "signature": "145d2fd1f37cdcaf25673f671191112c04a4b5b330c83011f485fd6ce678ecf4",
+        "affectsGlobalScope": false
+      },
+      "../src/services/email.service.ts": {
+        "version": "7071df82ee96f7d345666bc5cb963cb654714fc37fd47bea66c65ee34e60a2f8",
+        "signature": "51676f0bc84d999b9b3635af86bbe180acfdbcbf8022802995be436aa37c15ba",
+        "affectsGlobalScope": false
+      },
       "../src/services/messages.service.ts": {
-        "version": "9b54c22bc3f41683ce05a5877128ac50189f4dfee6cde62378c069ee66ada505",
-        "signature": "bc232119e3eeb4a39cfb2fed37a76c02f1a0fe8dd9fbbacc2cad726e635f5a9f",
+        "version": "3f28f0980e341f28a572398815774f34aac4b23acdb67acda38bc2f8df4df64a",
+        "signature": "c3ba49105b818219d08d32a9181c5656eb2c93146112524941a403596a2431cc",
         "affectsGlobalScope": false
       },
       "../src/services/index.ts": {
-        "version": "b1282a1110773f2e5f8738d99f938169da2fad75bd6fc5ca2706eafcb8569517",
-        "signature": "fed9af0c490765c6dc89165d9568dca02f9b416152e7833f89ae1833ee8e5d0a",
+        "version": "8881c53df0e29948bd0caa42948568a4093bc57e66913c348091d4b83cc07b21",
+        "signature": "b8fbcbd0e2d10f148189d8015db9ee4fde6058b018268ae8671296ebd91c5444",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/passport-strategy/index.d.ts": {
@@ -19211,6 +19221,15 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
+      "../src/services/email.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/services/nodemailer.service.ts"
+      ],
       "../src/services/events.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
@@ -19245,9 +19264,11 @@
         "../src/services/classes.service.ts",
         "../src/services/documents.service.ts",
         "../src/services/dummysms.service.ts",
+        "../src/services/email.service.ts",
         "../src/services/events.service.ts",
         "../src/services/file.service.ts",
         "../src/services/messages.service.ts",
+        "../src/services/nodemailer.service.ts",
         "../src/services/questions.service.ts",
         "../src/services/s3.service.ts",
         "../src/services/scheme.service.ts",
@@ -19268,7 +19289,18 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/services/db.service.ts",
+        "../src/services/email.service.ts",
+        "../src/services/sms.service.ts",
         "../src/services/users.service.ts"
+      ],
+      "../src/services/nodemailer.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/config/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts"
       ],
       "../src/services/questions.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -19310,7 +19342,8 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
-        "../src/services/dummysms.service.ts"
+        "../src/services/dummysms.service.ts",
+        "../src/services/twillio.service.ts"
       ],
       "../src/services/subject.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -19327,6 +19360,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/config/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/console.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
@@ -32121,6 +32155,9 @@
         "../src/services/db.service.ts",
         "../src/services/file.service.ts"
       ],
+      "../src/services/email.service.ts": [
+        "../src/services/nodemailer.service.ts"
+      ],
       "../src/services/events.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
         "../src/services/db.service.ts"
@@ -32134,15 +32171,23 @@
         "../src/services/classes.service.ts",
         "../src/services/documents.service.ts",
         "../src/services/dummysms.service.ts",
+        "../src/services/email.service.ts",
         "../src/services/file.service.ts",
         "../src/services/messages.service.ts",
+        "../src/services/nodemailer.service.ts",
         "../src/services/s3.service.ts",
-        "../src/services/sms.service.ts"
+        "../src/services/sms.service.ts",
+        "../src/services/twillio.service.ts"
       ],
       "../src/services/messages.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
         "../src/services/db.service.ts",
+        "../src/services/email.service.ts",
+        "../src/services/sms.service.ts",
         "../src/services/users.service.ts"
+      ],
+      "../src/services/nodemailer.service.ts": [
+        "../node_modules/@nestjs/config/index.d.ts"
       ],
       "../src/services/questions.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
@@ -32157,7 +32202,8 @@
       ],
       "../src/services/sms.service.ts": [
         "../node_modules/@nestjs/config/index.d.ts",
-        "../src/services/dummysms.service.ts"
+        "../src/services/dummysms.service.ts",
+        "../src/services/twillio.service.ts"
       ],
       "../src/services/subject.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
@@ -33385,10 +33431,12 @@
       "../src/services/db.service.ts",
       "../src/services/documents.service.ts",
       "../src/services/dummysms.service.ts",
+      "../src/services/email.service.ts",
       "../src/services/events.service.ts",
       "../src/services/file.service.ts",
       "../src/services/index.ts",
       "../src/services/messages.service.ts",
+      "../src/services/nodemailer.service.ts",
       "../src/services/questions.service.ts",
       "../src/services/s3.service.ts",
       "../src/services/scheme.service.ts",
