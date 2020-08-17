@@ -20,6 +20,7 @@ import { SchemesService } from "./scheme.service";
 import { MessagesService } from "./messages.service";
 import { NodeMailerService } from "./nodemailer.service";
 import { EmailService } from "./email.service";
+import { AquasmsService } from "./aquasms.service";
 
 export default [
   UsersService,
@@ -43,5 +44,6 @@ export default [
   MessagesService,
   TwillioService,
   NodeMailerService,
-  EmailService
+  EmailService,
+  AquasmsService,
 ];

@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Module, HttpModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ServeStaticModule } from '@nestjs/serve-static';
@@ -16,7 +16,7 @@ import { JwtStrategy } from './passport/jwt.strategy';
 import { MulterModule } from '@nestjs/platform-express';
 import * as multer from 'multer';
 
-var storage = multer.diskStorage({
+const storage = multer.diskStorage({
   destination: join(__dirname, '..', 'static/uploads'),
   filename: function (req, file, cb) {
     cb(null, file.originalname)
@@ -25,6 +25,7 @@ var storage = multer.diskStorage({
 
 @Module({
   imports: [
+    HttpModule,
     ConfigModule.forRoot(),
     PassportModule.register({ defaultStrategy: 'jwt' }),
     MongooseModule.forRoot(`mongodb://localhost/${process.env.DATABASE_NAME}`),

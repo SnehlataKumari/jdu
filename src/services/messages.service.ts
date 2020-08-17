@@ -34,8 +34,6 @@ export class MessagesService extends DBService {
       users = await this.userService.find(where);
     }
 
-    console.log(message);
-
     if(message.mediumType.SMS) {
       const usersMobileNumber = users
         .map(user => user.mobileNumber)
