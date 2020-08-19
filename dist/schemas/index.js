@@ -13,6 +13,7 @@ const answer_schema_1 = require("./answer.schema");
 const document_schema_1 = require("./document.schema");
 const scheme_schema_1 = require("./scheme.schema");
 const message_schema_1 = require("./message.schema");
+const brandBihar_schema_1 = require("./brandBihar.schema");
 exports.default = [
     { name: 'Class', schema: class_schema_1.ClassSchema },
     { name: 'User', schema: user_schema_1.UserSchema },
@@ -27,5 +28,6 @@ exports.default = [
     { name: 'Document', schema: document_schema_1.DocumentSchema },
     { name: 'Scheme', schema: scheme_schema_1.SchemeSchema },
     { name: 'Message', schema: message_schema_1.MessageSchema },
+    { name: 'BrandBihar', schema: brandBihar_schema_1.BrandBiharSchema },
 ];
 //# sourceMappingURL=index.js.map

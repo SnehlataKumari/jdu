@@ -11,6 +11,7 @@ import { AnswerSchema } from "./answer.schema";
 import { DocumentSchema } from "./document.schema";
 import { SchemeSchema } from "./scheme.schema";
 import { MessageSchema } from "./message.schema";
+import { BrandBiharSchema } from "./brandBihar.schema";
 
 export default  [
   { name: 'Class', schema: ClassSchema },
@@ -26,5 +27,5 @@ export default  [
   { name: 'Document', schema: DocumentSchema},
   { name: 'Scheme', schema: SchemeSchema},
   { name: 'Message', schema: MessageSchema},
-
+  { name: 'BrandBihar', schema: BrandBiharSchema},
 ];

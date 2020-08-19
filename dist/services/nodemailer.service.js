@@ -26,7 +26,7 @@ let NodeMailerService = (() => {
             });
         }
         async sendEmail(to, subject, text) {
-            let mailDetails = {
+            const mailDetails = {
                 from: this.config.get('GMAIL_ID'),
                 to,
                 subject,

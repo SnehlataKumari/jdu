@@ -34,10 +34,17 @@ let AuthController = (() => {
         registerYourself(req) {
             const { body } = req;
             const password = body.password;
-            var hashedPassword = passwordHash.generate(password);
+            const hashedPassword = passwordHash.generate(password);
             body.password = hashedPassword;
             const registerYourself = this.service.registerYourself(body);
             return registerYourself;
+        }
+        async manageBrandBihar(requestBody) {
+            const manageBrandBihar = await this.service.addVideo(requestBody);
+            return {
+                message: 'video added successfully.',
+                manageBrandBihar
+            };
         }
         async simpleLogin(body) {
             const { email, password } = body;
@@ -84,7 +91,7 @@ let AuthController = (() => {
         async createAdmin(requestBody) {
             const { mobileNumber, name, password, username } = requestBody;
             console.log({ mobileNumber });
-            let user = await this.usersService.create({ mobileNumber, name, password, username, role: 'ADMIN' });
+            const user = await this.usersService.create({ mobileNumber, name, password, username, role: 'ADMIN' });
             console.log({ user });
             return utils_1.success('Admin created successfully!', { user, access_token: this.jwtService.sign(user.toJSON()) });
         }
@@ -126,6 +133,13 @@ let AuthController = (() => {
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], AuthController.prototype, "registerYourself", null);
+    __decorate([
+        common_1.Post('manage-brandBihar'),
+        __param(0, common_1.Body()),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", Promise)
+    ], AuthController.prototype, "manageBrandBihar", null);
     __decorate([
         common_1.Post('simple-login'),
         __param(0, common_1.Body()),

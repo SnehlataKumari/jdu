@@ -1,11 +1,14 @@
 import { Injectable, UnauthorizedException } from "@nestjs/common";
 import { generateOTP } from "src/utils";
 import { UsersService } from "./users.service";
+import { BrandBiharService } from "./brandBihar.service";
 
 @Injectable()
 export class AuthService {
 
-  constructor(private userService: UsersService) {}
+  constructor(private userService: UsersService,
+    private brandBiharService: BrandBiharService,
+  ) { }
 
   async registerYourself(body) {
     const user = await this.userService.create(body);
@@ -18,9 +21,14 @@ export class AuthService {
     return user;
   }
 
+  async addVideo(requestBody) {
+    const video = await this.brandBiharService.create(requestBody);
+    return video;
+  }
+
   async validateUser(mobileNumber, otp) {
     const user = await this.userService.findByMobileNumber(mobileNumber);
-    
+
     if (user && user.otp === otp) {
       return user;
     }
@@ -36,7 +44,7 @@ export class AuthService {
 
   async postLogin(user, { deviceId }) {
     const updateObj = user.devices.length == 2 && !user.devices.includes(deviceId)
-      ? { devices: [deviceId]}
+      ? { devices: [deviceId] }
       : { $addToSet: { devices: deviceId } };
     return await this.userService.update(user, updateObj);
   }

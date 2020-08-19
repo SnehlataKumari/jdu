@@ -9,4 +9,5 @@ export class YatrayenController extends ResourceController {
   ) {
     super(service);
   }
+
 }

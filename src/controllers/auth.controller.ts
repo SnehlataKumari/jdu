@@ -8,7 +8,6 @@ import { SmsService } from "src/services/sms.service";
 import { VersionService } from "src/services/version.service";
 import { JwtAuthGuard } from "src/passport/auth.guard";
 import * as passwordHash from "password-hash";
-import { error } from "console";
 
 @Controller('auth')
 export class AuthController {
@@ -17,7 +16,7 @@ export class AuthController {
     private usersService: UsersService,
     private jwtService: JwtService,
     private smsService: SmsService,
-    private versionService: VersionService
+    private versionService: VersionService,
   ) {}
 
   @Post('register-user')
@@ -25,10 +24,19 @@ export class AuthController {
     const { body } = req;
 
     const password = body.password;
-    var hashedPassword = passwordHash.generate(password); 
+    const hashedPassword = passwordHash.generate(password); 
     body.password = hashedPassword;
     const registerYourself = this.service.registerYourself(body);
     return  registerYourself;
+  }
+
+  @Post('manage-brandBihar')
+  async manageBrandBihar(@Body() requestBody){
+    const manageBrandBihar = await this.service.addVideo(requestBody);
+    return {
+      message: 'video added successfully.',
+      manageBrandBihar
+    };
   }
 
   @Post('simple-login')
@@ -90,7 +98,7 @@ export class AuthController {
     const { mobileNumber, name, password, username } = requestBody;
     console.log({mobileNumber});
     
-    let user = await this.usersService.create({ mobileNumber, name, password, username, role: 'ADMIN' });
+    const user = await this.usersService.create({ mobileNumber, name, password, username, role: 'ADMIN' });
     console.log({user});
     
     return success('Admin created successfully!', { user, access_token: this.jwtService.sign(user.toJSON())});

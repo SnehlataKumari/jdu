@@ -31,11 +31,12 @@ let UsersController = (() => {
         }
         createUser(body) {
             const password = body.password;
-            var hashedPassword = passwordHash.generate(password);
+            const hashedPassword = passwordHash.generate(password);
             body.password = hashedPassword;
             return utils_1.success('Resource created successfully!', this.service.create(body));
         }
         async migrateUsers(file) {
+            console.log(file, 'fffffffffffffffffffffffff');
             const validatedValues = [];
             const withError = [];
             const users = await utils_1.getJsonFromCSV(file);
@@ -46,7 +47,7 @@ let UsersController = (() => {
                     if (!!userExits) {
                         throw new Error(`Username already exists: ${validatedUser.username}`);
                     }
-                    var hashedPassword = passwordHash.generate(validatedUser.password);
+                    const hashedPassword = passwordHash.generate(validatedUser.password);
                     validatedUser.password = hashedPassword;
                     validatedValues.push(validatedUser);
                 }

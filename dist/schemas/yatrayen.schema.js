@@ -4,6 +4,9 @@ exports.YatrayenSchema = void 0;
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const YatrayenSchema = new mongoose.Schema({
+    image: {
+        type: String,
+    },
     title: {
         type: String,
         required: [true, 'Subject title is required!'],

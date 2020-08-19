@@ -21,6 +21,7 @@ import { MessagesService } from "./messages.service";
 import { NodeMailerService } from "./nodemailer.service";
 import { EmailService } from "./email.service";
 import { AquasmsService } from "./aquasms.service";
+import { BrandBiharService } from "./brandBihar.service";
 
 export default [
   UsersService,
@@ -46,4 +47,5 @@ export default [
   NodeMailerService,
   EmailService,
   AquasmsService,
+  BrandBiharService,
 ];

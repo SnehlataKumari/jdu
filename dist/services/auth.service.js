@@ -13,10 +13,12 @@ exports.AuthService = void 0;
 const common_1 = require("@nestjs/common");
 const utils_1 = require("../utils");
 const users_service_1 = require("./users.service");
+const brandBihar_service_1 = require("./brandBihar.service");
 let AuthService = (() => {
     let AuthService = class AuthService {
-        constructor(userService) {
+        constructor(userService, brandBiharService) {
             this.userService = userService;
+            this.brandBiharService = brandBiharService;
         }
         async registerYourself(body) {
             const user = await this.userService.create(body);
@@ -26,6 +28,10 @@ let AuthService = (() => {
             user.otp = utils_1.generateOTP();
             user.save();
             return user;
+        }
+        async addVideo(requestBody) {
+            const video = await this.brandBiharService.create(requestBody);
+            return video;
         }
         async validateUser(mobileNumber, otp) {
             const user = await this.userService.findByMobileNumber(mobileNumber);
@@ -51,7 +57,8 @@ let AuthService = (() => {
     };
     AuthService = __decorate([
         common_1.Injectable(),
-        __metadata("design:paramtypes", [users_service_1.UsersService])
+        __metadata("design:paramtypes", [users_service_1.UsersService,
+            brandBihar_service_1.BrandBiharService])
     ], AuthService);
     return AuthService;
 })();

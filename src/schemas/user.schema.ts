@@ -13,6 +13,18 @@ export const UserSchema = new mongoose.Schema({
     type: String,
     // required: [true, 'Name is required!'],
   },
+  branch: {
+    type: String,
+  },
+  designation: {
+    type: String,
+  },
+  district: {
+    type: String,
+  },
+  vidhanshabha: {
+    type: String,
+  },
   password: { // Only for admin
     type: String
   },

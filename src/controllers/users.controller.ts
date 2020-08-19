@@ -21,7 +21,7 @@ export class UsersController extends ResourceController {
   @Post()
   createUser(@Body() body) {
     const password = body.password;
-    var hashedPassword = passwordHash.generate(password);
+    const hashedPassword = passwordHash.generate(password);
     body.password = hashedPassword;
     return success('Resource created successfully!', this.service.create(body));
   }
@@ -30,6 +30,8 @@ export class UsersController extends ResourceController {
   @Post('migrate-users')
   @UseInterceptors(FileInterceptor('file', {}))
   async migrateUsers(@UploadedFile() file) {
+    console.log(file, 'fffffffffffffffffffffffff');
+    
     const validatedValues = [];
     const withError = [];
 
@@ -41,7 +43,7 @@ export class UsersController extends ResourceController {
         if (!!userExits) {
           throw new Error(`Username already exists: ${validatedUser.username}`);
         }
-        var hashedPassword = passwordHash.generate(validatedUser.password);
+        const hashedPassword = passwordHash.generate(validatedUser.password);
         validatedUser.password = hashedPassword;
         validatedValues.push(validatedUser);
       } catch (e) {

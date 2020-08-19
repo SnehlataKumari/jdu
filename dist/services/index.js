@@ -22,6 +22,8 @@ const scheme_service_1 = require("./scheme.service");
 const messages_service_1 = require("./messages.service");
 const nodemailer_service_1 = require("./nodemailer.service");
 const email_service_1 = require("./email.service");
+const aquasms_service_1 = require("./aquasms.service");
+const brandBihar_service_1 = require("./brandBihar.service");
 exports.default = [
     users_service_1.UsersService,
     assets_service_1.AssetsService,
@@ -44,6 +46,8 @@ exports.default = [
     messages_service_1.MessagesService,
     twillio_service_1.TwillioService,
     nodemailer_service_1.NodeMailerService,
-    email_service_1.EmailService
+    email_service_1.EmailService,
+    aquasms_service_1.AquasmsService,
+    brandBihar_service_1.BrandBiharService,
 ];
 //# sourceMappingURL=index.js.map

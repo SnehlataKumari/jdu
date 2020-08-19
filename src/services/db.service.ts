@@ -9,6 +9,10 @@ export class DBService {
     return this.model.find(where);
   }
 
+  delete(query){
+    return this.model.remove(query);
+  }
+
   create(userObject) {
     return this.model.create(userObject);
   }

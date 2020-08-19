@@ -14,11 +14,13 @@ const common_1 = require("@nestjs/common");
 const config_1 = require("@nestjs/config");
 const dummySms_service_1 = require("./dummySms.service");
 const twillio_service_1 = require("./twillio.service");
+const aquasms_service_1 = require("./aquasms.service");
 let SmsService = (() => {
     let SmsService = class SmsService {
-        constructor(twillioService, dummySmsService, config) {
+        constructor(twillioService, dummySmsService, aquasmsService, config) {
             this.twillioService = twillioService;
             this.dummySmsService = dummySmsService;
+            this.aquasmsService = aquasmsService;
             this.config = config;
         }
         getClient() {
@@ -39,6 +41,7 @@ let SmsService = (() => {
         common_1.Injectable(),
         __metadata("design:paramtypes", [twillio_service_1.TwillioService,
             dummySms_service_1.DummySmsService,
+            aquasms_service_1.AquasmsService,
             config_1.ConfigService])
     ], SmsService);
     return SmsService;

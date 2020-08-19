@@ -13,6 +13,18 @@ exports.UserSchema = new mongoose.Schema({
     name: {
         type: String,
     },
+    branch: {
+        type: String,
+    },
+    designation: {
+        type: String,
+    },
+    district: {
+        type: String,
+    },
+    vidhanshabha: {
+        type: String,
+    },
     password: {
         type: String
     },
