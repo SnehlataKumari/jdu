@@ -36,7 +36,6 @@ let UsersController = (() => {
             return utils_1.success('Resource created successfully!', this.service.create(body));
         }
         async migrateUsers(file) {
-            console.log(file, 'fffffffffffffffffffffffff');
             const validatedValues = [];
             const withError = [];
             const users = await utils_1.getJsonFromCSV(file);

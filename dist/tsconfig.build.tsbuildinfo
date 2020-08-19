@@ -3347,7 +3347,7 @@
         "affectsGlobalScope": false
       },
       "../src/utils/index.ts": {
-        "version": "9b9ecddfc3a37fe7a659be40a5902c3f61ccdbd5cec10676d741393da781849c",
+        "version": "726a88613d0f221c3e86f2c3832fedc7e7af5635f34e02e15ae1e1534fbda54b",
         "signature": "03a89e9b64e8264a861eba277b7214cf67922cc536fa31801146066042520c68",
         "affectsGlobalScope": false
       },
@@ -5862,7 +5862,7 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/users.controller.ts": {
-        "version": "7c29697525c7d45dd8b341f2c36235a4b099cac40e7458628c3ca68bbccb1f66",
+        "version": "ac1ed654fadd93977e45d7ba125f7ec41f448ba0ac05ab3d17b7bf3cefe0b23c",
         "signature": "97af072cf8c32353b1a1085ee289ddfbdaa907010d3d573e73ab999bb2669989",
         "affectsGlobalScope": false
       },

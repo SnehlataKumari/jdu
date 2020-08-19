@@ -24,7 +24,7 @@ exports.getJsonFromCSV = async (file) => {
 exports.sanitizeJson = (json) => {
     if (lodash_1.isObject(json)) {
         return Reflect.ownKeys(json).reduce((obj, key) => {
-            obj[exports.removeSpecialChar(key)] = exports.removeSpecialChar(json[key]);
+            obj[lodash_1.camelCase(exports.removeSpecialChar(key))] = exports.removeSpecialChar(json[key]);
             return obj;
         }, {});
     }

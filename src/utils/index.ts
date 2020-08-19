@@ -1,7 +1,7 @@
 import * as csv from 'csv-parser';
 import * as fs from 'fs';
 
-import {isObject} from 'lodash';
+import {isObject, camelCase} from 'lodash';
 
 export const success = async (message = 'Success', data: any) => {
   return ({
@@ -25,7 +25,7 @@ export const getJsonFromCSV = async (file) => {
 export const sanitizeJson = (json) => {
   if (isObject(json)) {
     return Reflect.ownKeys(json).reduce((obj, key) => {
-      obj[removeSpecialChar(key)] = removeSpecialChar(json[key]);
+      obj[camelCase(removeSpecialChar(key))] = removeSpecialChar(json[key]);
       return obj;
     }, {});
   }

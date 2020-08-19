@@ -30,12 +30,12 @@ export class UsersController extends ResourceController {
   @Post('migrate-users')
   @UseInterceptors(FileInterceptor('file', {}))
   async migrateUsers(@UploadedFile() file) {
-    console.log(file, 'fffffffffffffffffffffffff');
     
     const validatedValues = [];
     const withError = [];
 
     const users = await getJsonFromCSV(file) as any[];
+    
     for( const user of users) {
       try {
         const validatedUser = await this.service.validateUserJson(user);
