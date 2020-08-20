@@ -8,6 +8,7 @@ exports.USER_ROLES = {
     ADMIN: { key: 'ADMIN', label: 'Admin' },
     STATE_LEVEL_USER: { key: 'STATE_LEVEL_USER', label: 'State Level User' },
     BLOCK_LEVEL_USER: { key: 'BLOCK_LEVEL_USER', label: 'Block level user' },
+    NATIONAL_LEVEL_USER: { key: 'NATIONAL_LEVEL_USER', label: 'National level user' },
     DISTRICT_LEVEL_USER: { key: 'DISTRICT_LEVEL_USER', label: 'District level user' }
 };
 exports.getCategory = (constant) => Reflect.ownKeys(constant).map(constantKey => constant[constantKey].key);

@@ -20,6 +20,10 @@ export declare const USER_ROLES: {
         key: string;
         label: string;
     };
+    NATIONAL_LEVEL_USER: {
+        key: string;
+        label: string;
+    };
     DISTRICT_LEVEL_USER: {
         key: string;
         label: string;

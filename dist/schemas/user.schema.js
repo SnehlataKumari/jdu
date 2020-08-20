@@ -3,12 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserSchema = void 0;
 const mongoose = require("mongoose");
 const constants_1 = require("../constants");
-const Schema = mongoose.Schema;
-const paymentSchema = new Schema({
-    paymentId: { type: String, required: true }
-}, {
-    timestamps: true
-});
 exports.UserSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -22,7 +16,7 @@ exports.UserSchema = new mongoose.Schema({
     district: {
         type: String,
     },
-    vidhanshabha: {
+    vidhansabha: {
         type: String,
     },
     password: {

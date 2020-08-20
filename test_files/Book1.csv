@@ -1,0 +1,4 @@
+﻿Name,Role,Branch,Designation,District,Vidhansabha,Email,Mobile Number,password,username
+Anand Kumar,STATE_LEVEL_USER,Vyavasayik,Sangathan Mahamantri,"Road no - 5, Near Water Bridge, Nawada",Rajauli ,testmail@gmail.com,9123456789,P@ssw0rd,useMig1
+Suresh Kumar,BLOCK_LEVEL_USER,Dalit,Executive Member,"Raja Pul, Near Municipal Office, Chanpatia",Chanpatia ,ymail@gmail.com,9123456789,P@ssw0rd,useMig2
+Manish Kumar,BLOCK_LEVEL_USER,Mahadalit,Member,"Gate no - 6, Road no 8, Sheohar",Sheohar ,zmail@gmail.com,9123456789,P@ssw0rd,useMig3
