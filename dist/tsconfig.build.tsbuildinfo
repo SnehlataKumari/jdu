@@ -3527,8 +3527,8 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/resource.controller.ts": {
-        "version": "8647c6726f838270239bc04931e884734378807dc4a8a1fcc727982094e98100",
-        "signature": "c3c4dee71b723db290bef6bd583cfae1b7b934f1246eb4cdc93ff641461be186",
+        "version": "a1612f5585f09a604ffbb34d0db063282f0630824905be12243b6f2f8b4cb805",
+        "signature": "bda24630323562bf4a8f36d8b10f950b149f3ec03ff88f7a804dce887f8e284b",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/platform-express/interfaces/serve-static-options.interface.d.ts": {
@@ -3612,7 +3612,7 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/users.controller.ts": {
-        "version": "ac1ed654fadd93977e45d7ba125f7ec41f448ba0ac05ab3d17b7bf3cefe0b23c",
+        "version": "0a7caccc91a8766cfb549b6eb2e3a47d722bd222f6e75e56138e4f6ed2cf4ce0",
         "signature": "97af072cf8c32353b1a1085ee289ddfbdaa907010d3d573e73ab999bb2669989",
         "affectsGlobalScope": false
       },
@@ -3713,7 +3713,7 @@
       },
       "../src/controllers/index.ts": {
         "version": "7df8c47bbd99471ec1970aa9ed9b68c52f792780a8d4618db6fb15eff0b11c09",
-        "signature": "675efab91467890fd93e8dc749bbfad8582d368186fe7774d28c0e62af059207",
+        "signature": "d587e5134d3830b6042ee9053789ed2d0daa79de225d0dc20c703fc43d4d3019",
         "affectsGlobalScope": false
       },
       "../node_modules/passport-custom/lib/index.d.ts": {
@@ -32547,12 +32547,12 @@
       ],
       "../src/controllers/index.ts": [
         "../src/controllers/auth.controller.ts",
+        "../src/controllers/brandbihar.controller.ts",
         "../src/controllers/chapters.controller.ts",
         "../src/controllers/classes.controller.ts",
         "../src/controllers/documents.controller.ts",
         "../src/controllers/questions.controller.ts",
-        "../src/controllers/subject.controller.ts",
-        "../src/controllers/yatrayen.controllers.ts"
+        "../src/controllers/subject.controller.ts"
       ],
       "../src/controllers/messages.controller.ts": [
         "../src/controllers/resource.controller.ts",

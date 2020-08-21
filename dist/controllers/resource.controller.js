@@ -37,9 +37,11 @@ let ResourceController = (() => {
         async updateResource(id, resourceObject) {
             return utils_1.success('Resource updated successfully!', this.service.findByIdAndUpdate(id, resourceObject));
         }
+        async getResource(id) {
+            return utils_1.success('Resource fetched successfully!', this.service.findById(id));
+        }
     }
     __decorate([
-        common_1.UseGuards(auth_guard_1.JwtAuthGuard),
         common_1.Get(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
@@ -69,6 +71,13 @@ let ResourceController = (() => {
         __metadata("design:paramtypes", [Object, Object]),
         __metadata("design:returntype", Promise)
     ], ResourceController.prototype, "updateResource", null);
+    __decorate([
+        common_1.Get('/:id'),
+        __param(0, common_1.Param('id')),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", Promise)
+    ], ResourceController.prototype, "getResource", null);
     return ResourceController;
 })();
 exports.ResourceController = ResourceController;

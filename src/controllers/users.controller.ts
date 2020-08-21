@@ -30,7 +30,6 @@ export class UsersController extends ResourceController {
   @Post('migrate-users')
   @UseInterceptors(FileInterceptor('file', {}))
   async migrateUsers(@UploadedFile() file) {
-    
     const validatedValues = [];
     const withError = [];
 

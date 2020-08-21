@@ -8,7 +8,6 @@ export class ResourceController {
 
   constructor(public service) {}
 
-  @UseGuards(JwtAuthGuard)
   @Get()
   findAll() {
     return success('List found successfully', this.service.findAll());
@@ -33,5 +32,10 @@ export class ResourceController {
   @Put('/:id')
   async updateResource(@Param('id') id, @Body() resourceObject) {
     return success('Resource updated successfully!', this.service.findByIdAndUpdate(id, resourceObject));
+  }
+  
+  @Get('/:id')
+  async getResource(@Param('id') id) {
+    return success('Resource fetched successfully!', this.service.findById(id));
   }
 };
