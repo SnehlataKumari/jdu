@@ -10,7 +10,6 @@ const sms_service_1 = require("./sms.service");
 const chapters_service_1 = require("./chapters.service");
 const subject_service_1 = require("./subject.service");
 const version_service_1 = require("./version.service");
-const twillio_service_1 = require("./twillio.service");
 const dummySms_service_1 = require("./dummySms.service");
 const event_schema_1 = require("../schemas/event.schema");
 const events_service_1 = require("./events.service");
@@ -44,7 +43,6 @@ exports.default = [
     documents_service_1.DocumentsService,
     scheme_service_1.SchemesService,
     messages_service_1.MessagesService,
-    twillio_service_1.TwillioService,
     nodemailer_service_1.NodeMailerService,
     email_service_1.EmailService,
     aquasms_service_1.AquasmsService,
