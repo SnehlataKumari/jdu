@@ -1937,7 +1937,7 @@
         "affectsGlobalScope": false
       },
       "../src/schemas/yatrayen.schema.ts": {
-        "version": "e719869dcae31e684b462d587084895022f03f6a0b0a78d508df9b373bb3aa89",
+        "version": "c6a516212a8d497aeb89cdabffc34d672e478808aa133814a6fead86a7f8d55c",
         "signature": "c9877c4f82eed3315cdcfd922389b82c460487372a9af9c2552951c4bc5da4cd",
         "affectsGlobalScope": false
       },
@@ -1967,7 +1967,7 @@
         "affectsGlobalScope": false
       },
       "../src/schemas/brandbihar.schema.ts": {
-        "version": "dedb8eb3619f7cfb166cd87407b54757875034d28cd4406aba94ee7e08040ecd",
+        "version": "fae22696abaf033be0b972e06f6520766538e777aeff73967cc0d60cdf2f666a",
         "signature": "1e6b90d03c377a799e604fc55a410ebd58c56e4f05299b9474cf4c2b0f03244c",
         "affectsGlobalScope": false
       },
@@ -5886,9 +5886,14 @@
         "signature": "6901d354c1b54d07ff8835cf03980a24d74ea4de2f3e0fc6e842c0511f1925f5",
         "affectsGlobalScope": false
       },
+      "../src/controllers/brandbihar.controller.ts": {
+        "version": "e65fae899079483568305f2d3cb8c1f66e4545514ce5ba1f43134158ea4aba63",
+        "signature": "7f9bfe75b07bf82410fcf97ad317ca007b2d79badf2129353d572abceff74dbc",
+        "affectsGlobalScope": false
+      },
       "../src/controllers/index.ts": {
-        "version": "94d3562637bde19a4f9b76943371ba7402406e122c2ebfd1736b20dc2cecf6e2",
-        "signature": "3ed95c774ee134136794fc767dcf4c9a2367af983fce149cf2efd67d6e54bd89",
+        "version": "0ef73bd129e15ae0458be56b1bed77e5cd3856f3c24eb0064df30121854a69c6",
+        "signature": "8d42691c3e34d29ee7234cf1b014ea81cbdb7f8aa2a00db0afa40d96a354697c",
         "affectsGlobalScope": false
       },
       "../node_modules/passport-custom/lib/index.d.ts": {
@@ -18794,6 +18799,16 @@
         "../src/services/version.service.ts",
         "../src/utils/index.ts"
       ],
+      "../src/controllers/brandbihar.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../src/controllers/resource.controller.ts",
+        "../src/services/brandbihar.service.ts"
+      ],
       "../src/controllers/chapters.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -18854,6 +18869,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../src/controllers/assets.controller.ts",
         "../src/controllers/auth.controller.ts",
+        "../src/controllers/brandbihar.controller.ts",
         "../src/controllers/chapters.controller.ts",
         "../src/controllers/classes.controller.ts",
         "../src/controllers/documents.controller.ts",
@@ -32054,6 +32070,10 @@
         "../src/services/users.service.ts",
         "../src/services/version.service.ts"
       ],
+      "../src/controllers/brandbihar.controller.ts": [
+        "../src/controllers/resource.controller.ts",
+        "../src/services/brandbihar.service.ts"
+      ],
       "../src/controllers/chapters.controller.ts": [
         "../src/controllers/resource.controller.ts",
         "../src/services/assets.service.ts",
@@ -32077,10 +32097,10 @@
       ],
       "../src/controllers/index.ts": [
         "../src/controllers/auth.controller.ts",
+        "../src/controllers/brandbihar.controller.ts",
         "../src/controllers/chapters.controller.ts",
         "../src/controllers/classes.controller.ts",
         "../src/controllers/documents.controller.ts",
-        "../src/controllers/events.controller.ts",
         "../src/controllers/questions.controller.ts",
         "../src/controllers/subject.controller.ts"
       ],
@@ -33455,6 +33475,7 @@
       "../src/constants/index.ts",
       "../src/controllers/assets.controller.ts",
       "../src/controllers/auth.controller.ts",
+      "../src/controllers/brandbihar.controller.ts",
       "../src/controllers/chapters.controller.ts",
       "../src/controllers/classes.controller.ts",
       "../src/controllers/documents.controller.ts",

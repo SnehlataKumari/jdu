@@ -13,6 +13,7 @@ const questions_controller_1 = require("./questions.controller");
 const documents_controller_1 = require("./documents.controller");
 const scheme_controller_1 = require("./scheme.controller");
 const messages_controller_1 = require("./messages.controller");
+const brandBihar_controller_1 = require("./brandBihar.controller");
 exports.default = [
     users_controller_1.UsersController,
     classes_controller_1.ClassesController,
@@ -27,5 +28,6 @@ exports.default = [
     documents_controller_1.DocumentsController,
     scheme_controller_1.SchemesController,
     messages_controller_1.MessagesController,
+    brandBihar_controller_1.BrandBiharController,
 ];
 //# sourceMappingURL=index.js.map

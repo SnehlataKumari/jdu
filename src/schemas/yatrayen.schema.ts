@@ -1,14 +1,13 @@
 import * as mongoose from 'mongoose';
-const Schema = mongoose.Schema;
 
 const YatrayenSchema = new mongoose.Schema({
-  image: {
+  imageUrl: {
     type: String,
   },
   title: {
     type: String,
     // unique: [true, 'Subject title already exists!'],
-    required: [true, 'Subject title is required!'],
+    required: [true, 'Yatrayen title is required!'],
   },
   description: {
     type: String,

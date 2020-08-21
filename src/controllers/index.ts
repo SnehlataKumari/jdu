@@ -11,6 +11,7 @@ import { QuestionsController } from "./questions.controller";
 import { DocumentsController } from "./documents.controller";
 import { SchemesController } from "./scheme.controller";
 import { MessagesController } from "./messages.controller";
+import { BrandBiharController } from "./brandBihar.controller";
 
 export default [
   UsersController,
@@ -26,4 +27,5 @@ export default [
   DocumentsController,
   SchemesController,
   MessagesController,
+  BrandBiharController,
 ];
