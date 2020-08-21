@@ -1487,7 +1487,7 @@
         "affectsGlobalScope": false
       },
       "../src/passport/auth.guard.ts": {
-        "version": "e1ff6184d2188f01310eb751d2ed697268ab543f9cbf21685a1e75ab84a7d0b7",
+        "version": "df5d4206972ac7c20777d03bb399f107be1f063610f3fd4d6980c3e0900df5c0",
         "signature": "8bb53a0469312086eaa5e1ffbc29e799097c6d0ee4a1ebd04694c5ee5dda6c4f",
         "affectsGlobalScope": false
       },
@@ -3682,8 +3682,8 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/yatrayen.controllers.ts": {
-        "version": "e28e53b17d36fe471be57e7561bc38f83588ac07c096e0b146b5f205aaf8dc56",
-        "signature": "263f68c269b6d6c59150504c066f4ee057d4d10e54ca8d53c797325765f8c630",
+        "version": "ade3aa96e0230cf02e03d36aec40c9b1ade8bd8a7b21a76d37c5e9650e3b21e3",
+        "signature": "fa519fa9a7f239cff38662f3704b446c7c76290ceb5827238f714315db09230f",
         "affectsGlobalScope": false
       },
       "../src/controllers/questions.controller.ts": {
@@ -3713,7 +3713,7 @@
       },
       "../src/controllers/index.ts": {
         "version": "7df8c47bbd99471ec1970aa9ed9b68c52f792780a8d4618db6fb15eff0b11c09",
-        "signature": "7c1d3ff109092682549b1d38239658e98075d8fd5a65ade5342f579d14734ca4",
+        "signature": "675efab91467890fd93e8dc749bbfad8582d368186fe7774d28c0e62af059207",
         "affectsGlobalScope": false
       },
       "../node_modules/passport-custom/lib/index.d.ts": {
@@ -19236,7 +19236,8 @@
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../src/controllers/resource.controller.ts",
-        "../src/services/yatrayen.service.ts"
+        "../src/services/yatrayen.service.ts",
+        "../src/utils/index.ts"
       ],
       "../src/exception-filters/mongo-exception.filter.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -32549,9 +32550,9 @@
         "../src/controllers/chapters.controller.ts",
         "../src/controllers/classes.controller.ts",
         "../src/controllers/documents.controller.ts",
-        "../src/controllers/events.controller.ts",
         "../src/controllers/questions.controller.ts",
-        "../src/controllers/subject.controller.ts"
+        "../src/controllers/subject.controller.ts",
+        "../src/controllers/yatrayen.controllers.ts"
       ],
       "../src/controllers/messages.controller.ts": [
         "../src/controllers/resource.controller.ts",

@@ -13,12 +13,22 @@ exports.YatrayenController = void 0;
 const common_1 = require("@nestjs/common");
 const resource_controller_1 = require("./resource.controller");
 const yatrayen_service_1 = require("../services/yatrayen.service");
+const utils_1 = require("../utils");
 let YatrayenController = (() => {
     let YatrayenController = class YatrayenController extends resource_controller_1.ResourceController {
         constructor(service) {
             super(service);
         }
+        findAll() {
+            return utils_1.success('List found successfully', this.service.findAll());
+        }
     };
+    __decorate([
+        common_1.Get(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], YatrayenController.prototype, "findAll", null);
     YatrayenController = __decorate([
         common_1.Controller('yatrayen'),
         __metadata("design:paramtypes", [yatrayen_service_1.YatrayenService])

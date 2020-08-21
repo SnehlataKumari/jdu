@@ -8,7 +8,7 @@ import { SmsService } from "./sms.service";
 import { ChaptersService } from "./chapters.service";
 import { SubjectsService } from "./subject.service";
 import { VersionService } from "./version.service";
-import { TwillioService } from "./twillio.service";
+// import { TwillioService } from "./twillio.service";
 import { DummySmsService } from "./dummySms.service";
 import { EventSchema } from "src/schemas/event.schema";
 import { EventsService } from "./events.service";
@@ -43,7 +43,7 @@ export default [
   DocumentsService,
   SchemesService,
   MessagesService,
-  TwillioService,
+  // TwillioService,
   NodeMailerService,
   EmailService,
   AquasmsService,
