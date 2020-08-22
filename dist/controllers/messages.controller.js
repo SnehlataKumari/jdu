@@ -37,6 +37,9 @@ let MessagesController = (() => {
             await this.service.sendMessage(messageObj);
             return utils_1.success('Message created successfully!', messageObj);
         }
+        findAll() {
+            return utils_1.success('List found successfully', this.service.findAll().populate('usersId').sort('-createdAt'));
+        }
         async getMessage(id) {
             const message = await this.service.find({ $or: [
                     { usersId: id },
@@ -53,6 +56,12 @@ let MessagesController = (() => {
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", Promise)
     ], MessagesController.prototype, "createMessage", null);
+    __decorate([
+        common_1.Get(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], MessagesController.prototype, "findAll", null);
     __decorate([
         common_1.Get('users/:usersId'),
         __param(0, common_1.Param('usersId')),

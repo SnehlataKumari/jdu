@@ -6,6 +6,10 @@ export declare class MessagesController extends ResourceController {
         message: string;
         data: any;
     }>;
+    findAll(): Promise<{
+        message: string;
+        data: any;
+    }>;
     getMessage(id: any): Promise<{
         message: string;
         data: any;

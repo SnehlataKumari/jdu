@@ -3702,8 +3702,8 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/messages.controller.ts": {
-        "version": "e010e8de379c945554e70b1b2ced087c9244a1dd881574c7ea61bcf0391f254d",
-        "signature": "5f2e6c9bb9c634d80b17a65e7f2f6a5e9fbfc3418f0bfd36dc1a2086c46f3470",
+        "version": "9787a36a0406df8a5bd3e51c10f102dc0633454af5d8706dd0181040e09e5888",
+        "signature": "f28c8c5c093834e1db6afaeec2cc1def91cf112adbe8461332289759f9bae3fe",
         "affectsGlobalScope": false
       },
       "../src/controllers/brandbihar.controller.ts": {
@@ -3713,7 +3713,7 @@
       },
       "../src/controllers/index.ts": {
         "version": "7df8c47bbd99471ec1970aa9ed9b68c52f792780a8d4618db6fb15eff0b11c09",
-        "signature": "d587e5134d3830b6042ee9053789ed2d0daa79de225d0dc20c703fc43d4d3019",
+        "signature": "e6d2f9970406ae9885f6dc3892a8987f550a0cfe771052fc78043d3b7ecc09f1",
         "affectsGlobalScope": false
       },
       "../node_modules/passport-custom/lib/index.d.ts": {
@@ -32547,10 +32547,10 @@
       ],
       "../src/controllers/index.ts": [
         "../src/controllers/auth.controller.ts",
-        "../src/controllers/brandbihar.controller.ts",
         "../src/controllers/chapters.controller.ts",
         "../src/controllers/classes.controller.ts",
         "../src/controllers/documents.controller.ts",
+        "../src/controllers/events.controller.ts",
         "../src/controllers/questions.controller.ts",
         "../src/controllers/subject.controller.ts"
       ],

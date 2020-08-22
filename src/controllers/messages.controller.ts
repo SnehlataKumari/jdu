@@ -29,6 +29,11 @@ export class MessagesController extends ResourceController {
     return success('Message created successfully!', messageObj);
   }
 
+  @Get()
+  findAll() {
+    return success('List found successfully', this.service.findAll().populate('usersId').sort('-createdAt'));
+  }
+
   @Get('users/:usersId')
   async getMessage(@Param('usersId') id) {
     const message = await this.service.find({$or: [
