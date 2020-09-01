@@ -11,7 +11,6 @@ const chapters_service_1 = require("./chapters.service");
 const subject_service_1 = require("./subject.service");
 const version_service_1 = require("./version.service");
 const dummySms_service_1 = require("./dummySms.service");
-const event_schema_1 = require("../schemas/event.schema");
 const events_service_1 = require("./events.service");
 const yatrayen_service_1 = require("./yatrayen.service");
 const questions_service_1 = require("./questions.service");
@@ -23,6 +22,7 @@ const nodemailer_service_1 = require("./nodemailer.service");
 const email_service_1 = require("./email.service");
 const aquasms_service_1 = require("./aquasms.service");
 const brandBihar_service_1 = require("./brandBihar.service");
+const speech_service_1 = require("./speech.service");
 exports.default = [
     users_service_1.UsersService,
     assets_service_1.AssetsService,
@@ -47,5 +47,6 @@ exports.default = [
     email_service_1.EmailService,
     aquasms_service_1.AquasmsService,
     brandBihar_service_1.BrandBiharService,
+    speech_service_1.SpeechService,
 ];
 //# sourceMappingURL=index.js.map

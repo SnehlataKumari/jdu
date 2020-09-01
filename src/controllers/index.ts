@@ -12,6 +12,7 @@ import { DocumentsController } from "./documents.controller";
 import { SchemesController } from "./scheme.controller";
 import { MessagesController } from "./messages.controller";
 import { BrandBiharController } from "./brandBihar.controller";
+import { SpeechController } from "./speech.controller";
 
 export default [
   UsersController,
@@ -28,4 +29,5 @@ export default [
   SchemesController,
   MessagesController,
   BrandBiharController,
+  SpeechController,
 ];

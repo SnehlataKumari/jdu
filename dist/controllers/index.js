@@ -14,6 +14,7 @@ const documents_controller_1 = require("./documents.controller");
 const scheme_controller_1 = require("./scheme.controller");
 const messages_controller_1 = require("./messages.controller");
 const brandBihar_controller_1 = require("./brandBihar.controller");
+const speech_controller_1 = require("./speech.controller");
 exports.default = [
     users_controller_1.UsersController,
     classes_controller_1.ClassesController,
@@ -29,5 +30,6 @@ exports.default = [
     scheme_controller_1.SchemesController,
     messages_controller_1.MessagesController,
     brandBihar_controller_1.BrandBiharController,
+    speech_controller_1.SpeechController,
 ];
 //# sourceMappingURL=index.js.map

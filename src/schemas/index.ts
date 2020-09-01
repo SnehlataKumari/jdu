@@ -12,6 +12,7 @@ import { DocumentSchema } from "./document.schema";
 import { SchemeSchema } from "./scheme.schema";
 import { MessageSchema } from "./message.schema";
 import { BrandBiharSchema } from "./brandBihar.schema";
+import { SpeechSchema } from "./speech.schema";
 
 export default  [
   { name: 'Class', schema: ClassSchema },
@@ -28,4 +29,5 @@ export default  [
   { name: 'Scheme', schema: SchemeSchema},
   { name: 'Message', schema: MessageSchema},
   { name: 'BrandBihar', schema: BrandBiharSchema},
+  { name: 'Speech', schema: SpeechSchema},
 ];

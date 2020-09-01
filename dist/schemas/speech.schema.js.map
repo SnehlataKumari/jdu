@@ -1,0 +1,1 @@
+{"version":3,"file":"speech.schema.js","sourceRoot":"","sources":["../../src/schemas/speech.schema.ts"],"names":[],"mappings":";;;AAAA,qCAAqC;AAExB,QAAA,YAAY,GAAG,IAAI,QAAQ,CAAC,MAAM,CAAC;IAC5C,QAAQ,EAAE;QACN,IAAI,EAAE,MAAM;KACf;IACD,KAAK,EAAE,MAAM;IACb,WAAW,EAAE;QACT,IAAI,EAAE,MAAM;KACf;CACJ,EACG,EAAE,UAAU,EAAE,IAAI,EAAE,CACvB,CAAC"}

@@ -10,7 +10,6 @@ import { SubjectsService } from "./subject.service";
 import { VersionService } from "./version.service";
 // import { TwillioService } from "./twillio.service";
 import { DummySmsService } from "./dummySms.service";
-import { EventSchema } from "src/schemas/event.schema";
 import { EventsService } from "./events.service";
 import { YatrayenService } from "./yatrayen.service";
 import { QuestionsService } from "./questions.service";
@@ -22,6 +21,7 @@ import { NodeMailerService } from "./nodemailer.service";
 import { EmailService } from "./email.service";
 import { AquasmsService } from "./aquasms.service";
 import { BrandBiharService } from "./brandBihar.service";
+import { SpeechService } from "./speech.service";
 
 export default [
   UsersService,
@@ -48,4 +48,5 @@ export default [
   EmailService,
   AquasmsService,
   BrandBiharService,
+  SpeechService,
 ];
