@@ -37,9 +37,9 @@ export class DocumentsController extends ResourceController {
   @UseInterceptors(FileInterceptor('file', {}))
   uploadFile(@UploadedFile() file) {
     const filename = file.filename;
-    const destination = '\\uploads';
-    const path = `${destination}\\${filename}`;
-    const hostUrl = `${this.config.get('HOST_URL')}:${this.config.get('PORT')}`;
+    const destination = '/uploads';
+    const path = `${destination}/${filename}`;
+    const hostUrl = `${this.config.get('HOST_URL')}`;
     return ({
       hostUrl,
       ...file,

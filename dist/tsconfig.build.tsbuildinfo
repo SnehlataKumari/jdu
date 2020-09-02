@@ -3702,7 +3702,7 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/documents.controller.ts": {
-        "version": "ea0c32a12f572e700df4e769af4a94e16985f4a5fc53690ed7724d4043839da5",
+        "version": "49f7046d41d480eedc455501850eb679058088581f71bef6230a9c956e662949",
         "signature": "6c536927ed5a8c1fb5b7c0677d4bb5a189e53f1b1822220060adf591ab07e4f5",
         "affectsGlobalScope": false
       },

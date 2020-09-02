@@ -39,9 +39,9 @@ let DocumentsController = (() => {
         }
         uploadFile(file) {
             const filename = file.filename;
-            const destination = '\\uploads';
-            const path = `${destination}\\${filename}`;
-            const hostUrl = `${this.config.get('HOST_URL')}:${this.config.get('PORT')}`;
+            const destination = '/uploads';
+            const path = `${destination}/${filename}`;
+            const hostUrl = `${this.config.get('HOST_URL')}`;
             return (Object.assign(Object.assign({ hostUrl }, file), { fullPath: `${hostUrl}${path}`, destination,
                 path }));
         }
