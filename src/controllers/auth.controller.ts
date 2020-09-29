@@ -1,4 +1,4 @@
-import { Controller, Post, Body, UseGuards, Request, UnauthorizedException, Param } from "@nestjs/common";
+import { Controller, Post, Body, UseGuards, Request, UnauthorizedException, Param, Req, Get } from "@nestjs/common";
 import { UsersService } from "src/services/users.service";
 import { AuthService } from "src/services/auth.service";
 import { success } from "src/utils";
@@ -42,6 +42,11 @@ export class AuthController {
     return await this.usersService.update(userModel, { password: hashNewPassword });
   }
 
+  @Get(':userId/get-login-details')
+  async getLoginDetails(@Param('userId') userId) {
+    return await this.service.getLoginDetails(userId);
+  }
+
 
   @Post('manage-brandBihar')
   async manageBrandBihar(@Body() requestBody){
@@ -68,7 +73,7 @@ export class AuthController {
   }
 
   @Post('login-with-username')
-  async loginWithUsername(@Body() body) {
+  async loginWithUsername(@Body() body, @Req() req) {
 
     const { username, password } = body;
   
@@ -79,6 +84,7 @@ export class AuthController {
     const encryptedPassword = passwordHash.verify(password, user.password);
 
     if (encryptedPassword) {
+      await this.service.logLoginDetails(user, req);
       return success('logged in successfully', { user, access_token: this.jwtService.sign(user.toJSON()) });
     } else {
       throw new UnauthorizedException('Invalid credentials');;

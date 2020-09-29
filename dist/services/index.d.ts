@@ -10,5 +10,5 @@ import { MessagesService } from "./messages.service";
 import { NodeMailerService } from "./nodemailer.service";
 import { EmailService } from "./email.service";
 import { AquasmsService } from "./aquasms.service";
-declare const _default: (typeof AssetsService | typeof ClassesService | typeof FileService | typeof AuthService | typeof S3Service | typeof SmsService | typeof DummySmsService | typeof DocumentsService | typeof MessagesService | typeof NodeMailerService | typeof EmailService | typeof AquasmsService)[];
+declare const _default: (typeof AuthService | typeof AssetsService | typeof ClassesService | typeof FileService | typeof S3Service | typeof SmsService | typeof DummySmsService | typeof DocumentsService | typeof MessagesService | typeof NodeMailerService | typeof EmailService | typeof AquasmsService)[];
 export default _default;

@@ -22,6 +22,7 @@ import { EmailService } from "./email.service";
 import { AquasmsService } from "./aquasms.service";
 import { BrandBiharService } from "./brandBihar.service";
 import { SpeechService } from "./speech.service";
+import { LoginDetailService } from "./loginDetail.service";
 
 export default [
   UsersService,
@@ -49,4 +50,5 @@ export default [
   AquasmsService,
   BrandBiharService,
   SpeechService,
+  LoginDetailService
 ];

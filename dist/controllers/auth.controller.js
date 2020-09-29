@@ -48,6 +48,9 @@ let AuthController = (() => {
             const hashNewPassword = passwordHash.generate(newPassword);
             return await this.usersService.update(userModel, { password: hashNewPassword });
         }
+        async getLoginDetails(userId) {
+            return await this.service.getLoginDetails(userId);
+        }
         async manageBrandBihar(requestBody) {
             const manageBrandBihar = await this.service.addVideo(requestBody);
             return {
@@ -66,7 +69,7 @@ let AuthController = (() => {
                 return 'wrong password';
             }
         }
-        async loginWithUsername(body) {
+        async loginWithUsername(body, req) {
             const { username, password } = body;
             const user = await this.usersService.findOne({ username });
             if (!user) {
@@ -74,6 +77,7 @@ let AuthController = (() => {
             }
             const encryptedPassword = passwordHash.verify(password, user.password);
             if (encryptedPassword) {
+                await this.service.logLoginDetails(user, req);
                 return utils_1.success('logged in successfully', { user, access_token: this.jwtService.sign(user.toJSON()) });
             }
             else {
@@ -149,6 +153,13 @@ let AuthController = (() => {
         __metadata("design:returntype", Promise)
     ], AuthController.prototype, "changePassword", null);
     __decorate([
+        common_1.Get(':userId/get-login-details'),
+        __param(0, common_1.Param('userId')),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", Promise)
+    ], AuthController.prototype, "getLoginDetails", null);
+    __decorate([
         common_1.Post('manage-brandBihar'),
         __param(0, common_1.Body()),
         __metadata("design:type", Function),
@@ -164,9 +175,9 @@ let AuthController = (() => {
     ], AuthController.prototype, "simpleLogin", null);
     __decorate([
         common_1.Post('login-with-username'),
-        __param(0, common_1.Body()),
+        __param(0, common_1.Body()), __param(1, common_1.Req()),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [Object]),
+        __metadata("design:paramtypes", [Object, Object]),
         __metadata("design:returntype", Promise)
     ], AuthController.prototype, "loginWithUsername", null);
     __decorate([

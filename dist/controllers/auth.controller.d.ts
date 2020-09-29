@@ -12,6 +12,7 @@ export declare class AuthController {
     constructor(service: AuthService, usersService: UsersService, jwtService: JwtService, smsService: SmsService, versionService: VersionService);
     registerYourself(req: any): Promise<any>;
     changePassword(userId: any, requestBody: any): Promise<any>;
+    getLoginDetails(userId: any): Promise<any[]>;
     manageBrandBihar(requestBody: any): Promise<{
         message: string;
         manageBrandBihar: any;
@@ -20,7 +21,7 @@ export declare class AuthController {
         message: string;
         data: any;
     } | "wrong password">;
-    loginWithUsername(body: any): Promise<{
+    loginWithUsername(body: any, req: any): Promise<{
         message: string;
         data: any;
     }>;

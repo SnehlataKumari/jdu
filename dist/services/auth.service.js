@@ -14,11 +14,13 @@ const common_1 = require("@nestjs/common");
 const utils_1 = require("../utils");
 const users_service_1 = require("./users.service");
 const brandBihar_service_1 = require("./brandBihar.service");
+const loginDetail_service_1 = require("./loginDetail.service");
 let AuthService = (() => {
     let AuthService = class AuthService {
-        constructor(userService, brandBiharService) {
+        constructor(userService, brandBiharService, loginDetailService) {
             this.userService = userService;
             this.brandBiharService = brandBiharService;
+            this.loginDetailService = loginDetailService;
         }
         async registerYourself(body) {
             const user = await this.userService.create(body);
@@ -51,6 +53,20 @@ let AuthService = (() => {
                 : { $addToSet: { devices: deviceId } };
             return await this.userService.update(user, updateObj);
         }
+        async logLoginDetails(userModel, req) {
+            const timestamp = Date.now();
+            const ip = req.connection.remoteAddress;
+            return await this.loginDetailService.create({
+                user: userModel._id,
+                ip,
+                date: timestamp
+            });
+        }
+        async getLoginDetails(userId) {
+            return await this.loginDetailService.find({
+                user: userId
+            }).sort('-createdAt');
+        }
         async validateAuth(payload) {
             return this.userService.findById(payload._id);
         }
@@ -58,7 +74,8 @@ let AuthService = (() => {
     AuthService = __decorate([
         common_1.Injectable(),
         __metadata("design:paramtypes", [users_service_1.UsersService,
-            brandBihar_service_1.BrandBiharService])
+            brandBihar_service_1.BrandBiharService,
+            loginDetail_service_1.LoginDetailService])
     ], AuthService);
     return AuthService;
 })();
