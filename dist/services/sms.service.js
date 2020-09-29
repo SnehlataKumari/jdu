@@ -25,7 +25,15 @@ let SmsService = (() => {
             return this[this.config.get('smsService')];
         }
         async sendMessage({ body, to }) {
-            return this.getClient().sendMessage({ body, to });
+            console.log({ body, to });
+            const res = this.getClient().sendMessage({ body, to })
+                .then((respo) => {
+                console.log(respo);
+            }).catch(e => {
+                console.log(e, 'Error');
+            });
+            console.log(res);
+            return res;
         }
         async sendOtp(user) {
             const body = `Your otp to login in rehani app is ${user.otp}`;

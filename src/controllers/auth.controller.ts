@@ -1,4 +1,4 @@
-import { Controller, Post, Body, UseGuards, Request, UnauthorizedException } from "@nestjs/common";
+import { Controller, Post, Body, UseGuards, Request, UnauthorizedException, Param } from "@nestjs/common";
 import { UsersService } from "src/services/users.service";
 import { AuthService } from "src/services/auth.service";
 import { success } from "src/utils";
@@ -29,6 +29,19 @@ export class AuthController {
     const registerYourself = this.service.registerYourself(body);
     return  registerYourself;
   }
+
+  @Post(':userId/update-password')
+  async changePassword(@Param('userId') userId, @Body() requestBody) {
+    const userModel = await this.usersService.findById(userId);
+    const {newPassword } = requestBody;
+    
+    if (!userModel) {
+      throw new UnauthorizedException('User not found!');
+    }
+    const hashNewPassword = passwordHash.generate(newPassword);
+    return await this.usersService.update(userModel, { password: hashNewPassword });
+  }
+
 
   @Post('manage-brandBihar')
   async manageBrandBihar(@Body() requestBody){
@@ -96,11 +109,8 @@ export class AuthController {
   @Post('create-admin')
   async createAdmin(@Body() requestBody) {
     const { mobileNumber, name, password, username } = requestBody;
-    console.log({mobileNumber});
-    
-    const user = await this.usersService.create({ mobileNumber, name, password, username, role: 'ADMIN' });
-    console.log({user});
-    
+    const hashedPassword = passwordHash.generate(password);
+    const user = await this.usersService.create({ mobileNumber, name, password: hashedPassword, username, role: 'ADMIN' });
     return success('Admin created successfully!', { user, access_token: this.jwtService.sign(user.toJSON())});
   }
   

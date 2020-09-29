@@ -11,6 +11,7 @@ export declare class AuthController {
     private versionService;
     constructor(service: AuthService, usersService: UsersService, jwtService: JwtService, smsService: SmsService, versionService: VersionService);
     registerYourself(req: any): Promise<any>;
+    changePassword(userId: any, requestBody: any): Promise<any>;
     manageBrandBihar(requestBody: any): Promise<{
         message: string;
         manageBrandBihar: any;

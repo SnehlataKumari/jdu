@@ -3377,7 +3377,7 @@
         "affectsGlobalScope": false
       },
       "../src/services/sms.service.ts": {
-        "version": "25222798ba2b180de39ab7707bde1cc1d28bdd1a44a6798f936f7c5f059198d1",
+        "version": "7fd97b9eaf1b3a097cc04f70a598c0ff12e51aefb3477ac83e5991e3ecca73c3",
         "signature": "d52b487860e310e429b1ef9724a0c46936036f008ec4f8d706b0d9e58d9408b1",
         "affectsGlobalScope": false
       },
@@ -3502,7 +3502,7 @@
         "affectsGlobalScope": false
       },
       "../src/services/messages.service.ts": {
-        "version": "41905f3b08e963d04e53da6acd2377288abc673c97f6369cbdff0c0751b639c4",
+        "version": "e1c0b1cd6278989e2b79c6740b6325d30277db619efd14829af70db32a9c4271",
         "signature": "9bc2bec22fe5626ebf39b400507c668feb5e6483cfc3e0d74618586e229edcf8",
         "affectsGlobalScope": false
       },
@@ -3666,144 +3666,9 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
-      "../src/controllers/auth.controller.ts": {
-        "version": "208c49127fe08f2bd63ff8eac6d7db36af6ac897f9b383432208e1e6e0cbd225",
-        "signature": "62ebbc47bf5266b877a1de32430c64553ec6b317bfe97cfa6926733abc731590",
-        "affectsGlobalScope": false
-      },
-      "../src/controllers/chapters.controller.ts": {
-        "version": "a1ea4d173c2f223f2166abb46816d98343d303a0a2a3c8d2910f15ce6f725371",
-        "signature": "e50a814590d9cfe2493f7f2a045be5ba04c1c3408939abfb16ff423b99e20adc",
-        "affectsGlobalScope": false
-      },
-      "../src/controllers/subject.controller.ts": {
-        "version": "1f44a09cc9e4c6ca86fb663e5196206d35c0330d0946563d82b3062018dfd691",
-        "signature": "bf59986606df2853ad3955cd3704ee59ce53ea805325a35bda4673bcf0973249",
-        "affectsGlobalScope": false
-      },
-      "../src/controllers/payments.controller.ts": {
-        "version": "a340d9af1f13ef2f69bd9b2443092ee37e12a9a437c65b112efe161b3a3b5f1d",
-        "signature": "d0894aad858fe608abf1b7de6cc290ebc49eccf57aba6bfbcb9e6464278997b5",
-        "affectsGlobalScope": false
-      },
-      "../src/controllers/events.controller.ts": {
-        "version": "009e3f9ed7774ff65d08b454b6201cbc83248f6cb8cb2763296d5a8c3b1aba50",
-        "signature": "c281413a9d7fbfe9e97e9ba944737195bfe8e1a8709bfde90868707203fbcb61",
-        "affectsGlobalScope": false
-      },
-      "../src/controllers/yatrayen.controllers.ts": {
-        "version": "07261d9b7fba0552ddab581d529c912fb10f37578861e9a1883fe54ed03ef537",
-        "signature": "8db2952d5f9dd1ad9c6c1054893e9df20d39ee99d58e991e0af7fb1283c1f494",
-        "affectsGlobalScope": false
-      },
-      "../src/controllers/questions.controller.ts": {
-        "version": "b37e045c71c67cdc2e22932c006c65113dc1624dcf47d6d21b2ca56a1281c7d9",
-        "signature": "cf6de087dad4fd3f836a8de2d8da040f297b3b654adf203255f65631743f94e7",
-        "affectsGlobalScope": false
-      },
-      "../src/controllers/documents.controller.ts": {
-        "version": "49f7046d41d480eedc455501850eb679058088581f71bef6230a9c956e662949",
-        "signature": "6c536927ed5a8c1fb5b7c0677d4bb5a189e53f1b1822220060adf591ab07e4f5",
-        "affectsGlobalScope": false
-      },
-      "../src/controllers/scheme.controller.ts": {
-        "version": "719aa0d735f54246e1940840f7dd0867d6730dc0307c2d8999732f47765cc708",
-        "signature": "ce1bd6d4a244c0f4e9b1636883d8137598e622770a1bc8b4da2402a7d2d69244",
-        "affectsGlobalScope": false
-      },
-      "../src/controllers/messages.controller.ts": {
-        "version": "981fb88e93a844825d85e00bd12c037a1463386aa3393b6e53599d1b2765b7ab",
-        "signature": "ec452becef9911e5fda9cf12d91262e90181744694a34f6dae9fdd60be60b7e3",
-        "affectsGlobalScope": false
-      },
-      "../src/controllers/brandBihar.controller.ts": {
-        "version": "e65fae899079483568305f2d3cb8c1f66e4545514ce5ba1f43134158ea4aba63",
-        "signature": "7f9bfe75b07bf82410fcf97ad317ca007b2d79badf2129353d572abceff74dbc",
-        "affectsGlobalScope": false
-      },
-      "../src/controllers/speech.controller.ts": {
-        "version": "46de0e2341ca2f3480730b18978364d742b6bcb3d446d213d3006ac09ebf0b44",
-        "signature": "a236e16c29930dbc4ee119dc1fd955efdfead0edbe99bb7438d1f8bd24a4f4ff",
-        "affectsGlobalScope": false
-      },
-      "../src/controllers/index.ts": {
-        "version": "ad0f41213478de3bcd14b6c1613db7f47a11d96ce26e89c3c5e363fd28445498",
-        "signature": "3ed95c774ee134136794fc767dcf4c9a2367af983fce149cf2efd67d6e54bd89",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/passport-custom/lib/index.d.ts": {
-        "version": "70e80ba1adad976a1498e826ab0a0fd352dd1061f40614c312c2448429f73a34",
-        "signature": "70e80ba1adad976a1498e826ab0a0fd352dd1061f40614c312c2448429f73a34",
-        "affectsGlobalScope": false
-      },
-      "../src/passport/otp.strategy.ts": {
-        "version": "23f6570389af09c2771e12f53a7036996801a06430ca5d91bbcdac8aabb963a0",
-        "signature": "c29ff44f19990c6fb7560dc1cf8c662d406b0c7a7359323845419442df111ec8",
-        "affectsGlobalScope": false
-      },
-      "../src/app.module.ts": {
-        "version": "f4cfb9110e9c8fbef3dec1e286b13c3ea7c1ffc3e671b9f35cc0f491659c7a86",
-        "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
-        "affectsGlobalScope": false
-      },
-      "../src/exception-filters/mongo-exception.filter.ts": {
-        "version": "123c98cd1e55c1d27a87d9258b39cd018889712192728ad936785e3211e07ec5",
-        "signature": "c18576246cb5cfc6bfaba7734b827d905222078b7223da24434c64411859382d",
-        "affectsGlobalScope": false
-      },
-      "../src/main.ts": {
-        "version": "16541527aa90dba222f7bbe501d17faac3edc0db5cc0dc25eca0c90ccc54c051",
-        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/twilio/lib/jwt/taskrouter/TaskRouterCapability.d.ts": {
-        "version": "dca34927798d6af9b6519683155f99e31283a33626d5ed999be1b260a22b9879",
-        "signature": "dca34927798d6af9b6519683155f99e31283a33626d5ed999be1b260a22b9879",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/twilio/lib/jwt/taskrouter/util.d.ts": {
-        "version": "ac5608c5d1090406efa3c83028f7ce21d6fed872a8e0d49bc561a893547a24fa",
-        "signature": "ac5608c5d1090406efa3c83028f7ce21d6fed872a8e0d49bc561a893547a24fa",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/twilio/lib/twiml/FaxResponse.d.ts": {
-        "version": "2e891552a476b37ac467a1f0a9adce2b517cbb8602de79dfcf9a2350e71a1dd2",
-        "signature": "2e891552a476b37ac467a1f0a9adce2b517cbb8602de79dfcf9a2350e71a1dd2",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/twilio/lib/twiml/MessagingResponse.d.ts": {
-        "version": "4ec3a05a9c781601b289897ded92221f391b41c560509fba56280dfd14da2f71",
-        "signature": "4ec3a05a9c781601b289897ded92221f391b41c560509fba56280dfd14da2f71",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/twilio/lib/twiml/VoiceResponse.d.ts": {
-        "version": "5f05dacfc15be64f6f4e6491bc1c71aaa679973ddefd905033355013a5d40736",
-        "signature": "5f05dacfc15be64f6f4e6491bc1c71aaa679973ddefd905033355013a5d40736",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/twilio/lib/webhooks/webhooks.d.ts": {
-        "version": "85958a2307cbcabbbd5e24a3fb0cd63845af808e6a040471fe874ccadae398b4",
-        "signature": "85958a2307cbcabbbd5e24a3fb0cd63845af808e6a040471fe874ccadae398b4",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/twilio/lib/base/Domain.d.ts": {
-        "version": "480666d5850dc7152abef94f9f92dab3c7e351690133fa4a2c034622a219c51a",
-        "signature": "480666d5850dc7152abef94f9f92dab3c7e351690133fa4a2c034622a219c51a",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/twilio/lib/base/Version.d.ts": {
-        "version": "def99478a5650d79ca431decfcc1742e3a333c102c7fa4812449f0fd03d4e7ce",
-        "signature": "def99478a5650d79ca431decfcc1742e3a333c102c7fa4812449f0fd03d4e7ce",
-        "affectsGlobalScope": false
-      },
       "../node_modules/twilio/lib/http/response.d.ts": {
         "version": "8048c734f85b543a2c8bdc6449bfb33ac80db229f406d1f86afa05f38f3c0599",
         "signature": "8048c734f85b543a2c8bdc6449bfb33ac80db229f406d1f86afa05f38f3c0599",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/twilio/lib/base/Page.d.ts": {
-        "version": "9a83d06e3da305ff14ec7629d551306b99069e57fc54c35231fab6a6b3e39fc5",
-        "signature": "9a83d06e3da305ff14ec7629d551306b99069e57fc54c35231fab6a6b3e39fc5",
         "affectsGlobalScope": false
       },
       "../node_modules/twilio/lib/interfaces.d.ts": {
@@ -4464,11 +4329,6 @@
       "../node_modules/twilio/lib/rest/chat/v2/service/role.d.ts": {
         "version": "44d84e7d35e3455644ab87b3c48bbea1b4b8fb8b07f29a95d106fc50213f3b20",
         "signature": "44d84e7d35e3455644ab87b3c48bbea1b4b8fb8b07f29a95d106fc50213f3b20",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/twilio/lib/rest/chat/v2/service/user/userBinding.d.ts": {
-        "version": "9f773c9299655c8ad1f1cf9bac03bd319e903402bcaaab0cd9ade175c747f50e",
-        "signature": "9f773c9299655c8ad1f1cf9bac03bd319e903402bcaaab0cd9ade175c747f50e",
         "affectsGlobalScope": false
       },
       "../node_modules/twilio/lib/rest/chat/v2/service/user/userChannel.d.ts": {
@@ -5984,6 +5844,146 @@
       "../node_modules/twilio/lib/rest/Twilio.d.ts": {
         "version": "44b57de87b4025581e7d2fe332a7a68a9b89929dc50d16eed009461055349436",
         "signature": "44b57de87b4025581e7d2fe332a7a68a9b89929dc50d16eed009461055349436",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/twilio/lib/base/Domain.d.ts": {
+        "version": "480666d5850dc7152abef94f9f92dab3c7e351690133fa4a2c034622a219c51a",
+        "signature": "480666d5850dc7152abef94f9f92dab3c7e351690133fa4a2c034622a219c51a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/twilio/lib/base/Version.d.ts": {
+        "version": "def99478a5650d79ca431decfcc1742e3a333c102c7fa4812449f0fd03d4e7ce",
+        "signature": "def99478a5650d79ca431decfcc1742e3a333c102c7fa4812449f0fd03d4e7ce",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/twilio/lib/base/Page.d.ts": {
+        "version": "9a83d06e3da305ff14ec7629d551306b99069e57fc54c35231fab6a6b3e39fc5",
+        "signature": "9a83d06e3da305ff14ec7629d551306b99069e57fc54c35231fab6a6b3e39fc5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/twilio/lib/rest/chat/v2/service/user/userBinding.d.ts": {
+        "version": "9f773c9299655c8ad1f1cf9bac03bd319e903402bcaaab0cd9ade175c747f50e",
+        "signature": "9f773c9299655c8ad1f1cf9bac03bd319e903402bcaaab0cd9ade175c747f50e",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/auth.controller.ts": {
+        "version": "1f18032f16441c93dac69307dcb10d67fa55640f593229171b804b63611f83d9",
+        "signature": "940cacfad3aabafa316d9ceac127912a51dbd30e9633e37b9ed439683ea8f294",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/chapters.controller.ts": {
+        "version": "a1ea4d173c2f223f2166abb46816d98343d303a0a2a3c8d2910f15ce6f725371",
+        "signature": "e50a814590d9cfe2493f7f2a045be5ba04c1c3408939abfb16ff423b99e20adc",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/subject.controller.ts": {
+        "version": "1f44a09cc9e4c6ca86fb663e5196206d35c0330d0946563d82b3062018dfd691",
+        "signature": "bf59986606df2853ad3955cd3704ee59ce53ea805325a35bda4673bcf0973249",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/payments.controller.ts": {
+        "version": "a340d9af1f13ef2f69bd9b2443092ee37e12a9a437c65b112efe161b3a3b5f1d",
+        "signature": "d0894aad858fe608abf1b7de6cc290ebc49eccf57aba6bfbcb9e6464278997b5",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/events.controller.ts": {
+        "version": "009e3f9ed7774ff65d08b454b6201cbc83248f6cb8cb2763296d5a8c3b1aba50",
+        "signature": "c281413a9d7fbfe9e97e9ba944737195bfe8e1a8709bfde90868707203fbcb61",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/yatrayen.controllers.ts": {
+        "version": "07261d9b7fba0552ddab581d529c912fb10f37578861e9a1883fe54ed03ef537",
+        "signature": "8db2952d5f9dd1ad9c6c1054893e9df20d39ee99d58e991e0af7fb1283c1f494",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/questions.controller.ts": {
+        "version": "b37e045c71c67cdc2e22932c006c65113dc1624dcf47d6d21b2ca56a1281c7d9",
+        "signature": "cf6de087dad4fd3f836a8de2d8da040f297b3b654adf203255f65631743f94e7",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/documents.controller.ts": {
+        "version": "49f7046d41d480eedc455501850eb679058088581f71bef6230a9c956e662949",
+        "signature": "6c536927ed5a8c1fb5b7c0677d4bb5a189e53f1b1822220060adf591ab07e4f5",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/scheme.controller.ts": {
+        "version": "719aa0d735f54246e1940840f7dd0867d6730dc0307c2d8999732f47765cc708",
+        "signature": "ce1bd6d4a244c0f4e9b1636883d8137598e622770a1bc8b4da2402a7d2d69244",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/messages.controller.ts": {
+        "version": "981fb88e93a844825d85e00bd12c037a1463386aa3393b6e53599d1b2765b7ab",
+        "signature": "ec452becef9911e5fda9cf12d91262e90181744694a34f6dae9fdd60be60b7e3",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/brandBihar.controller.ts": {
+        "version": "e65fae899079483568305f2d3cb8c1f66e4545514ce5ba1f43134158ea4aba63",
+        "signature": "7f9bfe75b07bf82410fcf97ad317ca007b2d79badf2129353d572abceff74dbc",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/speech.controller.ts": {
+        "version": "46de0e2341ca2f3480730b18978364d742b6bcb3d446d213d3006ac09ebf0b44",
+        "signature": "a236e16c29930dbc4ee119dc1fd955efdfead0edbe99bb7438d1f8bd24a4f4ff",
+        "affectsGlobalScope": false
+      },
+      "../src/controllers/index.ts": {
+        "version": "ad0f41213478de3bcd14b6c1613db7f47a11d96ce26e89c3c5e363fd28445498",
+        "signature": "dd64e01864108ab7d7baef328ed7c70a95dfaf24145a74047a5bf35f50947406",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/passport-custom/lib/index.d.ts": {
+        "version": "70e80ba1adad976a1498e826ab0a0fd352dd1061f40614c312c2448429f73a34",
+        "signature": "70e80ba1adad976a1498e826ab0a0fd352dd1061f40614c312c2448429f73a34",
+        "affectsGlobalScope": false
+      },
+      "../src/passport/otp.strategy.ts": {
+        "version": "23f6570389af09c2771e12f53a7036996801a06430ca5d91bbcdac8aabb963a0",
+        "signature": "c29ff44f19990c6fb7560dc1cf8c662d406b0c7a7359323845419442df111ec8",
+        "affectsGlobalScope": false
+      },
+      "../src/app.module.ts": {
+        "version": "f4cfb9110e9c8fbef3dec1e286b13c3ea7c1ffc3e671b9f35cc0f491659c7a86",
+        "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
+        "affectsGlobalScope": false
+      },
+      "../src/exception-filters/mongo-exception.filter.ts": {
+        "version": "123c98cd1e55c1d27a87d9258b39cd018889712192728ad936785e3211e07ec5",
+        "signature": "c18576246cb5cfc6bfaba7734b827d905222078b7223da24434c64411859382d",
+        "affectsGlobalScope": false
+      },
+      "../src/main.ts": {
+        "version": "16541527aa90dba222f7bbe501d17faac3edc0db5cc0dc25eca0c90ccc54c051",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/twilio/lib/jwt/taskrouter/TaskRouterCapability.d.ts": {
+        "version": "dca34927798d6af9b6519683155f99e31283a33626d5ed999be1b260a22b9879",
+        "signature": "dca34927798d6af9b6519683155f99e31283a33626d5ed999be1b260a22b9879",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/twilio/lib/jwt/taskrouter/util.d.ts": {
+        "version": "ac5608c5d1090406efa3c83028f7ce21d6fed872a8e0d49bc561a893547a24fa",
+        "signature": "ac5608c5d1090406efa3c83028f7ce21d6fed872a8e0d49bc561a893547a24fa",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/twilio/lib/twiml/FaxResponse.d.ts": {
+        "version": "2e891552a476b37ac467a1f0a9adce2b517cbb8602de79dfcf9a2350e71a1dd2",
+        "signature": "2e891552a476b37ac467a1f0a9adce2b517cbb8602de79dfcf9a2350e71a1dd2",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/twilio/lib/twiml/MessagingResponse.d.ts": {
+        "version": "4ec3a05a9c781601b289897ded92221f391b41c560509fba56280dfd14da2f71",
+        "signature": "4ec3a05a9c781601b289897ded92221f391b41c560509fba56280dfd14da2f71",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/twilio/lib/twiml/VoiceResponse.d.ts": {
+        "version": "5f05dacfc15be64f6f4e6491bc1c71aaa679973ddefd905033355013a5d40736",
+        "signature": "5f05dacfc15be64f6f4e6491bc1c71aaa679973ddefd905033355013a5d40736",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/twilio/lib/webhooks/webhooks.d.ts": {
+        "version": "85958a2307cbcabbbd5e24a3fb0cd63845af808e6a040471fe874ccadae398b4",
+        "signature": "85958a2307cbcabbbd5e24a3fb0cd63845af808e6a040471fe874ccadae398b4",
         "affectsGlobalScope": false
       },
       "../node_modules/twilio/lib/jwt/AccessToken.d.ts": {
@@ -19067,6 +19067,7 @@
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",
+        "../node_modules/twilio/lib/rest/chat/v2/service/user/userBinding.d.ts",
         "../src/passport/auth.guard.ts",
         "../src/services/auth.service.ts",
         "../src/services/sms.service.ts",

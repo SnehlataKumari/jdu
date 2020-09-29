@@ -39,6 +39,15 @@ let AuthController = (() => {
             const registerYourself = this.service.registerYourself(body);
             return registerYourself;
         }
+        async changePassword(userId, requestBody) {
+            const userModel = await this.usersService.findById(userId);
+            const { newPassword } = requestBody;
+            if (!userModel) {
+                throw new common_1.UnauthorizedException('User not found!');
+            }
+            const hashNewPassword = passwordHash.generate(newPassword);
+            return await this.usersService.update(userModel, { password: hashNewPassword });
+        }
         async manageBrandBihar(requestBody) {
             const manageBrandBihar = await this.service.addVideo(requestBody);
             return {
@@ -90,9 +99,8 @@ let AuthController = (() => {
         }
         async createAdmin(requestBody) {
             const { mobileNumber, name, password, username } = requestBody;
-            console.log({ mobileNumber });
-            const user = await this.usersService.create({ mobileNumber, name, password, username, role: 'ADMIN' });
-            console.log({ user });
+            const hashedPassword = passwordHash.generate(password);
+            const user = await this.usersService.create({ mobileNumber, name, password: hashedPassword, username, role: 'ADMIN' });
             return utils_1.success('Admin created successfully!', { user, access_token: this.jwtService.sign(user.toJSON()) });
         }
         async loginAdmin(requestBody) {
@@ -133,6 +141,13 @@ let AuthController = (() => {
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], AuthController.prototype, "registerYourself", null);
+    __decorate([
+        common_1.Post(':userId/update-password'),
+        __param(0, common_1.Param('userId')), __param(1, common_1.Body()),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object, Object]),
+        __metadata("design:returntype", Promise)
+    ], AuthController.prototype, "changePassword", null);
     __decorate([
         common_1.Post('manage-brandBihar'),
         __param(0, common_1.Body()),

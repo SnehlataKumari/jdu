@@ -49,6 +49,7 @@ let MessagesService = (() => {
                     .map(user => user.mobileNumber)
                     .filter(mobileNumber => !!mobileNumber)
                     .map(number => `+91${number}`);
+                console.log(usersMobileNumber);
                 this.processBatch(usersMobileNumber, strMessage, this.sendSMS.bind(this));
             }
             if (message.mediumType.EMAIL) {
