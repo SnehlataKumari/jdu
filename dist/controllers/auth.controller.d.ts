@@ -25,10 +25,10 @@ export declare class AuthController {
         message: string;
         data: any;
     }>;
-    requestOtp(requestBody: any): Promise<{
+    requestOtp(requestBody: any): Promise<"Error" | {
         message: string;
         data: any;
-    } | "Error">;
+    }>;
     createAdmin(requestBody: any): Promise<{
         message: string;
         data: any;

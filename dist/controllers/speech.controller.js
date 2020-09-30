@@ -8,20 +8,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SpeechController = void 0;
 const common_1 = require("@nestjs/common");
 const resource_controller_1 = require("./resource.controller");
 const speech_service_1 = require("../services/speech.service");
+const auth_guard_1 = require("../passport/auth.guard");
+const utils_1 = require("../utils");
+const notification_service_1 = require("../services/notification.service");
 let SpeechController = (() => {
     let SpeechController = class SpeechController extends resource_controller_1.ResourceController {
-        constructor(service) {
+        constructor(notificationService, service) {
             super(service);
+            this.notificationService = notificationService;
+        }
+        async createResource(createObject) {
+            const speech = await this.service.create(createObject);
+            await this.notificationService.speechCreated(speech);
+            return utils_1.success('Resource created successfully!', speech);
         }
     };
+    __decorate([
+        common_1.UseGuards(auth_guard_1.JwtAuthGuard),
+        common_1.Post(),
+        __param(0, common_1.Body()),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", Promise)
+    ], SpeechController.prototype, "createResource", null);
     SpeechController = __decorate([
         common_1.Controller('speeches'),
-        __metadata("design:paramtypes", [speech_service_1.SpeechService])
+        __metadata("design:paramtypes", [notification_service_1.NotificationService,
+            speech_service_1.SpeechService])
     ], SpeechController);
     return SpeechController;
 })();

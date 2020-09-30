@@ -14,6 +14,7 @@ import { MessageSchema } from "./message.schema";
 import { BrandBiharSchema } from "./brandBihar.schema";
 import { SpeechSchema } from "./speech.schema";
 import { LoginDetail } from "./loginDetail.schema";
+import { NotificationSchema } from "./notification.schema";
 
 export default  [
   { name: 'Class', schema: ClassSchema },
@@ -32,4 +33,5 @@ export default  [
   { name: 'BrandBihar', schema: BrandBiharSchema},
   { name: 'Speech', schema: SpeechSchema},
   { name: 'LoginDetail', schema: LoginDetail},
+  { name: 'Notification', schema: NotificationSchema},
 ];

@@ -1,14 +1,14 @@
 import { AssetsService } from "./assets.service";
-import { ClassesService } from "./classes.service";
 import { FileService } from "./file.service";
 import { AuthService } from "./auth.service";
 import { S3Service } from "./s3.service";
 import { SmsService } from "./sms.service";
+import { VersionService } from "./version.service";
 import { DummySmsService } from "./dummySms.service";
 import { DocumentsService } from "./documents.service";
 import { MessagesService } from "./messages.service";
 import { NodeMailerService } from "./nodemailer.service";
 import { EmailService } from "./email.service";
 import { AquasmsService } from "./aquasms.service";
-declare const _default: (typeof AuthService | typeof AssetsService | typeof ClassesService | typeof FileService | typeof S3Service | typeof SmsService | typeof DummySmsService | typeof DocumentsService | typeof MessagesService | typeof NodeMailerService | typeof EmailService | typeof AquasmsService)[];
+declare const _default: (typeof S3Service | typeof FileService | typeof VersionService | typeof AssetsService | typeof AuthService | typeof DummySmsService | typeof AquasmsService | typeof SmsService | typeof DocumentsService | typeof NodeMailerService | typeof EmailService | typeof MessagesService)[];
 export default _default;

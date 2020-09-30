@@ -5,11 +5,13 @@ import { JwtAuthGuard } from 'src/passport/auth.guard';
 import { DocumentsService } from 'src/services/documents.service';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ConfigService } from '@nestjs/config';
+import { NotificationService } from 'src/services/notification.service';
 
 @Controller('documents')
 export class DocumentsController extends ResourceController {
   constructor(
     private config: ConfigService,
+    private notificationService: NotificationService,
     service: DocumentsService) {
     super(service)
   }
@@ -23,7 +25,9 @@ export class DocumentsController extends ResourceController {
 
   @Post()
   async createAsset(@Body() createObject) {
-    return success('Asset created successfully!', this.service.create({ ...createObject }));
+    const document = await this.service.create({ ...createObject });
+    await this.notificationService.documentUploaded(document);
+    return success('Asset created successfully!', document);
   }
 
   @UseGuards(JwtAuthGuard)

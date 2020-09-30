@@ -1,9 +1,11 @@
 import { ResourceController } from './resource.controller';
 import { DocumentsService } from 'src/services/documents.service';
 import { ConfigService } from '@nestjs/config';
+import { NotificationService } from 'src/services/notification.service';
 export declare class DocumentsController extends ResourceController {
     private config;
-    constructor(config: ConfigService, service: DocumentsService);
+    private notificationService;
+    constructor(config: ConfigService, notificationService: NotificationService, service: DocumentsService);
     findAllAssets(req: any): Promise<{
         message: string;
         data: any;

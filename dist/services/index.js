@@ -24,6 +24,7 @@ const aquasms_service_1 = require("./aquasms.service");
 const brandBihar_service_1 = require("./brandBihar.service");
 const speech_service_1 = require("./speech.service");
 const loginDetail_service_1 = require("./loginDetail.service");
+const notification_service_1 = require("./notification.service");
 exports.default = [
     users_service_1.UsersService,
     assets_service_1.AssetsService,
@@ -49,6 +50,7 @@ exports.default = [
     aquasms_service_1.AquasmsService,
     brandBihar_service_1.BrandBiharService,
     speech_service_1.SpeechService,
-    loginDetail_service_1.LoginDetailService
+    loginDetail_service_1.LoginDetailService,
+    notification_service_1.NotificationService,
 ];
 //# sourceMappingURL=index.js.map

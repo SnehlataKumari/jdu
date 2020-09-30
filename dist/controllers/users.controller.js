@@ -21,10 +21,12 @@ const auth_guard_1 = require("../passport/auth.guard");
 const passwordHash = require("password-hash");
 const platform_express_1 = require("@nestjs/platform-express");
 const lodash_1 = require("lodash");
+const notification_service_1 = require("../services/notification.service");
 let UsersController = (() => {
     let UsersController = class UsersController extends resource_controller_1.ResourceController {
-        constructor(service) {
+        constructor(service, notificationService) {
             super(service);
+            this.notificationService = notificationService;
         }
         findAll() {
             return utils_1.success('List found successfully', this.service.findAll());
@@ -64,6 +66,13 @@ let UsersController = (() => {
             const insertedValues = await this.service.insertMany(validatedValues);
             return utils_1.success('Users created successfully!', insertedValues);
         }
+        async getNotification(userId) {
+            let userModel;
+            if (userId) {
+                userModel = await this.service.findById(userId);
+            }
+            return this.notificationService.getNotifications(userModel);
+        }
     };
     __decorate([
         common_1.Get(),
@@ -86,9 +95,17 @@ let UsersController = (() => {
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", Promise)
     ], UsersController.prototype, "migrateUsers", null);
+    __decorate([
+        common_1.Get('notifications'),
+        __param(0, common_1.Query('userId')),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", Promise)
+    ], UsersController.prototype, "getNotification", null);
     UsersController = __decorate([
         common_1.Controller('users'),
-        __metadata("design:paramtypes", [users_service_1.UsersService])
+        __metadata("design:paramtypes", [users_service_1.UsersService,
+            notification_service_1.NotificationService])
     ], UsersController);
     return UsersController;
 })();

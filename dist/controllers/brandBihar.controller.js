@@ -8,20 +8,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BrandBiharController = void 0;
 const common_1 = require("@nestjs/common");
 const resource_controller_1 = require("./resource.controller");
 const brandBihar_service_1 = require("../services/brandBihar.service");
+const notification_service_1 = require("../services/notification.service");
+const utils_1 = require("../utils");
+const auth_guard_1 = require("../passport/auth.guard");
 let BrandBiharController = (() => {
     let BrandBiharController = class BrandBiharController extends resource_controller_1.ResourceController {
-        constructor(service) {
+        constructor(service, notificationService) {
             super(service);
+            this.notificationService = notificationService;
+        }
+        async createResource(createObject) {
+            const brandBihar = await this.service.create(createObject);
+            this.notificationService.brandBiharCreated(brandBihar);
+            return utils_1.success('Resource created successfully!', brandBihar);
         }
     };
+    __decorate([
+        common_1.UseGuards(auth_guard_1.JwtAuthGuard),
+        common_1.Post(),
+        __param(0, common_1.Body()),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", Promise)
+    ], BrandBiharController.prototype, "createResource", null);
     BrandBiharController = __decorate([
         common_1.Controller('brand-bihar'),
-        __metadata("design:paramtypes", [brandBihar_service_1.BrandBiharService])
+        __metadata("design:paramtypes", [brandBihar_service_1.BrandBiharService,
+            notification_service_1.NotificationService])
     ], BrandBiharController);
     return BrandBiharController;
 })();

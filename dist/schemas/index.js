@@ -16,6 +16,7 @@ const message_schema_1 = require("./message.schema");
 const brandBihar_schema_1 = require("./brandBihar.schema");
 const speech_schema_1 = require("./speech.schema");
 const loginDetail_schema_1 = require("./loginDetail.schema");
+const notification_schema_1 = require("./notification.schema");
 exports.default = [
     { name: 'Class', schema: class_schema_1.ClassSchema },
     { name: 'User', schema: user_schema_1.UserSchema },
@@ -33,5 +34,6 @@ exports.default = [
     { name: 'BrandBihar', schema: brandBihar_schema_1.BrandBiharSchema },
     { name: 'Speech', schema: speech_schema_1.SpeechSchema },
     { name: 'LoginDetail', schema: loginDetail_schema_1.LoginDetail },
+    { name: 'Notification', schema: notification_schema_1.NotificationSchema },
 ];
 //# sourceMappingURL=index.js.map

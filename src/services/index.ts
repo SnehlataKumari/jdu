@@ -23,6 +23,7 @@ import { AquasmsService } from "./aquasms.service";
 import { BrandBiharService } from "./brandBihar.service";
 import { SpeechService } from "./speech.service";
 import { LoginDetailService } from "./loginDetail.service";
+import { NotificationService } from "./notification.service";
 
 export default [
   UsersService,
@@ -50,5 +51,6 @@ export default [
   AquasmsService,
   BrandBiharService,
   SpeechService,
-  LoginDetailService
+  LoginDetailService,
+  NotificationService,
 ];

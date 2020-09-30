@@ -16,6 +16,7 @@ export class NodeMailerService {
         pass: this.config.get('GMAIL_PASSWORD')
       }
     });
+
   }
 
   async sendEmail(to, subject, text) {

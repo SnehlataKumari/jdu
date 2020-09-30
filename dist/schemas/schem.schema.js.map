@@ -1,1 +1,0 @@
-{"version":3,"file":"schem.schema.js","sourceRoot":"","sources":["../../src/schemas/schem.schema.ts"],"names":[],"mappings":";;;AAAA,qCAAqC;AACrC,4CAA+D;AAC/D,MAAM,MAAM,GAAG,QAAQ,CAAC,MAAM,CAAC;AAE/B,MAAM,YAAY,GAAG,IAAI,QAAQ,CAAC,MAAM,CAAC;IACvC,KAAK,EAAE;QACL,IAAI,EAAE,MAAM;QACZ,MAAM,EAAE,CAAC,IAAI,EAAE,+BAA+B,CAAC;KAEhD;CACF,CAAC,CAAC;AAEM,oCAAY"}

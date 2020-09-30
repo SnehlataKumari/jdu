@@ -20,18 +20,22 @@ const auth_guard_1 = require("../passport/auth.guard");
 const documents_service_1 = require("../services/documents.service");
 const platform_express_1 = require("@nestjs/platform-express");
 const config_1 = require("@nestjs/config");
+const notification_service_1 = require("../services/notification.service");
 let DocumentsController = (() => {
     let DocumentsController = class DocumentsController extends resource_controller_1.ResourceController {
-        constructor(config, service) {
+        constructor(config, notificationService, service) {
             super(service);
             this.config = config;
+            this.notificationService = notificationService;
         }
         async findAllAssets(req) {
             const assetsList = await this.service.findAll();
             return utils_1.success('List found successfully', assetsList);
         }
         async createAsset(createObject) {
-            return utils_1.success('Asset created successfully!', this.service.create(Object.assign({}, createObject)));
+            const document = await this.service.create(Object.assign({}, createObject));
+            await this.notificationService.documentUploaded(document);
+            return utils_1.success('Asset created successfully!', document);
         }
         async getRoleBasedDocuments(req) {
             const { user } = req;
@@ -105,6 +109,7 @@ let DocumentsController = (() => {
     DocumentsController = __decorate([
         common_1.Controller('documents'),
         __metadata("design:paramtypes", [config_1.ConfigService,
+            notification_service_1.NotificationService,
             documents_service_1.DocumentsService])
     ], DocumentsController);
     return DocumentsController;

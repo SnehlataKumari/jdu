@@ -1,4 +1,4 @@
-import { Controller, Get, UseGuards, Post, Body, UseInterceptors, UploadedFile, BadRequestException,  } from '@nestjs/common';
+import { Controller, Get, UseGuards, Post, Body, UseInterceptors, UploadedFile, BadRequestException, Query  } from '@nestjs/common';
 import { UsersService } from 'src/services/users.service';
 import { ResourceController } from './resource.controller';
 import { success, getJsonFromCSV } from 'src/utils';
@@ -6,10 +6,14 @@ import { JwtAuthGuard } from 'src/passport/auth.guard';
 import * as passwordHash from "password-hash";
 import { FileInterceptor } from '@nestjs/platform-express';
 import {uniqBy} from 'lodash';
+import { NotificationService } from 'src/services/notification.service';
 
 @Controller('users')
 export class UsersController extends ResourceController {
-  constructor(service: UsersService) {
+  constructor(
+    service: UsersService,
+    private notificationService: NotificationService
+  ) {
     super(service)
   }
 
@@ -65,5 +69,15 @@ export class UsersController extends ResourceController {
 
     const insertedValues = await this.service.insertMany(validatedValues);
     return success('Users created successfully!', insertedValues);
+  }
+
+
+  @Get('notifications')
+  async getNotification(@Query('userId') userId) {
+    let userModel;
+    if(userId) {
+      userModel = await this.service.findById(userId);
+    }
+    return this.notificationService.getNotifications(userModel);
   }
 }
