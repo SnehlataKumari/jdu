@@ -29,7 +29,7 @@ let DocumentsController = (() => {
             this.notificationService = notificationService;
         }
         async findAllAssets(req) {
-            const assetsList = await this.service.findAll();
+            const assetsList = await this.service.findAll().sort('-_id');
             return utils_1.success('List found successfully', assetsList);
         }
         async createAsset(createObject) {

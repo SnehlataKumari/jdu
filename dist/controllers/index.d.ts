@@ -8,5 +8,5 @@ import { QuestionsController } from "./questions.controller";
 import { DocumentsController } from "./documents.controller";
 import { BrandBiharController } from "./brandBihar.controller";
 import { SpeechController } from "./speech.controller";
-declare const _default: (typeof UsersController | typeof ClassesController | typeof AuthController | typeof ChaptersController | typeof SubjectsController | typeof EventsController | typeof QuestionsController | typeof DocumentsController | typeof BrandBiharController | typeof SpeechController)[];
+declare const _default: (typeof BrandBiharController | typeof UsersController | typeof ClassesController | typeof AuthController | typeof ChaptersController | typeof SubjectsController | typeof EventsController | typeof QuestionsController | typeof DocumentsController | typeof SpeechController)[];
 export default _default;

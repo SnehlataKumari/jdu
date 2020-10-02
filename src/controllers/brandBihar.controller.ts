@@ -1,4 +1,4 @@
-import { Body, Controller, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Post, UseGuards } from '@nestjs/common';
 import { ResourceController } from './resource.controller';
 import { BrandBiharService } from 'src/services/brandBihar.service';
 import { NotificationService } from 'src/services/notification.service';
@@ -20,6 +20,11 @@ export class BrandBiharController extends ResourceController {
     const brandBihar = await this.service.create(createObject);
     this.notificationService.brandBiharCreated(brandBihar);
     return success('Resource created successfully!', brandBihar);
+  }
+
+  @Get()
+  findAll() {
+    return success('List found successfully', this.service.findAll().sort('-_id'));
   }
 
 

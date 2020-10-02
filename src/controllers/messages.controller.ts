@@ -31,7 +31,7 @@ export class MessagesController extends ResourceController {
 
   @Get()
   findAll() {
-    return success('List found successfully', this.service.findAll().populate('usersId').sort('-createdAt'));
+    return success('List found successfully', this.service.findAll().populate('usersId').sort('-_id'));
   }
 
   @Get('users/:usersId')
@@ -39,7 +39,8 @@ export class MessagesController extends ResourceController {
     const message = await this.service.find({$or: [
       {usersId: id},
       { "usersId.0": { "$exists": false }}
-    ]});
+    ]
+    }).sort('-_id');
 
     return success('Messages sent to this user found successfully!', 
       message

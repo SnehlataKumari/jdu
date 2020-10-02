@@ -8,4 +8,8 @@ export declare class BrandBiharController extends ResourceController {
         message: string;
         data: any;
     }>;
+    findAll(): Promise<{
+        message: string;
+        data: any;
+    }>;
 }

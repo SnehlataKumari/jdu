@@ -30,6 +30,9 @@ let BrandBiharController = (() => {
             this.notificationService.brandBiharCreated(brandBihar);
             return utils_1.success('Resource created successfully!', brandBihar);
         }
+        findAll() {
+            return utils_1.success('List found successfully', this.service.findAll().sort('-_id'));
+        }
     };
     __decorate([
         common_1.UseGuards(auth_guard_1.JwtAuthGuard),
@@ -39,6 +42,12 @@ let BrandBiharController = (() => {
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", Promise)
     ], BrandBiharController.prototype, "createResource", null);
+    __decorate([
+        common_1.Get(),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], BrandBiharController.prototype, "findAll", null);
     BrandBiharController = __decorate([
         common_1.Controller('brand-bihar'),
         __metadata("design:paramtypes", [brandBihar_service_1.BrandBiharService,

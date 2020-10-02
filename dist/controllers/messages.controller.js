@@ -38,13 +38,14 @@ let MessagesController = (() => {
             return utils_1.success('Message created successfully!', messageObj);
         }
         findAll() {
-            return utils_1.success('List found successfully', this.service.findAll().populate('usersId').sort('-createdAt'));
+            return utils_1.success('List found successfully', this.service.findAll().populate('usersId').sort('-_id'));
         }
         async getMessage(id) {
             const message = await this.service.find({ $or: [
                     { usersId: id },
                     { "usersId.0": { "$exists": false } }
-                ] });
+                ]
+            }).sort('-_id');
             return utils_1.success('Messages sent to this user found successfully!', message);
         }
     };

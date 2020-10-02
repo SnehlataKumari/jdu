@@ -20,7 +20,7 @@ let YatrayenController = (() => {
             super(service);
         }
         findAll() {
-            return utils_1.success('List found successfully', this.service.findAll());
+            return utils_1.success('List found successfully', this.service.findAll().sort('-_id'));
         }
     };
     __decorate([

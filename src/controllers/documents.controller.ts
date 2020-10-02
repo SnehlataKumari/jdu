@@ -19,7 +19,7 @@ export class DocumentsController extends ResourceController {
   @UseGuards(JwtAuthGuard)
   @Get()
   async findAllAssets(@Req() req) {
-    const assetsList = await this.service.findAll();
+    const assetsList = await this.service.findAll().sort('-_id');
     return success('List found successfully', assetsList);
   }
 

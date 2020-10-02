@@ -13,7 +13,7 @@ export class YatrayenController extends ResourceController {
 
   @Get()
   findAll() {
-    return success('List found successfully', this.service.findAll());
+    return success('List found successfully', this.service.findAll().sort('-_id'));
   }
 
 }
