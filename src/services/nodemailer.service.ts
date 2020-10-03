@@ -9,13 +9,17 @@ export class NodeMailerService {
   constructor(
     private config: ConfigService
   ) {
-    this.mailTransporter = nodemailer.createTransport({
+    const conf = {
       service: 'gmail',
       auth: {
         user: this.config.get('GMAIL_ID'),
         pass: this.config.get('GMAIL_PASSWORD')
       }
-    });
+    };
+
+    console.log(conf);
+    
+    this.mailTransporter = nodemailer.createTransport(conf);
 
   }
 

@@ -3507,7 +3507,7 @@
         "affectsGlobalScope": false
       },
       "../src/services/nodemailer.service.ts": {
-        "version": "a6486a0cf77fae161853beb55643f39c5c9e3a899131363469e349e341c8a9d8",
+        "version": "47e4b0e9214e6cf1aba85270ee62845b71b1e5321c9bc554a5f7f44eb5279647",
         "signature": "145d2fd1f37cdcaf25673f671191112c04a4b5b330c83011f485fd6ce678ecf4",
         "affectsGlobalScope": false
       },

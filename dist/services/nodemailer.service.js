@@ -17,13 +17,15 @@ let NodeMailerService = (() => {
     let NodeMailerService = class NodeMailerService {
         constructor(config) {
             this.config = config;
-            this.mailTransporter = nodemailer.createTransport({
+            const conf = {
                 service: 'gmail',
                 auth: {
                     user: this.config.get('GMAIL_ID'),
                     pass: this.config.get('GMAIL_PASSWORD')
                 }
-            });
+            };
+            console.log(conf);
+            this.mailTransporter = nodemailer.createTransport(conf);
         }
         async sendEmail(to, subject, text) {
             const mailDetails = {
