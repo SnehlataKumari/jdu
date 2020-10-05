@@ -6,6 +6,7 @@ const mongo_exception_filter_1 = require("./exception-filters/mongo-exception.fi
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.enableCors();
+    app.set('trust proxy', 1);
     app.useGlobalFilters(new mongo_exception_filter_1.MongooseExceptionFilter());
     app.useGlobalFilters(new mongo_exception_filter_1.MongoDBExceptionFilter());
     await app.listen(process.env.PORT);
