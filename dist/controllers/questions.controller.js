@@ -47,7 +47,7 @@ let QuestionsController = (() => {
             return utils_1.success('Answers submitted successfully', questions);
         }
         async getQuestionsWithAnswers() {
-            const questions = (await this.service.find({}).populate('answers'));
+            const questions = (await this.service.find({}).populate('answers').sort('-_id'));
             const qs = questions.map(element => {
                 return element.toObject({ virtuals: true });
             });

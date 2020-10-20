@@ -19,10 +19,13 @@ const mongoose_2 = require("@nestjs/mongoose");
 const db_service_1 = require("./db.service");
 const Joi = require("@hapi/joi");
 const constants_1 = require("../constants");
+const passwordExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+const passwordSchema = Joi.string()
+    .pattern(passwordExpression);
 const userSchem = Joi.object({
     name: Joi.string().required(),
     username: Joi.string().required(),
-    password: Joi.string().required(),
+    password: passwordSchema.required(),
     email: Joi.string().email().required(),
     mobileNumber: Joi.string().min(10).max(10).required(),
     role: Joi.string().valid(...constants_1.getKeys(constants_1.USER_ROLES)).required()

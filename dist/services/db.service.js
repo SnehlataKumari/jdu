@@ -6,7 +6,7 @@ class DBService {
         this.model = model;
     }
     findAll(where = {}) {
-        return this.model.find(where);
+        return this.model.find(where).sort('-_id');
     }
     delete(query) {
         return this.model.remove(query);
