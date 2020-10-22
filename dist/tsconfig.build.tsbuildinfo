@@ -3642,8 +3642,8 @@
         "affectsGlobalScope": false
       },
       "../src/controllers/users.controller.ts": {
-        "version": "8838d9a103b2dc9a49882f381233f42ed9e9aa95d1e286665609ec24f1133d02",
-        "signature": "4337701480c43ffb7f2e8af805251d37d12a3ba556898e2625646fe2168ee2d6",
+        "version": "a7a86706ce06cc597e77ecc20a176b93a31054b7c392c463e93b979017dd1e47",
+        "signature": "5ebf1a8d8082e521728c1d1af8e61c847c0071bfdc1fba3e3a7c66c2aaf09a44",
         "affectsGlobalScope": false
       },
       "../src/controllers/classes.controller.ts": {
@@ -3748,7 +3748,7 @@
       },
       "../src/controllers/index.ts": {
         "version": "9dffc00caf38d386e531cae9046ef487cb7a37c85ed438160c000873e4ff2c9c",
-        "signature": "0e5b0b2f1f11d6c7626b323646ca24796ab9e68c7954bc211e8ec3d18c67a6e9",
+        "signature": "261355126aacd95f203660132abb459af920e03bd907becd290c42bcfbf03f08",
         "affectsGlobalScope": false
       },
       "../node_modules/passport-custom/lib/index.d.ts": {
@@ -19273,6 +19273,7 @@
         "../node_modules/@nestjs/platform-express/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/path.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts",
         "../node_modules/@types/node/util.d.ts",

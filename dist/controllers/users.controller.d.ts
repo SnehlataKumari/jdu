@@ -17,4 +17,6 @@ export declare class UsersController extends ResourceController {
         data: any;
     }>;
     getNotification(userId: any): Promise<any[]>;
+    getUsersSampleCsv(res: any): void;
+    getUsersDefaultValuesCsv(res: any): void;
 }

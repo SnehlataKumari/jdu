@@ -22,6 +22,7 @@ const passwordHash = require("password-hash");
 const platform_express_1 = require("@nestjs/platform-express");
 const lodash_1 = require("lodash");
 const notification_service_1 = require("../services/notification.service");
+const path_1 = require("path");
 let UsersController = (() => {
     let UsersController = class UsersController extends resource_controller_1.ResourceController {
         constructor(service, notificationService) {
@@ -73,6 +74,16 @@ let UsersController = (() => {
             }
             return this.notificationService.getNotifications(userModel);
         }
+        getUsersSampleCsv(res) {
+            const fileName = 'userMigratesampleV2.csv';
+            const filePath = path_1.join(__dirname, '../../test_files', fileName);
+            res.download(filePath, fileName);
+        }
+        getUsersDefaultValuesCsv(res) {
+            const fileName = 'DefaultValues.xlsx';
+            const filePath = path_1.join(__dirname, '../../test_files', fileName);
+            res.download(filePath, fileName);
+        }
     };
     __decorate([
         common_1.Get(),
@@ -102,6 +113,20 @@ let UsersController = (() => {
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", Promise)
     ], UsersController.prototype, "getNotification", null);
+    __decorate([
+        common_1.Get('sample-csv'),
+        __param(0, common_1.Res()),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", void 0)
+    ], UsersController.prototype, "getUsersSampleCsv", null);
+    __decorate([
+        common_1.Get('default-values-xlsx'),
+        __param(0, common_1.Res()),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", void 0)
+    ], UsersController.prototype, "getUsersDefaultValuesCsv", null);
     UsersController = __decorate([
         common_1.Controller('users'),
         __metadata("design:paramtypes", [users_service_1.UsersService,

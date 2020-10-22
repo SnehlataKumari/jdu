@@ -1,4 +1,4 @@
-import { Controller, Get, UseGuards, Post, Body, UseInterceptors, UploadedFile, BadRequestException, Query  } from '@nestjs/common';
+import { Controller, Get, UseGuards, Post, Body, UseInterceptors, UploadedFile, BadRequestException, Query, Res  } from '@nestjs/common';
 import { UsersService } from 'src/services/users.service';
 import { ResourceController } from './resource.controller';
 import { success, getJsonFromCSV } from 'src/utils';
@@ -7,7 +7,7 @@ import * as passwordHash from "password-hash";
 import { FileInterceptor } from '@nestjs/platform-express';
 import {uniqBy} from 'lodash';
 import { NotificationService } from 'src/services/notification.service';
-
+import {join} from 'path';
 @Controller('users')
 export class UsersController extends ResourceController {
   constructor(
@@ -80,4 +80,19 @@ export class UsersController extends ResourceController {
     }
     return this.notificationService.getNotifications(userModel);
   }
+
+  @Get('sample-csv')
+  getUsersSampleCsv(@Res() res) {
+    const fileName = 'userMigratesampleV2.csv';
+    const filePath = join(__dirname, '../../test_files', fileName);
+    res.download(filePath, fileName);
+  }
+
+  @Get('default-values-xlsx')
+  getUsersDefaultValuesCsv(@Res() res) {
+    const fileName = 'DefaultValues.xlsx';
+    const filePath = join(__dirname, '../../test_files', fileName);
+    res.download(filePath, fileName);
+  }
+
 }
