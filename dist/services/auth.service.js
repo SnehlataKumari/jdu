@@ -55,7 +55,7 @@ let AuthService = (() => {
         }
         async logLoginDetails(userModel, req) {
             const timestamp = Date.now();
-            const ip = req.connection.remoteAddress;
+            const ip = req.header('x-forwarded-for');
             return await this.loginDetailService.create({
                 user: userModel._id,
                 ip,
