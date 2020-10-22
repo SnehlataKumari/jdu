@@ -6,7 +6,7 @@ import { MongooseExceptionFilter, MongoDBExceptionFilter } from './exception-fil
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.enableCors();
-  app.set('trust proxy', 1);
+  app.set('trust proxy', true);
   app.useGlobalFilters(new MongooseExceptionFilter());
   app.useGlobalFilters(new MongoDBExceptionFilter());
   await app.listen(process.env.PORT);
