@@ -1942,7 +1942,7 @@
         "affectsGlobalScope": false
       },
       "../src/schemas/question.schema.ts": {
-        "version": "d2602632f508bdc7d57ae916fe50e7fc716942206fd5b3d2dac31c0ee5e12fc6",
+        "version": "bcd481dc2dc5fc59d350db3a136740e75a9403c6cab079e50b29f6443385c1cf",
         "signature": "cfb5b5a24744e3aa3d4c6cec501b3a1f681340f4126b0db7c78ccd391005e821",
         "affectsGlobalScope": false
       },
